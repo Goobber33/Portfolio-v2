@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Project 1',
     description: 'This is a description of Project 1.',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: './images/second.jpg',
   },
   {
     title: 'Project 2',
@@ -25,7 +25,7 @@ const ProjectCard: React.FC = () => {
     <Row>
       {projects.map((project, index) => (
         <Col key={index} md={4} className="mb-4">
-          <Card>
+          <Card className="card">
             <Card.Img variant="top" src={project.imageUrl} />
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
