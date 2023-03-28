@@ -2,19 +2,23 @@ import React from 'react';
 import NavbarComponent from './components/NavbarComponent';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
-import './App.css';
+import Hero from './components/Hero';
+import useTypewriter from 'react-typewriter-hook';
 
 const App: React.FC = () => {
+  const typewriterText = useTypewriter('Kyle Parks Portfolio');
+
   return (
     <>
       <NavbarComponent />
-      <header className="text-center py-5 text-white">
-        <h1>Kyle Parks Portfolio</h1>
+      <header>
+        <h1>{typewriterText}</h1>
       </header>
+      <Hero />
       <About />
       <Portfolio />
     </>
   );
-};
+}
 
 export default App;

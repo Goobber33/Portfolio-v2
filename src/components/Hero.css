@@ -1,0 +1,30 @@
+.hero-section {
+    position: relative;
+    text-align: center;
+    background-color: #284B63;
+    padding: 2rem 0;
+  }
+  
+  .hero-container {
+    position: relative;
+  }
+  
+  .hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .hero-title {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: #3C6E71;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
