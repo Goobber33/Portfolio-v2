@@ -1,20 +1,41 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import ProjectCard from './ProjectCard';
+import { Card, Row, Col } from 'react-bootstrap';
 
-const Portfolio = () => {
+// Replace this with your actual project data
+const projects = [
+  {
+    title: 'Project 1',
+    description: 'This is a description of Project 1.',
+    imageUrl: 'https://via.placeholder.com/150',
+  },
+  {
+    title: 'Project 2',
+    description: 'This is a description of Project 2.',
+    imageUrl: 'https://via.placeholder.com/150',
+  },
+  {
+    title: 'Project 3',
+    description: 'This is a description of Project 3.',
+    imageUrl: 'https://via.placeholder.com/150',
+  },
+];
+
+const ProjectCard: React.FC = () => {
   return (
-    <>
-      <header>
-        <h1>Kyle Parks Portfolio</h1>
-      </header>
-      <main>
-        <Container fluid>
-          <ProjectCard />
-        </Container>
-      </main>
-    </>
+    <Row>
+      {projects.map((project, index) => (
+        <Col key={index} md={4} className="mb-4">
+          <Card>
+            <Card.Img variant="top" src={project.imageUrl} />
+            <Card.Body>
+              <Card.Title>{project.title}</Card.Title>
+              <Card.Text>{project.description}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
 };
 
-export default Portfolio;
+export default ProjectCard;

@@ -7,10 +7,13 @@ const App: React.FC = () => {
   return (
     <>
       <NavbarComponent />
+      <header>
+        <h1>Kyle Parks Portfolio</h1>
+      </header>
       <About />
       <Portfolio />
     </>
   );
-}
+};
 
 export default App;
