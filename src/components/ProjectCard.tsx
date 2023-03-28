@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
-// Replace this with your actual project data
 const projects = [
   {
     title: 'Project 1',
@@ -25,7 +24,7 @@ const ProjectCard: React.FC = () => {
     <Row>
       {projects.map((project, index) => (
         <Col key={index} md={4} className="mb-4">
-          <Card className="card">
+          <Card className="card h-100">
             <Card.Img variant="top" src={project.imageUrl} />
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>

@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const Portfolio = () => {
   return (
     <main>
-      <Container fluid>
+      <Container fluid className="px-4">
         <ProjectCard />
       </Container>
     </main>

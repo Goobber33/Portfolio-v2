@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <>
       <NavbarComponent />
-      <header>
+      <header className="text-center py-5 text-white">
         <h1>Kyle Parks Portfolio</h1>
       </header>
       <About />
