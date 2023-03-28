@@ -1,7 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Project 1',
     description: 'Description of Project 1.',
@@ -23,10 +28,10 @@ const Portfolio = () => {
         <h1>Kyle Parks Portfolio</h1>
       </header>
       <main>
-        <Container>
-          <Row>
-            {projects.map((project, index) => (
-              <Col key={index} md={4} className="mb-4">
+        <Container fluid>
+          <Row xs={1} sm={2} md={3}>
+            {projects.map((project: Project, index: number) => (
+              <Col key={index} className="mb-4">
                 <Card>
                   <Card.Body>
                     <Card.Title>{project.title}</Card.Title>
