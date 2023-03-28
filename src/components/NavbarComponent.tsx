@@ -1,10 +1,13 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import LogoComponent from './LogoComponents';
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
-      <Navbar.Brand href="#home">Kyle Parks Portfolio</Navbar.Brand>
+    <Navbar variant="dark" expand="lg" className="mb-4">
+      <Navbar.Brand href="#home">
+        <LogoComponent />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

@@ -1,6 +1,6 @@
 #root {
   background-color: #284B63;
-  min-height: 100vh;
+  min-height: 300vh;
 }
 
 body {
@@ -26,6 +26,16 @@ main {
   padding: 0 2rem;
 }
 
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-nav {
+  margin-top: -10rem;
+}
+
+
 .typewriter-text {
   font-family: 'Your Desired Font', sans-serif;
   font-size: 1rem;
@@ -38,8 +48,6 @@ main {
   max-width: 30%;
   padding-left: 2rem;
 }
-
-
 
 .card {
   box-shadow: 0 2px 4px #3C6E71;
@@ -60,8 +68,4 @@ main {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
-}
-
-.Navbar {
-  margin-bottom: 2rem;
 }

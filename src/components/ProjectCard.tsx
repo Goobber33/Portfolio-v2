@@ -1,11 +1,13 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
+import secondImage from '../images/second.jpg';
+
 const projects = [
   {
     title: 'Project 1',
     description: 'This is a description of Project 1.',
-    imageUrl: './images/second.jpg',
+    imageUrl: secondImage,
   },
   {
     title: 'Project 2',

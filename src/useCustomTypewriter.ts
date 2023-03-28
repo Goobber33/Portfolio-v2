@@ -5,26 +5,25 @@ interface TypewriterOptions {
 }
 
 const useTypewriter = (
-  text: string,
-  { typingSpeed }: TypewriterOptions
+  options: { text: string, typingSpeed: number }
 ): string => {
   const [typewriterText, setTypewriterText] = useState('');
   let index = 0;
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (index < text.length) {
-        setTypewriterText((prevText) => prevText + text[index]);
+      if (index < options.text.length) {
+        setTypewriterText((prevText) => prevText + options.text[index]);
         index++;
       } else {
         clearInterval(timer);
       }
-    }, typingSpeed);
+    }, options.typingSpeed);
 
     return () => {
       clearInterval(timer);
     };
-  }, [text, typingSpeed]);
+  }, [options.text, options.typingSpeed]);
 
   return typewriterText;
 };
