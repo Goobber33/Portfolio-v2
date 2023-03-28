@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 
 const LogoComponent = () => {
   return (
-    <img src={logo} alt="Kyle Parks Portfolio" height="200" />
+    <img src={logo} alt="Kyle Parks Portfolio" height="180" />
   );
 };
 
