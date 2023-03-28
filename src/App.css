@@ -1,16 +1,18 @@
-/* index.css */
+#root {
+  background-color: #353535;
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
   text-align: center;
   padding: 2rem 0;
+  color: white;
 }
 
 h1 {
@@ -25,13 +27,13 @@ main {
 }
 
 .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #3C6E71;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
 }
 
 .card .card-title {
