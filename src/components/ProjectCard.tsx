@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
-import About from './About';
 
 const Portfolio = () => {
   return (
@@ -11,7 +10,6 @@ const Portfolio = () => {
       </header>
       <main>
         <Container fluid>
-          <About />
           <ProjectCard />
         </Container>
       </main>
