@@ -6,10 +6,12 @@ import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Hero from './components/Hero';
 import SocialBar from './components/SocialMediaBar';
+import GlobalStyle from './components/GlobalStyle';
 
 const App: React.FC = () => {
   return (
     <>
+      <GlobalStyle />
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 col-md-4">

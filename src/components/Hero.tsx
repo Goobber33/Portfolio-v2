@@ -1,5 +1,4 @@
 import React from 'react';
-import './Hero.css';
 import heroImage from '../images/hero.jpeg';
 
 const Hero: React.FC = () => {
