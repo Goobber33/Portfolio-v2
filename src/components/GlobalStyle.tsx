@@ -88,19 +88,6 @@ const GlobalStyle = createGlobalStyle`
     animation-delay: 0.75s;
   }
 
-
-  #about .intro-text-line:nth-child(1) {
-    animation-delay: 1s;
-  }
-
-  #about .intro-text-line:nth-child(2) {
-    animation-delay: 1.25s;
-  }
-
-  #about .intro-text-line:nth-child(3) {
-    animation-delay: 1.5s;
-  }
-
   @keyframes slideUpFadeIn {
     from {
       opacity: 0;

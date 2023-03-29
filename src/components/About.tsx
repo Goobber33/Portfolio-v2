@@ -28,24 +28,26 @@ const About: React.FC = () => {
   const headerAnimation = useTextAnimation(showText, 500);
   const paragraph1Animation = useTextAnimation(showText, 700);
   const paragraph2Animation = useTextAnimation(showText, 900);
+  const paragraph3Animation = useTextAnimation(showText, 1100);
+  const paragraph4Animation = useTextAnimation(showText, 1300);
+  const paragraph5Animation = useTextAnimation(showText, 1500);
 
-  const reactIconAnimation = useIconAnimation(showIcons, 900);
-  const htmlIconAnimation = useIconAnimation(showIcons, 1100);
-  const cssIconAnimation = useIconAnimation(showIcons, 1300);
-  const jsIconAnimation = useIconAnimation(showIcons, 1500);
-  const nodeIconAnimation = useIconAnimation(showIcons, 1700);
-  const npmIconAnimation = useIconAnimation(showIcons, 1900);
 
-  const typewriterText = 'About Me';
+  const reactIconAnimation = useIconAnimation(showIcons, 1700);
+  const htmlIconAnimation = useIconAnimation(showIcons, 1900);
+  const cssIconAnimation = useIconAnimation(showIcons, 2100);
+  const jsIconAnimation = useIconAnimation(showIcons, 2300);
+  const nodeIconAnimation = useIconAnimation(showIcons, 2500);
+  const npmIconAnimation = useIconAnimation(showIcons, 2700);
 
   useEffect(() => {
     const handleScroll = () => {
       if (animationTriggered) return;
-  
+
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         const rect = aboutSection.getBoundingClientRect();
-        const threshold = 0.5; // Adjust this value to control when the animations are triggered (0.5 means 50% of the viewport height)
+        const threshold = 0.5;
         const isInViewport = rect.top <= window.innerHeight * threshold && rect.bottom >= 0;
         if (isInViewport) {
           setShowIcons(true);
@@ -55,32 +57,40 @@ const About: React.FC = () => {
         }
       }
     };
-  
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [animationTriggered]);
-  
 
-  const scrollToAbout = () => {
-    scroller.scrollTo('about', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });
-  };
 
   return (
     <Element name="about">
       <section id="about" className="py-5 custom-mt">
-        <animated.div id="aboutTextWrapper" className="container text-white d-flex flex-column" style={{ ...headerAnimation, ...paragraph1Animation, ...paragraph2Animation }}>
-          <h2 id="aboutHeader" onClick={scrollToAbout} className="mb-5 text-center intro-text-line">
-            {typewriterText}
-          </h2>
-          <p id="aboutParagraph1" className="mb-3 text-center intro-text-line">
-            I am a Full Stack Developer and IT Professional. I have worked in IT for 3 years, and have developed a passion for Software Development.
+        <animated.div style={headerAnimation}>
+        <h2 className="text-center text-white mb-4">About Me</h2>
+        </animated.div>
+        <animated.div style={paragraph1Animation}>
+          <p id="aboutParagraph1" className="mb-3 text-center text-white intro-text-line">
+            I am a Full Stack Developer and IT Professional.
           </p>
-          <p id="aboutParagraph2" className="mb-5 text-center intro-text-line">
-            On my down time, I like to work on personal projects and learn new technologies. I am working my way through my coding bootcamp,
+        </animated.div>
+        <animated.div style={paragraph2Animation}>
+          <p className="mb-3 text-center text-white intro-text-line">
+            I have worked in IT for 3 years, and have developed a passion for Software Development.
+          </p>
+        </animated.div>
+        <animated.div style={paragraph3Animation}>
+          <p id="aboutParagraph2" className="mb-3 text-center text-white intro-text-line">
+            On my down time, I like to work on personal projects and learn new technologies.
+          </p>
+        </animated.div>
+        <animated.div style={paragraph4Animation}>
+          <p className="mb-3 text-center text-white intro-text-line">
+            I am working my way through my coding bootcamp,
+          </p>
+        </animated.div>
+        <animated.div style={paragraph5Animation}>
+          <p className="mb-5 text-center text-white intro-text-line">
             and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.
           </p>
         </animated.div>
@@ -88,29 +98,29 @@ const About: React.FC = () => {
         <div className="d-flex justify-content-end mb-5">
           <div>
             <animated.div style={reactIconAnimation}>
-              <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
+              <FontAwesomeIcon icon={faReact} size="4x" className="mx-3 my-3 fa-icon" color="#61dafb" />
             </animated.div>
             <animated.div style={htmlIconAnimation}>
-              <FontAwesomeIcon icon={faHtml5} size="3x" className="mx-3 my-3 fa-icon" color="#f06529" />
+              <FontAwesomeIcon icon={faHtml5} size="4x" className="mx-3 my-3 fa-icon" color="#f06529" />
             </animated.div>
             <animated.div style={cssIconAnimation}>
-              <FontAwesomeIcon icon={faCss3} size="3x" className="mx-3 my-3 fa-icon" color="#2965f1" />
+              <FontAwesomeIcon icon={faCss3} size="4x" className="mx-3 my-3 fa-icon" color="#2965f1" />
             </animated.div>
           </div>
           <div>
             <animated.div style={jsIconAnimation}>
-              <FontAwesomeIcon icon={faJs} size="3x" className="mx-3 my-3 fa-icon" color="#f7df1e" />
+              <FontAwesomeIcon icon={faJs} size="4x" className="mx-3 my-3 fa-icon" color="#f7df1e" />
             </animated.div>
             <animated.div style={nodeIconAnimation}>
-              <FontAwesomeIcon icon={faNode} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+              <FontAwesomeIcon icon={faNode} size="4x" className="mx-3 my-3 fa-icon" color="#68a063" />
             </animated.div>
             <animated.div style={npmIconAnimation}>
-              <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+              <FontAwesomeIcon icon={faNpm} size="4x" className="mx-3 my-3 fa-icon" color="#68a063" />
             </animated.div>
           </div>
-      </div>
+        </div>
 
-    </section>
+      </section>
     </Element >
   );
 };
