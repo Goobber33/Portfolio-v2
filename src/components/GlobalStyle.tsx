@@ -68,6 +68,35 @@ const GlobalStyle = createGlobalStyle`
     animation-delay: 0.75s;
   }
 
+
+  #about .intro-text-line:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  #about .intro-text-line:nth-child(2) {
+    animation-delay: 1.25s;
+  }
+
+  #about .intro-text-line:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+
+  #aboutHeader,
+#aboutParagraph1,
+#aboutParagraph2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+#aboutHeader.visible,
+#aboutParagraph1.visible,
+#aboutParagraph2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
   @keyframes slideUpFadeIn {
     from {
       opacity: 0;
@@ -89,19 +118,6 @@ const GlobalStyle = createGlobalStyle`
   
   .custom-mt {
     margin-top: 20rem; /* Adjust this value to your desired spacing */
-  }
-  
-  .typewriter-text {
-    font-family: 'Your Desired Font', sans-serif;
-    font-size: 1rem;
-    color: white;
-    text-align: left;
-    padding-left: 2rem;
-  }
-  
-  .typewriter-container {
-    max-width: 30%;
-    padding-left: 2rem;
   }
   
   .card {

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
-import useTypewriter from 'react-typewriter-hook';
 import { Element, scroller } from 'react-scroll';
 
 const useIconAnimation = (showIcons: boolean, delay: number) => {
@@ -15,16 +14,16 @@ const useIconAnimation = (showIcons: boolean, delay: number) => {
 
 const About: React.FC = () => {
   const [showIcons, setShowIcons] = useState(false);
-  const [showTypewriter, setShowTypewriter] = useState(false);
+  const [showText, setShowText] = useState(false);
 
-  const reactIconAnimation = useIconAnimation(showIcons, 500);
-  const htmlIconAnimation = useIconAnimation(showIcons, 700);
-  const cssIconAnimation = useIconAnimation(showIcons, 900);
-  const jsIconAnimation = useIconAnimation(showIcons, 1100);
-  const nodeIconAnimation = useIconAnimation(showIcons, 1300);
-  const npmIconAnimation = useIconAnimation(showIcons, 1500);
+  const reactIconAnimation = useIconAnimation(showIcons, 900);
+  const htmlIconAnimation = useIconAnimation(showIcons, 1100);
+  const cssIconAnimation = useIconAnimation(showIcons, 1300);
+  const jsIconAnimation = useIconAnimation(showIcons, 1500);
+  const nodeIconAnimation = useIconAnimation(showIcons, 1700);
+  const npmIconAnimation = useIconAnimation(showIcons, 1900);
 
-  const typewriterText = useTypewriter(showTypewriter ? 'About Me' : '');
+  const typewriterText = 'About Me';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +33,7 @@ const About: React.FC = () => {
         const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
         if (isInViewport) {
           setShowIcons(true);
-          setShowTypewriter(true);
+          setShowText(true);
           window.removeEventListener('scroll', handleScroll);
         }
       }
@@ -43,6 +42,16 @@ const About: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (showText) {
+      setTimeout(() => {
+        document.getElementById('aboutHeader')?.classList.add('visible');
+        document.getElementById('aboutParagraph1')?.classList.add('visible');
+        document.getElementById('aboutParagraph2')?.classList.add('visible');
+      }, 500);
+    }
+  }, [showText]);
 
   const scrollToAbout = () => {
     scroller.scrollTo('about', {
@@ -55,15 +64,15 @@ const About: React.FC = () => {
   return (
     <Element name="about">
       <section id="about" className="py-5 custom-mt">
-        <div className="container text-white d-flex flex-column align-items-center">
-          <h2 onClick={scrollToAbout} className="mb-5">{typewriterText}</h2>
-          <p className="mb-3">
-            I am a Full Stack Developer and IT Professional. I have worked in IT for 3 years, and have developed a passion for Software Development. 
+        <div className="container text-white d-flex flex-column ">
+          <h2 id="aboutHeader" onClick={scrollToAbout} className="mb-5 text-center">{typewriterText}</h2>
+          <p id="aboutParagraph1" className="mb-3 text-center">
+            I am a Full Stack Developer and IT Professional. I have worked in IT for 3 years, and have developed a passion for Software Development.
           </p>
-          <p className="mb-5">On my down time, I like to work on personal projects and learn new technologies. I am working my way through my coding bootcamp,
-             and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.</p>
+          <p id="aboutParagraph2" className="mb-5 text-center">On my down time, I like to work on personal projects and learn new technologies. I am working my way through my coding bootcamp,
+            and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.</p>
 
-          <div className="d-flex justify-content-center mb-5">
+          <div className="d-flex justify-content-end mb-5">
             <div>
               <animated.div style={reactIconAnimation}>
                 <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
