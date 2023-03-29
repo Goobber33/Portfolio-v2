@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
 interface NavbarProps {
@@ -7,10 +7,31 @@ interface NavbarProps {
 
 const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
   const [expanded, setExpanded] = React.useState(false);
+  const [visible, setVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleNavbar = () => {
     setExpanded(!expanded);
   };
+
+  const handleScroll = () => {
+    const currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition <= 0) {
+      setVisible(true);
+    } else if (currentScrollPosition > scrollPosition) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setScrollPosition(currentScrollPosition);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollPosition]);
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -21,7 +42,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
       variant="dark"
       expand="lg"
       fixed="top"
-      className="mb-4 mt-3 mt-md-0"
+      className={`mb-4 mt-3 mt-md-0 ${visible ? '' : 'navbar-hidden'}`}
       style={style}
     >
       <Navbar.Toggle

@@ -29,6 +29,26 @@ const GlobalStyle = createGlobalStyle`
     max-width: 960px;
     padding: 0 2rem;
   }
+
+  .navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar {
+    transition: transform 0.3s ease;
+  }
+
+  .line-by-line {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .line-by-line.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+  }  
   
   .logo-box {
     display: inline-block;
@@ -51,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
     transform: translateY(50px);
     animation: slideUpFadeIn 1s ease-in-out forwards;
   }
-
+  
   .intro-text-line:nth-child(1) {
     animation-delay: 0s;
   }
@@ -80,22 +100,6 @@ const GlobalStyle = createGlobalStyle`
   #about .intro-text-line:nth-child(3) {
     animation-delay: 1.5s;
   }
-
-  #aboutHeader,
-#aboutParagraph1,
-#aboutParagraph2 {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
-}
-
-#aboutHeader.visible,
-#aboutParagraph1.visible,
-#aboutParagraph2.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
   @keyframes slideUpFadeIn {
     from {
