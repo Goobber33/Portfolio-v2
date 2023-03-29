@@ -67,30 +67,30 @@ const About: React.FC = () => {
     <Element name="about">
       <section id="about" className="py-5 custom-mt">
         <animated.div style={headerAnimation}>
-        <h2 className="text-center text-white mb-4">About Me</h2>
+          <h2 className="text-center text-white mb-4 fs-1">About Me</h2>
         </animated.div>
         <animated.div style={paragraph1Animation}>
-          <p id="aboutParagraph1" className="mb-3 text-center text-white intro-text-line">
+          <p id="aboutParagraph1" className="mb-1 text-center text-white about-text-line fs-4">
             I am a Full Stack Developer and IT Professional.
           </p>
         </animated.div>
         <animated.div style={paragraph2Animation}>
-          <p className="mb-3 text-center text-white intro-text-line">
+          <p className="mb-1 text-center text-white about-text-line fs-4">
             I have worked in IT for 3 years, and have developed a passion for Software Development.
           </p>
         </animated.div>
         <animated.div style={paragraph3Animation}>
-          <p id="aboutParagraph2" className="mb-3 text-center text-white intro-text-line">
+          <p id="aboutParagraph2" className="mb-1 text-center text-white about-text-line fs-4">
             On my down time, I like to work on personal projects and learn new technologies.
           </p>
         </animated.div>
         <animated.div style={paragraph4Animation}>
-          <p className="mb-3 text-center text-white intro-text-line">
+          <p className="mb-1 text-center text-white about-text-line fs-4">
             I am working my way through my coding bootcamp,
           </p>
         </animated.div>
         <animated.div style={paragraph5Animation}>
-          <p className="mb-5 text-center text-white intro-text-line">
+          <p className="mb-5 text-center text-white about-text-line fs-4">
             and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.
           </p>
         </animated.div>
