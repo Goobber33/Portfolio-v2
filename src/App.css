@@ -77,3 +77,23 @@ main {
 .hero-title {
   font-size: 3rem;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #284B63;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 20px;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+

@@ -5,6 +5,7 @@ import LogoComponent from './components/LogoComponents';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Hero from './components/Hero';
+import SocialBar from './components/SocialMediaBar';
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
       <Hero />
       <About />
       <Portfolio />
+      <SocialBar />
     </>
   );
 };
