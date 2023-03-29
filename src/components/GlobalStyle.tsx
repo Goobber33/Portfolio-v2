@@ -45,6 +45,39 @@ const GlobalStyle = createGlobalStyle`
   .custom-navbar-link {
     font-size: 1.9rem;
   }
+
+  .intro-text-line {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-in-out forwards;
+  }
+
+  .intro-text-line:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .intro-text-line:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  .intro-text-line:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .intro-text-line:nth-child(4) {
+    animation-delay: 0.75s;
+  }
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   .pt-custom {
     padding-top: 10rem;

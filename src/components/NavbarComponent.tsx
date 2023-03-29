@@ -12,6 +12,10 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
     setExpanded(!expanded);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Navbar
       variant="dark"
@@ -30,7 +34,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
         className={`${expanded ? 'show transparent-menu' : ''} text-right`}
       >
         <Nav className="ml-auto">
-          <Nav.Link href="#home">01. Home</Nav.Link>
+          <Nav.Link onClick={scrollToTop}>01. Home</Nav.Link>
           <Nav.Link href="#about">02. About</Nav.Link>
           <Nav.Link href="#projects">03. Projects</Nav.Link>
           <Nav.Link href="#contact">04. Contact</Nav.Link>
