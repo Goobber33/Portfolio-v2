@@ -111,6 +111,20 @@ const GlobalStyle = createGlobalStyle`
       transform: translateY(0);
     }
   }
+
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .icon-wrapper {
+    flex: 0 0 calc(33.333% - 10px);
+    margin: 5px;
+  }
+  
   
   .pt-custom {
     padding-top: 10rem;

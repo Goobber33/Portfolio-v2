@@ -87,7 +87,6 @@ const About: React.FC = () => {
 
         <div className="d-flex justify-content-end mb-5">
           <div>
-          <div className="d-flex justify-content-end mb-5 flex-wrap">
             <animated.div style={reactIconAnimation}>
               <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
             </animated.div>
@@ -109,7 +108,6 @@ const About: React.FC = () => {
               <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
             </animated.div>
           </div>
-        </div>
       </div>
 
     </section>
