@@ -20,11 +20,6 @@ h1 {
   font-size: 3rem;
 }
 
-.intro-text {
-  font-size: 1.5rem;
-  margin-top: 3rem; /* Add margin to push the element down */
-}
-
 main {
   margin: 2rem auto;
   max-width: 960px;
