@@ -20,21 +20,36 @@ h1 {
   font-size: 3rem;
 }
 
+.intro-text {
+  font-size: 1.5rem;
+  margin-top: 3rem; /* Add margin to push the element down */
+}
+
 main {
   margin: 2rem auto;
   max-width: 960px;
   padding: 0 2rem;
 }
 
+.logo-box {
+  display: inline-block;
+}
+
+.logo {
+  height: 180px;
+}
+
 .navbar {
+  background-color: transparent;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  align-items: flex-start;
 }
 
 .navbar-nav {
-  margin-top: -10rem;
+  margin-top: 0;
 }
-
 
 .typewriter-text {
   font-family: 'Your Desired Font', sans-serif;
@@ -69,3 +84,50 @@ main {
   color: #666;
   line-height: 1.5;
 }
+
+.hero-image {
+  width: 100%;
+  height: auto; 
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 991px) {
+  .logo {
+    height: 80px;
+  }
+
+  .navbar-collapse.show {
+    background-color: #284B63;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Add z-index to give the menu a higher stacking order */
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
