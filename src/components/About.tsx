@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faHtml5, faCss3, faJs } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
 import useTypewriter from 'react-typewriter-hook';
 import { Element, scroller } from 'react-scroll';
 
-const About: React.FC = () => {
-  const [showIcons, setShowIcons] = useState(false);
-  const [showTypewriter, setShowTypewriter] = useState(false); // Add a new state for the typewriter effect
-  const iconAnimation = useSpring({
+const useIconAnimation = (showIcons: boolean, delay: number) => {
+  return useSpring({
     opacity: showIcons ? 1 : 0,
     transform: showIcons ? 'translateY(0)' : 'translateY(100px)',
-    delay: 500,
+    delay: delay,
   });
+};
 
-  const typewriterText = useTypewriter(showTypewriter ? 'About Me' : ''); // Trigger the typewriter effect based on the state
+const About: React.FC = () => {
+  const [showIcons, setShowIcons] = useState(false);
+  const [showTypewriter, setShowTypewriter] = useState(false);
+
+  const reactIconAnimation = useIconAnimation(showIcons, 500);
+  const htmlIconAnimation = useIconAnimation(showIcons, 700);
+  const cssIconAnimation = useIconAnimation(showIcons, 900);
+  const jsIconAnimation = useIconAnimation(showIcons, 1100);
+  const nodeIconAnimation = useIconAnimation(showIcons, 1300);
+  const npmIconAnimation = useIconAnimation(showIcons, 1500);
+
+  const typewriterText = useTypewriter(showTypewriter ? 'About Me' : '');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +33,7 @@ const About: React.FC = () => {
         const rect = aboutSection.getBoundingClientRect();
         const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
         setShowIcons(isInViewport);
-        setShowTypewriter(isInViewport); // Set the typewriter effect state based on the visibility of the section
+        setShowTypewriter(isInViewport);
       }
     };
 
@@ -43,21 +53,39 @@ const About: React.FC = () => {
     <Element name="about">
       <section id="about" className="py-5">
         <div className="container text-white d-flex flex-column align-items-center">
-          <h2 onClick={scrollToAbout}>
-            {typewriterText}
-          </h2>
+          <h2 onClick={scrollToAbout}>{typewriterText}</h2>
           <p>
             I am a software developer with a passion for building web applications. I enjoy solving complex problems and
             collaborating with others to build innovative solutions. In my free time, I enjoy hiking, playing guitar, and
             exploring new technologies.
           </p>
-          <animated.div style={iconAnimation}>
-            <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" />
-            <FontAwesomeIcon icon={faHtml5} size="3x" className="mx-3 my-3 fa-icon" />
-            <FontAwesomeIcon icon={faCss3} size="3x" className="mx-3 my-3 fa-icon" />
-            <FontAwesomeIcon icon={faJs} size="3x" className="mx-3 my-3 fa-icon" />
-          </animated.div>
+
+          <div className="d-flex justify-content-center">
+            <div>
+              <animated.div style={reactIconAnimation}>
+                <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
+              </animated.div>
+              <animated.div style={htmlIconAnimation}>
+                <FontAwesomeIcon icon={faHtml5} size="3x" className="mx-3 my-3 fa-icon" color="#f06529" />
+              </animated.div>
+              <animated.div style={cssIconAnimation}>
+                <FontAwesomeIcon icon={faCss3} size="3x" className="mx-3 my-3 fa-icon" color="#2965f1" />
+              </animated.div>
+            </div>
+            <div>
+              <animated.div style={jsIconAnimation}>
+                <FontAwesomeIcon icon={faJs} size="3x" className="mx-3 my-3 fa-icon" color="#f7df1e" />
+              </animated.div>
+              <animated.div style={nodeIconAnimation}>
+                <FontAwesomeIcon icon={faNode} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+              </animated.div>
+              <animated.div style={npmIconAnimation}>
+                <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+              </animated.div>
+            </div>
+          </div>
         </div>
+
       </section>
     </Element>
   );
