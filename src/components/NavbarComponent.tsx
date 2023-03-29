@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
-const NavbarComponent = () => {
-  const [expanded, setExpanded] = useState(false);
+interface NavbarProps {
+  style?: React.CSSProperties;
+}
+
+const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
+  const [expanded, setExpanded] = React.useState(false);
 
   const toggleNavbar = () => {
     setExpanded(!expanded);
@@ -12,17 +16,18 @@ const NavbarComponent = () => {
     <Navbar
       variant="dark"
       expand="lg"
-      fixed="top" // Make the navbar fixed at the top
+      fixed="top"
       className="mb-4 mt-3 mt-md-0"
+      style={style}
     >
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
         onClick={toggleNavbar}
-        className="ml-auto" // Align the burger icon to the right side
+        className="ml-auto"
       />
       <Navbar.Collapse
         id="basic-navbar-nav"
-        className={`${expanded ? 'show transparent-menu' : ''} text-right`} // Add the text-right class
+        className={`${expanded ? 'show transparent-menu' : ''} text-right`}
       >
         <Nav className="ml-auto">
           <Nav.Link href="#home">01. Home</Nav.Link>

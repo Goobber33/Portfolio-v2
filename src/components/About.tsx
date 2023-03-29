@@ -51,9 +51,9 @@ const About: React.FC = () => {
 
   return (
     <Element name="about">
-      <section id="about" className="py-5">
+      <section id="about" className="py-5 custom-mt">
         <div className="container text-white d-flex flex-column align-items-center">
-          <h2 onClick={scrollToAbout}>{typewriterText}</h2>
+          <h2 onClick={scrollToAbout} className="mb-4">{typewriterText}</h2>
           <p>
             I am a software developer with a passion for building web applications. I enjoy solving complex problems and
             collaborating with others to build innovative solutions. In my free time, I enjoy hiking, playing guitar, and

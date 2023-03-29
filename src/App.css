@@ -34,6 +34,25 @@ main {
   height: 180px;
 }
 
+.custom-navbar {
+  font-size: 1.2rem;
+}
+
+.custom-navbar-link {
+  font-size: 1.9rem;
+}
+
+.pt-custom {
+  padding-top: 10rem;
+}
+
+.pt-hero {
+  padding-top: 1rem;
+}
+
+.custom-mt {
+  margin-top: 20rem; /* Adjust this value to your desired spacing */
+}
 
 .typewriter-text {
   font-family: 'Your Desired Font', sans-serif;
