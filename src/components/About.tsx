@@ -34,7 +34,7 @@ const About: React.FC = () => {
         const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
         if (isInViewport) {
           setShowIcons(true);
-          setShowTypewriter(true);  
+          setShowTypewriter(true);
           window.removeEventListener('scroll', handleScroll);
         }
       }
