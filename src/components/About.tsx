@@ -53,14 +53,14 @@ const About: React.FC = () => {
     <Element name="about">
       <section id="about" className="py-5 custom-mt">
         <div className="container text-white d-flex flex-column align-items-center">
-          <h2 onClick={scrollToAbout} className="mb-4">{typewriterText}</h2>
-          <p>
-            I am a software developer with a passion for building web applications. I enjoy solving complex problems and
-            collaborating with others to build innovative solutions. In my free time, I enjoy hiking, playing guitar, and
-            exploring new technologies.
+          <h2 onClick={scrollToAbout} className="mb-5">{typewriterText}</h2>
+          <p className="mb-3">
+            I am a Full Stack Developer and IT Professional. I have worked in IT for 3 years, and have developed a passion for Software Development. 
           </p>
+          <p className="mb-5">On my down time, I like to work on personal projects and learn new technologies. I am working my way through my coding bootcamp,
+             and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.</p>
 
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center mb-5">
             <div>
               <animated.div style={reactIconAnimation}>
                 <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
