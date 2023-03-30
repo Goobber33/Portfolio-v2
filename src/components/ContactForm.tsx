@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import Modal from 'react-modal';
+import { Button } from 'react-bootstrap';
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,13 +22,16 @@ const ContactForm: React.FC = () => {
       });
   
       if (response.ok) {
-        alert('Email sent successfully!');
+        setModalMessage('Email sent successfully!');
+        setModalIsOpen(true);
       } else {
-        alert('An error occurred while sending the email.');
+        setModalMessage('An error occurred while sending the email.');
+        setModalIsOpen(true);
       }
     } catch (error) {
       console.error(error);
-      alert('An error occurred while sending the email.');
+      setModalMessage('An error occurred while sending the email.');
+      setModalIsOpen(true);
     }
   };
   
@@ -66,6 +73,42 @@ const ContactForm: React.FC = () => {
           <button type="submit">Send</button>
         </form>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Email Result Modal"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          },
+          content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            width: '40%',
+            maxWidth: '600px',
+            minHeight: '200px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: '10px',
+            padding: '2rem',
+          },
+        }}
+      >
+        <h2>{modalMessage}</h2>
+        <Button
+          variant="primary"
+          onClick={() => setModalIsOpen(false)}
+          style={{ width: '100px', marginTop: '2rem' }}
+        >
+          OK
+        </Button>
+      </Modal>
     </section>
   );
 };
