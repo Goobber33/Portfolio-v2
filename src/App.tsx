@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import SocialBar from './components/SocialMediaBar';
 import GlobalStyle from './components/GlobalStyle';
 import IntroText from './components/IntroText';
+import ContactForm from './components/ContactForm'; // Import the ContactForm component
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
       <Hero />
       <Portfolio />
       <SocialBar />
+      <ContactForm /> {/* Add the ContactForm component to the bottom of the page */}
     </>
   );
 };
