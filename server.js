@@ -1,6 +1,9 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 
@@ -14,18 +17,19 @@ app.post('/send-email', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'your-email@example.com',
-        pass: 'your-email-password',
+        user: process.env.EMAIL_USER,
+        pass: process.env.APP_PASSWORD,
       },
     });
 
     const mailOptions = {
-      from: email,
-      to: 'your-email@example.com',
+      from: process.env.EMAIL_USER,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
       subject: `New message from ${name}`,
       text: message,
     };
-
+    
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
