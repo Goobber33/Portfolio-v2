@@ -267,6 +267,12 @@ const GlobalStyle = createGlobalStyle`
   .contact-section button[type='submit']:hover {
     background-color: #284b63;
   }
+
+  .hover-effect:hover {
+    background-color: white !important;
+    color: #284B63 !important;
+  }
+  
   
 
   @media screen and (max-width: 991px) {
