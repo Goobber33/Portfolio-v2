@@ -217,6 +217,58 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 5px;
   }
 
+  .contact-section {
+    color: #fff;
+    padding: 4rem 0;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-section label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #d9d9d9;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .contact-section textarea {
+    height: 10rem;
+  }
+  
+  .contact-section button[type='submit'] {
+    background-color: #3c6e71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .contact-section button[type='submit']:hover {
+    background-color: #284b63;
+  }
+  
+
   @media screen and (max-width: 991px) {
     .hero-image {
       width: 120px;
