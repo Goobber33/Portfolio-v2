@@ -11,13 +11,6 @@ const IntroText: React.FC = () => {
               <div className="intro-text-line">
                 I am a Full Stack Developer, and I love to create and learn new things.
               </div>
-              <div className="intro-text-line">
-                I am currently enrolled in the University of Washington's Full Stack coding bootcamp where I am learning new
-                skills every day.
-              </div>
-              <div className="intro-text-line">
-                Please take a look at my Portfolio, and follow my social media links if you would like to get in contact!
-              </div>
             </h2>
           </div>
         </div>

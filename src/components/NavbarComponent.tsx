@@ -3,9 +3,10 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 interface NavbarProps {
   style?: React.CSSProperties;
+  contactFormRef: React.RefObject<HTMLDivElement>;
 }
 
-const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
+const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
   const [expanded, setExpanded] = React.useState(false);
   const [visible, setVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -84,7 +85,12 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
             03. Projects
           </Nav.Link>
           <Nav.Link
-            onClick={() => handleNavLinkClick('contact')}
+            onClick={() => {
+              handleNavLinkClick('contact');
+              if (contactFormRef.current) {
+                contactFormRef.current.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             href="#contact"
             active={activeLink === 'contact'}
           >

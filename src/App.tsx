@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/NavbarComponent';
 import LogoComponent from './components/LogoComponents';
@@ -8,9 +8,11 @@ import Hero from './components/Hero';
 import SocialBar from './components/SocialMediaBar';
 import GlobalStyle from './components/GlobalStyle';
 import IntroText from './components/IntroText';
-import ContactForm from './components/ContactForm'; // Import the ContactForm component
+import ContactForm from './components/ContactForm';
 
 const App: React.FC = () => {
+  const contactFormRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <GlobalStyle />
@@ -20,7 +22,7 @@ const App: React.FC = () => {
             <LogoComponent />
           </div>
           <div className="col-12 col-md-8">
-            <NavbarComponent style={{ marginTop: '3rem' }} />
+            <NavbarComponent style={{ marginTop: '3rem' }} contactFormRef={contactFormRef} />
           </div>
         </div>
       </div>
@@ -29,7 +31,9 @@ const App: React.FC = () => {
       <Hero />
       <Portfolio />
       <SocialBar />
-      <ContactForm /> {/* Add the ContactForm component to the bottom of the page */}
+      <div ref={contactFormRef}>
+        <ContactForm />
+      </div>
     </>
   );
 };

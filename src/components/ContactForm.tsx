@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
   
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <div className="container">
         <h2>Contact Me</h2>
         <form onSubmit={handleSubmit}>
