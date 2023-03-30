@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 #root {
     background-color: #284B63;
-    min-height: 300vh;
+    min-height: 350vh;
   }
   
   body {
@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
   
-  h1 {
+  h1, {
     margin: 0;
     font-size: 3rem;
   }
@@ -88,6 +88,30 @@ const GlobalStyle = createGlobalStyle`
     animation-delay: 0.75s;
   }
 
+  .about-text-line:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .about-text-line:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  .about-text-line:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .about-text-line:nth-child(4) {
+    animation-delay: 0.75s;
+  }
+
+  .intro-text-line {
+    font-size: 1.1em;
+  }
+
+  .about-text-line {
+    font-size: 1.3em;
+  }
+
   @keyframes slideUpFadeIn {
     from {
       opacity: 0;
@@ -99,19 +123,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .icon-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .icon-wrapper {
-    flex: 0 0 calc(33.333% - 10px);
-    margin: 5px;
-  }
-  
+
   
   .pt-custom {
     padding-top: 10rem;
@@ -122,7 +134,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .custom-mt {
-    margin-top: 20rem; /* Adjust this value to your desired spacing */
+    margin-top: 20rem; 
   }
   
   .card {

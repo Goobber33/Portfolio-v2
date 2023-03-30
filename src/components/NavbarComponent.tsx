@@ -37,6 +37,14 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
     window.scrollTo(0, 0);
   };
 
+  const [activeLink, setActiveLink] = useState('home');
+
+  const handleNavLinkClick = (linkName: string) => {
+    setExpanded(false);
+    setActiveLink(linkName);
+  };
+
+
   return (
     <Navbar
       variant="dark"
@@ -55,12 +63,42 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style }) => {
         className={`${expanded ? 'show transparent-menu' : ''} text-right`}
       >
         <Nav className="ml-auto">
-          <Nav.Link onClick={scrollToTop}>01. Home</Nav.Link>
-          <Nav.Link href="#about">02. About</Nav.Link>
-          <Nav.Link href="#projects">03. Projects</Nav.Link>
-          <Nav.Link href="#contact">04. Contact</Nav.Link>
-          <Nav.Link href="#resume">05. Resume</Nav.Link>
+          <Nav.Link
+            onClick={() => { scrollToTop(); handleNavLinkClick('home'); }}
+            active={activeLink === 'home'}
+          >
+            01. Home
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => handleNavLinkClick('about')}
+            href="#about"
+            active={activeLink === 'about'}
+          >
+            02. About
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => handleNavLinkClick('projects')}
+            href="#projects"
+            active={activeLink === 'projects'}
+          >
+            03. Projects
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => handleNavLinkClick('contact')}
+            href="#contact"
+            active={activeLink === 'contact'}
+          >
+            04. Contact
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => handleNavLinkClick('resume')}
+            href="#resume"
+            active={activeLink === 'resume'}
+          >
+            05. Resume
+          </Nav.Link>
         </Nav>
+
       </Navbar.Collapse>
     </Navbar>
   );
