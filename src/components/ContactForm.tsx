@@ -35,7 +35,6 @@ const ContactForm: React.FC = () => {
         }
     };
 
-
     return (
         <section className="contact-section" id="contact">
             <div className="container">
