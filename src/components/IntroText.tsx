@@ -25,15 +25,15 @@ const IntroText: React.FC = () => {
       <div className="row">
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
           <div className="intro-text-wrapper">
-            <animated.h2 style={helloTextAnimation} className="hello-text mb-3">
+            <animated.h2 style={{...helloTextAnimation, fontFamily: 'Garamond, serif'}} className="hello-text mb-3 text-white">
               Hi{' '}
               <span role="img" aria-label="waving hand" className="waving-hand fs-2">
                 👋 {' '}
               </span> my name is
             </animated.h2>
-            <animated.h3 style={nameTextAnimation} className="name-text fs-1 mb-5">
+            <animated.h3 style={{...nameTextAnimation, fontFamily: 'Adobe Caslon Pro, serif', fontWeight: 'bold'}} className="name-text fs-1 mb-4">
               <span className="name-inner">
-                <span className="name-text-inner">Kyle Parks.</span> {/* Add this line */}
+                <span className="name-text-inner">Kyle Parks.</span>
               </span>
               <span className="underline"></span>
             </animated.h3>

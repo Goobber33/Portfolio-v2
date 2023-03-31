@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    color: #B0FFF8;
+    font-family: garamond;
   }
   
   main {
@@ -82,8 +82,7 @@ const GlobalStyle = createGlobalStyle`
   
   .hello-text {
     font-size: 2.5em;
-    color: #B0FFF8;
-    
+    font-family: Garamond, serif; 
   }
 
   .waving-hand {
