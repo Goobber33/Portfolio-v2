@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
-import { Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 const useIconAnimation = (showIcons: boolean, delay: number) => {
   return useSpring({

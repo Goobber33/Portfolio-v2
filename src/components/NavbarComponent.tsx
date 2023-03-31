@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { useSpring, animated } from 'react-spring';
 
 interface NavbarProps {
   style?: React.CSSProperties;
   contactFormRef: React.RefObject<HTMLDivElement>;
 }
 
+const useTextAnimation = (showText: boolean, delay: number) => {
+  return useSpring({
+    opacity: showText ? 1 : 0,
+    transform: showText ? 'translateX(0)' : 'translateX(30px)',
+    delay: delay,
+  });
+};
+
 const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
   const [visible, setVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
-
-  const toggleNavbar = () => {
-    setExpanded(!expanded);
-  };
+  const [showText, setShowText] = useState(false);
 
   const handleScroll = () => {
     const currentScrollPosition = window.pageYOffset;
@@ -34,6 +40,14 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollPosition]);
 
+  useEffect(() => {
+    setShowText(true);
+  }, []);
+
+  const toggleNavbar = () => {
+    setExpanded(!expanded);
+  };
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -45,6 +59,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     setActiveLink(linkName);
   };
 
+  const textAnimation = useTextAnimation(showText, 500);
 
   return (
     <Navbar

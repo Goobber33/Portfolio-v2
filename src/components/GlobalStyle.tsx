@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 3rem;
   }
+
+  h2 {
+    color: #B0FFF8;
+  }
   
   main {
     margin: 2rem auto;
@@ -67,20 +71,51 @@ const GlobalStyle = createGlobalStyle`
 
   .intro-text-wrapper {
     padding-top: 10rem;
+    text-align: left;
+  }
+  
+  .chat-box {
+    width: fit-content;
+    height: fit-content;
   }
   
   
   .hello-text {
-    font-size: 5.5em;
-    color: #3C6E71;
+    font-size: 2.5em;
+    color: #B0FFF8;
+    
+  }
+
+  .waving-hand {
+    display: inline-block;
+    animation: wave 1s linear infinite;
   }
   
   .name-text {
-    font-size: 1.5em;
+    display: inline-block;
     color: white;
+    font-size: 8rem !important;
+    position: relative; /* Add this line */
+  }
+
+  
+  .name-inner::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B0FFF8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
   }
   
-
+  .name-text:hover .name-inner::after {
+    transform: scaleX(1);
+  }
+  
   @keyframes slideUpFadeIn {
     from {
       opacity: 0;
@@ -100,13 +135,7 @@ const GlobalStyle = createGlobalStyle`
     50% {
       transform: rotate(20deg);
     }
-  }
-  
-  .waving-hand {
-    display: inline-block;
-    animation: wave 1s linear infinite;
-  }
-  
+  }  
 
   .pt-custom {
     padding-top: 10rem;
@@ -292,6 +321,22 @@ const GlobalStyle = createGlobalStyle`
   @media screen and (max-width: 991px) {
     .transparent-menu {
       background-color: transparent !important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .hello-text {
+      font-size: 1.1em;
+      padding-left: 13rem;
+    }
+  
+    .name-text {
+      font-size: 3rem !important;
+    }
+  
+    .intro-text-wrapper {
+      padding-top: 5rem;
+      padding-left: 2rem;
     }
   }
 `;

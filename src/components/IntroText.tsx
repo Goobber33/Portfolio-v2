@@ -25,15 +25,18 @@ const IntroText: React.FC = () => {
       <div className="row">
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
           <div className="intro-text-wrapper">
-            <animated.h2 style={helloTextAnimation} className="hello-text">
-              Hello{' '}
-              <span role="img" aria-label="waving hand" className="waving-hand fs-1">
-                👋
+            <animated.h2 style={helloTextAnimation} className="hello-text mb-3">
+              Hi{' '}
+              <span role="img" aria-label="waving hand" className="waving-hand fs-2">
+                👋 {' '}
+              </span> my name is
+            </animated.h2>
+            <animated.h3 style={nameTextAnimation} className="name-text fs-1 mb-5">
+              <span className="name-inner">
+                <span className="name-text-inner">Kyle Parks.</span> {/* Add this line */}
               </span>
-            </animated.h2>
-            <animated.h2 style={nameTextAnimation} className="name-text fs-1 mb-5">
-              My name is Kyle Parks.
-            </animated.h2>
+              <span className="underline"></span>
+            </animated.h3>
             <animated.h2 style={descriptionTextAnimation} className="text-white">
               I am a Full Stack Developer, and I love to create and learn new things.
             </animated.h2>
