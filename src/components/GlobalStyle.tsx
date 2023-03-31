@@ -103,7 +103,32 @@ const GlobalStyle = createGlobalStyle`
   .about-text-line:nth-child(4) {
     animation-delay: 0.75s;
   }
-
+  
+  // GlobalStyle.tsx
+  .hello-text {
+    font-size: 2.5em;
+    color: #3C6E71;
+    animation-delay: 0s;
+  }
+  
+  .name-text {
+    font-size: 1.5em;
+    color: white;
+    animation-delay: 0.25s;
+  }
+  
+  .intro-text-line {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-in-out forwards;
+  }
+  
+  .hello-text, .name-text, .intro-text-line:nth-child(3) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-in-out forwards;
+  }
+  
   .intro-text-line {
     font-size: 1.1em;
   }
