@@ -1,4 +1,3 @@
-// GlobalStyle.tsx
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -19,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
   
-  h1, {
+  h1 {
     margin: 0;
     font-size: 3rem;
   }
@@ -49,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     transform: translateY(0);
     transition: opacity 0.5s, transform 0.5s;
   }  
-  
+
   .logo-box {
     display: inline-block;
   }
@@ -66,76 +65,21 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.9rem;
   }
 
-  .intro-text-line {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUpFadeIn 1s ease-in-out forwards;
+  .intro-text-wrapper {
+    padding-top: 10rem;
   }
   
-  .intro-text-line:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  .intro-text-line:nth-child(2) {
-    animation-delay: 0.25s;
-  }
-
-  .intro-text-line:nth-child(3) {
-    animation-delay: 0.5s;
-  }
-
-  .intro-text-line:nth-child(4) {
-    animation-delay: 0.75s;
-  }
-
-  .about-text-line:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  .about-text-line:nth-child(2) {
-    animation-delay: 0.25s;
-  }
-
-  .about-text-line:nth-child(3) {
-    animation-delay: 0.5s;
-  }
-
-  .about-text-line:nth-child(4) {
-    animation-delay: 0.75s;
-  }
   
-  // GlobalStyle.tsx
   .hello-text {
-    font-size: 2.5em;
+    font-size: 5.5em;
     color: #3C6E71;
-    animation-delay: 0s;
   }
   
   .name-text {
     font-size: 1.5em;
     color: white;
-    animation-delay: 0.25s;
   }
   
-  .intro-text-line {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUpFadeIn 1s ease-in-out forwards;
-  }
-  
-  .hello-text, .name-text, .intro-text-line:nth-child(3) {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUpFadeIn 1s ease-in-out forwards;
-  }
-  
-  .intro-text-line {
-    font-size: 1.1em;
-  }
-
-  .about-text-line {
-    font-size: 1.3em;
-  }
 
   @keyframes slideUpFadeIn {
     from {
@@ -148,8 +92,22 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-
+  @keyframes wave {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
   
+  .waving-hand {
+    display: inline-block;
+    animation: wave 1s linear infinite;
+  }
+  
+
   .pt-custom {
     padding-top: 10rem;
   }
