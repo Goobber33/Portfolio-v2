@@ -134,7 +134,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .custom-mt {
-    margin-top: 20rem; 
+    margin-top: 30rem; 
   }
   
   .card {
@@ -273,7 +273,27 @@ const GlobalStyle = createGlobalStyle`
     color: #284B63 !important;
   }
   
-  
+  // GlobalStyle.tsx
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon .fa-github {
+  color: #181717;
+}
+
+.social-icon .fa-linkedin {
+  color: #0A66C2;
+}
+
+.social-icon .fa-instagram {
+  color: #E1306C;
+}
+
 
   @media screen and (max-width: 991px) {
     .hero-image {
