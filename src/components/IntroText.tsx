@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 
 // Custom hook to animate text
+
 const useTextAnimation = (showText: boolean, delay: number) => {
   return useSpring({
     opacity: showText ? 1 : 0,
@@ -11,27 +12,34 @@ const useTextAnimation = (showText: boolean, delay: number) => {
 };
 
 // Component that displays the introductory text
+
 const IntroText: React.FC = () => {
   const [showText, setShowText] = useState(false);
 
   // Sets the "showText" state to true when the component mounts
+
   useEffect(() => {
     setShowText(true);
   }, []);
 
   // Animations for the different parts of the text
+
   const helloTextAnimation = useTextAnimation(showText, 500);
   const nameTextAnimation = useTextAnimation(showText, 700);
   const descriptionTextAnimation = useTextAnimation(showText, 900);
 
   return (
+
     // Container for the text
+
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
           <div className="intro-text-wrapper">
+
             {/* Animated "Hi my name is" text */}
             <animated.h2
+
               style={{
                 ...helloTextAnimation,
                 fontFamily: 'Garamond, serif', // Sets the font for this text
@@ -43,7 +51,9 @@ const IntroText: React.FC = () => {
                 👋 {' '}
               </span> my name is
             </animated.h2>
+
             {/* Animated name text */}
+
             <animated.h3
               style={{
                 ...nameTextAnimation,
@@ -57,7 +67,9 @@ const IntroText: React.FC = () => {
               </span>
               <span className="underline"></span>
             </animated.h3>
+
             {/* Animated description text */}
+            
             <animated.h2
               style={descriptionTextAnimation}
               className="text-white"
