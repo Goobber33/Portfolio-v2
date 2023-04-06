@@ -27,6 +27,7 @@ const IntroText: React.FC = () => {
   const helloTextAnimation = useTextAnimation(showText, 500);
   const nameTextAnimation = useTextAnimation(showText, 700);
   const descriptionTextAnimation = useTextAnimation(showText, 900);
+  const descriptionTextAnimationtwo = useTextAnimation(showText, 1100);
 
   return (
 
@@ -53,7 +54,7 @@ const IntroText: React.FC = () => {
             <animated.h3
               style={{
                 ...nameTextAnimation,
-                fontFamily: 'Adobe Caslon Pro, serif', 
+                fontFamily: 'Adobe Caslon Pro, serif',
                 fontWeight: 'bold',
               }}
               className="name-text fs-1 mb-4"
@@ -63,14 +64,14 @@ const IntroText: React.FC = () => {
               </span>
               <span className="underline"></span>
             </animated.h3>
-            
-            <animated.h2
-              style={descriptionTextAnimation}
-              className="text-white"
-            >
-              I am a Full Stack Developer, and I love to create and learn new things.
+
+            <animated.h2 style={descriptionTextAnimation} className="text-white mb-1">
+              I am a Full Stack Developer, and I love to create and 
             </animated.h2>
-            
+            <animated.h2 style={descriptionTextAnimationtwo} className="text-white">
+            learn new things.
+            </animated.h2>
+
           </div>
         </div>
       </div>

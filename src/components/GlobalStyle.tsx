@@ -79,7 +79,6 @@ const GlobalStyle = createGlobalStyle`
     height: fit-content;
   }
   
-  
   .hello-text {
     font-size: 2.5em;
     font-family: Garamond, serif; 
@@ -136,14 +135,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }  
 
-  .pt-custom {
-    padding-top: 10rem;
-  }
-  
-  .pt-hero {
-    padding-top: 1rem;
-  }
-  
   .custom-mt {
     margin-top: 30rem; 
   }
@@ -169,10 +160,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
   
-  .hero-title {
-    font-size: 3rem;
-  }
-  
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -192,36 +179,31 @@ const GlobalStyle = createGlobalStyle`
     background-color: #555;
   }
   
-  .hero-section {
-    position: relative;
-    text-align: center;
-    background-color: #284B63;
-    padding: 2rem 0;
-    padding-top: 6rem;
+  .hero-wrapper {
+    position: absolute; 
+    top: 35%;
+    right: -99%;
+    transform: translateY(-40%);
   }
-
-  .hero-container {
-    position: relative;
-  }
-
+  
   .hero-image {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    border-radius: 3%;
     object-fit: cover;
   }
-
+  
   .hero-title {
     position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -32px;
+    right: calc(61.5% - 150px);
     font-size: 2rem;
     color: white;
     background-color: #3C6E71;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
   }
+  
 
   .contact-section {
     color: #fff;
@@ -279,7 +261,6 @@ const GlobalStyle = createGlobalStyle`
     color: #284B63 !important;
   }
   
-  // GlobalStyle.tsx
 .social-icon {
   transition: transform 0.3s ease;
 }
