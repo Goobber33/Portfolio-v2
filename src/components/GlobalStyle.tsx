@@ -93,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     color: white;
     font-size: 8rem !important;
-    position: relative; /* Add this line */
+    position: relative;
   }
 
   
@@ -138,6 +138,10 @@ const GlobalStyle = createGlobalStyle`
   .custom-mt {
     margin-top: 30rem; 
   }
+
+  .custom-pr {
+    margin-top: 30rem;
+  }
   
   .card {
     box-shadow: 0 2px 4px #3C6E71;
@@ -178,32 +182,50 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-  
+
   .hero-wrapper {
-    position: absolute; 
+    position: absolute;
     top: 35%;
     right: -99%;
     transform: translateY(-40%);
-  }
-  
-  .hero-image {
-    width: 450px;
-    height: 450px;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
-  .hero-title {
+}
+
+.hero-image {
+  width: 450px;
+  height: 450px;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  bottom: -32px;
+  right: calc(61.5% - 150px);
+  font-size: 2rem;
+  color: white;
+  background-color: #3C6E71;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.hero-image-wrapper::after {
+    content: "";
     position: absolute;
-    bottom: -32px;
-    right: calc(61.5% - 150px);
-    font-size: 2rem;
-    color: white;
-    background-color: #3C6E71;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-  }
-  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B0FFF8;
+    opacity: 0.2; /* Adjust opacity here */
+    transition: all 0.3s;
+    z-index: 1;
+    border-radius: 3%;
+}
+
+.hero-image-wrapper:hover::after {
+    opacity: 0;
+}
+
 
   .contact-section {
     color: #fff;

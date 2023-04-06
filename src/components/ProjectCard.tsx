@@ -23,9 +23,10 @@ const projects = [
 
 const ProjectCard: React.FC = () => {
   return (
+    <section id="project" className="project py-5 custom-pr">
     <Row>
       {projects.map((project, index) => (
-        <Col key={index} md={4} className="mb-4">
+        <Col key={index} md={4} className="mb-5">
           <Card className="card h-100">
             <Card.Img variant="top" src={project.imageUrl} />
             <Card.Body>
@@ -36,6 +37,7 @@ const ProjectCard: React.FC = () => {
         </Col>
       ))}
     </Row>
+    </section>
   );
 };
 

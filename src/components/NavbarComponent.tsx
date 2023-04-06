@@ -10,7 +10,7 @@ interface NavbarProps {
 const useTextAnimation = (showText: boolean, delay: number) => {
   return useSpring({
     opacity: showText ? 1 : 0,
-    transform: showText ? 'translateX(0)' : 'translateX(30px)',
+    transform: showText ? 'translateX(0)' : 'translateX(10px)',
     delay: delay,
   });
 };
@@ -58,8 +58,6 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     setExpanded(false);
     setActiveLink(linkName);
   };
-
-  const textAnimation = useTextAnimation(showText, 500);
 
   return (
     <Navbar

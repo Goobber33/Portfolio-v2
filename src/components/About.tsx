@@ -27,7 +27,7 @@ const About: React.FC = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const headerAnimation = useTextAnimation(showText, 300);
-  const hero = useTextAnimation(showText, 2900);
+  const hero = useTextAnimation(showText, 0);
   const paragraph1Animation = useTextAnimation(showText, 400);
   const paragraph2Animation = useTextAnimation(showText, 500);
   const paragraph3Animation = useTextAnimation(showText, 600);
@@ -170,22 +170,22 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Hero Image */}
-               
+
                 <div className="col-md-4">
                   <div className="hero-wrapper">
-                    <div>
-                    <animated.div style={hero}>
-                      <img src={heroImage} alt="Kyle Parks" className="hero-image" />
-                      <h1 className="hero-title">Kyle Parks</h1>
+                    <div className="hero-image-wrapper">
+                      <animated.div style={hero}>
+                        <img src={heroImage} alt="Kyle Parks" className="hero-image" />
+                        <h1 className="hero-title">Kyle Parks</h1>
                       </animated.div>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </Element >
   );
 };
