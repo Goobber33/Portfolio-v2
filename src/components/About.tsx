@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
 import { Element, scroller } from 'react-scroll';
+import heroImage from '../images/hero.jpeg';
 
 const useIconAnimation = (showIcons: boolean, delay: number) => {
   return useSpring({
@@ -80,24 +81,45 @@ const About: React.FC = () => {
               </animated.div>
               <animated.div style={paragraph2Animation} className="about-text-line">
                 <p className="mb-1 text-white fs-4">
-                  I have worked in IT for 3 years, and have developed a passion for Software Development.
+                  I have worked in IT for 3 years, and have developed
                 </p>
               </animated.div>
               <animated.div style={paragraph3Animation} className="about-text-line">
                 <p id="aboutParagraph2" className="mb-1 text-white fs-4">
-                  On my down time, I like to work on personal projects and learn new technologies.
+                  a passion for Software Development. On my down time,
                 </p>
               </animated.div>
               <animated.div style={paragraph4Animation} className="about-text-line">
                 <p className="mb-1 text-white fs-4">
-                  I am working my way through my coding bootcamp,
+                  I like to work on personal projects and learn new
+                </p>
+              </animated.div>
+              <animated.div style={paragraph5Animation} className="about-text-line">
+                <p className="mb-1 text-white fs-4">
+                  technologies. I am working my way through my coding
+                </p>
+              </animated.div>
+              <animated.div style={paragraph5Animation} className="about-text-line">
+                <p className="mb-1 text-white fs-4">
+                  bootcamp, and I intend to learn cloud technologies post
                 </p>
               </animated.div>
               <animated.div style={paragraph5Animation} className="about-text-line">
                 <p className="mb-5 text-white fs-4">
-                  and I intend to learn cloud technologies post bootcamp and pursue certifications in AWS, Azure, and Google cloud.
+                  bootcamp and pursue certifications in AWS, Azure, and Google cloud.
                 </p>
               </animated.div>
+
+              {/* Hero Image */}
+
+              <section className="hero-section">
+                <div className="hero-container pt-hero">
+                  <img src={heroImage} alt="Kyle Parks" className="hero-image" />
+                  <h1 className="hero-title">Kyle Parks</h1>
+                </div>
+              </section>
+
+              {/* These are the icons below the about me text */}
 
               <div className="d-flex justify-content-start mb-5">
                 <animated.div style={reactIconAnimation}>
@@ -123,7 +145,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-    </section>
+      </section>
     </Element >
   );
 };

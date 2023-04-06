@@ -70,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .intro-text-wrapper {
-    padding-top: 10rem;
+    padding-top: 9rem;
     text-align: left;
   }
   
@@ -167,11 +167,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     color: #666;
     line-height: 1.5;
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: auto; 
   }
   
   .hero-title {

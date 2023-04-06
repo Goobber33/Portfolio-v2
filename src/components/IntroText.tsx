@@ -37,12 +37,10 @@ const IntroText: React.FC = () => {
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
           <div className="intro-text-wrapper">
 
-            {/* Animated "Hi my name is" text */}
             <animated.h2
-
               style={{
                 ...helloTextAnimation,
-                fontFamily: 'Garamond, serif', // Sets the font for this text
+                fontFamily: 'Garamond, serif',
               }}
               className="hello-text mb-3 text-white"
             >
@@ -52,13 +50,11 @@ const IntroText: React.FC = () => {
               </span> my name is
             </animated.h2>
 
-            {/* Animated name text */}
-
             <animated.h3
               style={{
                 ...nameTextAnimation,
-                fontFamily: 'Adobe Caslon Pro, serif', // Sets the font for this text
-                fontWeight: 'bold', // Sets the font weight for this text
+                fontFamily: 'Adobe Caslon Pro, serif', 
+                fontWeight: 'bold',
               }}
               className="name-text fs-1 mb-4"
             >
@@ -67,8 +63,6 @@ const IntroText: React.FC = () => {
               </span>
               <span className="underline"></span>
             </animated.h3>
-
-            {/* Animated description text */}
             
             <animated.h2
               style={descriptionTextAnimation}
@@ -76,6 +70,7 @@ const IntroText: React.FC = () => {
             >
               I am a Full Stack Developer, and I love to create and learn new things.
             </animated.h2>
+            
           </div>
         </div>
       </div>
