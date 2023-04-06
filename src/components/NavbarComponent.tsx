@@ -91,9 +91,9 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
             02. About
           </Nav.Link>
           <Nav.Link
-            onClick={() => handleNavLinkClick('projects')}
-            href="#projects"
-            active={activeLink === 'projects'}
+             onClick={() => handleNavLinkClick('projects')}
+             href="#project"
+             active={activeLink === 'projects'}
           >
             03. Projects
           </Nav.Link>
