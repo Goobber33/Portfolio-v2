@@ -300,8 +300,13 @@ const GlobalStyle = createGlobalStyle`
       padding-left: 2rem;
     }
 
+    #about {
+      padding-top: 5rem;
+      padding-left: 2rem;
+    }
+
     .hero-wrapper {
-      right: 70%;
+      right: 3%;
     }
     
     .hero-image {
@@ -310,7 +315,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .hero-title {
-      right: 96%;
+      right: 3%;
     }
 
     .text-muted {
