@@ -26,14 +26,19 @@ const About: React.FC = () => {
   const [showText, setShowText] = useState(false);
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
-  const headerAnimation = useTextAnimation(showText, 100);
-  const paragraph1Animation = useTextAnimation(showText, 300);
+  const headerAnimation = useTextAnimation(showText, 300);
+  const hero = useTextAnimation(showText, 2900);
+  const paragraph1Animation = useTextAnimation(showText, 400);
   const paragraph2Animation = useTextAnimation(showText, 500);
-  const paragraph3Animation = useTextAnimation(showText, 700);
-  const paragraph4Animation = useTextAnimation(showText, 900);
-  const paragraph5Animation = useTextAnimation(showText, 1100);
-  const paragraph6Animation = useTextAnimation(showText, 1300);
-  const paragraph7Animation = useTextAnimation(showText, 1500);
+  const paragraph3Animation = useTextAnimation(showText, 600);
+  const paragraph4Animation = useTextAnimation(showText, 700);
+  const paragraph5Animation = useTextAnimation(showText, 800);
+  const paragraph6Animation = useTextAnimation(showText, 900);
+  const paragraph7Animation = useTextAnimation(showText, 1000);
+  const paragraph8Animation = useTextAnimation(showText, 1100);
+  const paragraph9Animation = useTextAnimation(showText, 1200);
+  const paragraph10Animation = useTextAnimation(showText, 1300);
+  const paragraph11Animation = useTextAnimation(showText, 1500)
 
   const reactIconAnimation = useIconAnimation(showIcons, 1700);
   const htmlIconAnimation = useIconAnimation(showIcons, 1900);
@@ -85,7 +90,7 @@ const About: React.FC = () => {
                     <div style={{ maxWidth: '500px' }}>
                       <animated.div style={paragraph1Animation}>
                         <p id="aboutParagraph1" className="mb-1 text-white fs-4">
-                          I am a Full Stack Developer and IT 
+                          I am a Full Stack Developer and IT
                         </p>
                       </animated.div>
                       <animated.div style={paragraph2Animation}>
@@ -95,31 +100,50 @@ const About: React.FC = () => {
                       </animated.div>
                       <animated.div style={paragraph3Animation}>
                         <p className="mb-1 text-white fs-4">
-                          Development. Having worked in IT for 3 years, 
+                          Development. Having worked in IT for 3 years,
                         </p>
                       </animated.div>
                       <animated.div style={paragraph4Animation}>
                         <p className="mb-1 text-white fs-4">
-                        I spend my downtime working on personal 
+                          I spend my downtime working on personal
                         </p>
                       </animated.div>
                       <animated.div style={paragraph5Animation}>
                         <p className="mb-1 text-white fs-4">
-                          projects and learning new technologies. Currently, I am working my
+                          projects and learning new technologies.
                         </p>
                       </animated.div>
                       <animated.div style={paragraph6Animation}>
                         <p className="mb-1 text-white fs-4">
-                          way through a coding bootcamp, and plan to focus on cloud technologies afterwards.
+                          Currently, I am working my way through a
                         </p>
                       </animated.div>
                       <animated.div style={paragraph7Animation}>
+                        <p className="mb-1 text-white fs-4">
+                          coding bootcamp, and plan to focus on cloud
+                        </p>
+                      </animated.div>
+                      <animated.div style={paragraph8Animation}>
+                        <p className="mb-1 text-white fs-4">
+                          technologies afterwards. My goal is to pursue
+                        </p>
+                      </animated.div>
+                      <animated.div style={paragraph9Animation}>
+                        <p className="mb-1 text-white fs-4">
+                          certifications in AWS, Azure, and Google
+                        </p>
+                      </animated.div>
+                      <animated.div style={paragraph10Animation}>
                         <p className="mb-5 text-white fs-4">
-                          My goal is to pursue certifications in AWS, Azure, and Google Cloud, further enhancing my skillset.
+                          Cloud, further enhancing my skillset.
                         </p>
                       </animated.div>
                     </div>
                   </div>
+
+                  <animated.div style={paragraph11Animation}>
+                    <p className="text-white">Here are some languages I have worked with: </p>
+                  </animated.div>
 
                   {/* These are the icons below the about me text */}
 
@@ -146,21 +170,23 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Hero Image */}
-
+               
                 <div className="col-md-4">
                   <div className="hero-wrapper">
                     <div>
+                    <animated.div style={hero}>
                       <img src={heroImage} alt="Kyle Parks" className="hero-image" />
                       <h1 className="hero-title">Kyle Parks</h1>
+                      </animated.div>
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
-      </section>
-    </Element>
+      </div>
+    </section>
+    </Element >
   );
 };
 
