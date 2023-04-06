@@ -80,8 +80,6 @@ const About: React.FC = () => {
 
                 {/* About me text section */}
 
-
-
                 <div className="col-md-8">
                   <animated.div style={headerAnimation} className="text-start">
                     <h2 className="text-white mb-4 fs-1">About Me</h2>
@@ -170,8 +168,8 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Hero Image */}
-
-                <div className="col-md-4">
+                
+                <div className="col-md-4 col-sm-12">
                   <div className="hero-wrapper">
                     <div className="hero-image-wrapper">
                       <animated.div style={hero}>
@@ -181,6 +179,8 @@ const About: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
+
               </div>
             </div>
           </div>

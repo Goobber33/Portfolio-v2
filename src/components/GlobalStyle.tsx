@@ -142,6 +142,10 @@ const GlobalStyle = createGlobalStyle`
   .custom-pr {
     margin-top: 30rem;
   }
+
+  .contact-section {
+    margin-top: 30rem;
+  }
   
   .card {
     box-shadow: 0 2px 4px #3C6E71;
@@ -188,16 +192,16 @@ const GlobalStyle = createGlobalStyle`
     top: 35%;
     right: -99%;
     transform: translateY(-40%);
-}
+  }
 
-.hero-image {
+  .hero-image {
   width: 450px;
   height: 450px;
   border-radius: 3%;
   object-fit: cover;
-}
+  }
 
-.hero-title {
+  .hero-title {
   position: absolute;
   bottom: -32px;
   right: calc(61.5% - 150px);
@@ -206,26 +210,7 @@ const GlobalStyle = createGlobalStyle`
   background-color: #3C6E71;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-}
-
-.hero-image-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #B0FFF8;
-    opacity: 0.2; /* Adjust opacity here */
-    transition: all 0.3s;
-    z-index: 1;
-    border-radius: 3%;
-}
-
-.hero-image-wrapper:hover::after {
-    opacity: 0;
-}
-
+  }
 
   .contact-section {
     color: #fff;
@@ -283,50 +268,29 @@ const GlobalStyle = createGlobalStyle`
     color: #284B63 !important;
   }
   
-.social-icon {
+  .social-icon {
   transition: transform 0.3s ease;
-}
+  }
 
-.social-icon:hover {
+  .social-icon:hover {
   transform: scale(1.2);
-}
+  }
 
-.social-icon .fa-github {
+  .social-icon .fa-github {
   color: #181717;
-}
+  }
 
-.social-icon .fa-linkedin {
+  .social-icon .fa-linkedin {
   color: #0A66C2;
-}
+  }
 
-.social-icon .fa-instagram {
+  .social-icon .fa-instagram {
   color: #E1306C;
-}
-
-
-  @media screen and (max-width: 991px) {
-    .hero-image {
-      width: 120px;
-      height: 120px;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-    }
   }
 
-  @media screen and (max-width: 991px) {
-    .transparent-menu {
-      background-color: transparent !important;
-    }
-  }
 
   @media screen and (max-width: 767px) {
-    .hello-text {
-      font-size: 1.1em;
-      padding-left: 13rem;
-    }
-  
+
     .name-text {
       font-size: 3rem !important;
     }
@@ -335,6 +299,27 @@ const GlobalStyle = createGlobalStyle`
       padding-top: 5rem;
       padding-left: 2rem;
     }
+
+    .hero-wrapper {
+      right: 70%;
+    }
+    
+    .hero-image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .hero-title {
+      right: 96%;
+    }
+
+    .text-muted {
+      text-align: left;
+      margin-left: 620px;
+      position: absolute;
+      bottom: 0;
+    }
+
   }
 `;
 
