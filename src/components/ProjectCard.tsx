@@ -1,31 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import { useTrail, animated } from 'react-spring';
+import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
     title: 'Project 1',
     description: 'This is a description of Project 1.',
+    githubUrl: 'https://github.com/example/project1'
   },
   {
     title: 'Project 2',
     description: 'This is a description of Project 2.',
+    githubUrl: 'https://github.com/example/project2'
   },
   {
     title: 'Project 3',
     description: 'This is a description of Project 3.',
+    githubUrl: 'https://github.com/example/project3'
   },
   {
     title: 'Project 4',
     description: 'This is a description of Project 4.',
+    githubUrl: 'https://github.com/example/project4'
   },
   {
     title: 'Project 5',
     description: 'This is a description of Project 5.',
+    githubUrl: 'https://github.com/example/project5'
   },
   {
     title: 'Project 6',
     description: 'This is a description of Project 6.',
+    githubUrl: 'https://github.com/example/project6'
   },
 ];
 
@@ -77,6 +84,7 @@ const ProjectCard: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [animationTriggered]);
 
+
   return (
     <section id="projects" className="project py-3 custom-pr">
       <Container fluid style={{ paddingLeft: 16, paddingRight: 23 }}>
@@ -85,6 +93,11 @@ const ProjectCard: React.FC = () => {
             <Col key={index} className="mb-2 custom-col" xl={4} lg={4} md={6} sm={12}>
               <animated.div style={style}>
                 <Card className="card" style={cardStyle}>
+                  <Card.Header className="d-flex justify-content-end">
+                    <a href={projects[index].githubUrl} target="_blank" rel="noopener noreferrer">
+                      <FaGithub size={24} color="#000" />
+                    </a>
+                  </Card.Header>
                   <Card.Body>
                     <Card.Title>{projects[index].title}</Card.Title>
                     <Card.Text>{projects[index].description}</Card.Text>
