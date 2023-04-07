@@ -1,27 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { useSpring, animated } from 'react-spring';
+import { throttle } from 'lodash';
 
 interface NavbarProps {
   style?: React.CSSProperties;
   contactFormRef: React.RefObject<HTMLDivElement>;
 }
 
-const useTextAnimation = (showText: boolean, delay: number) => {
-  return useSpring({
-    opacity: showText ? 1 : 0,
-    transform: showText ? 'translateX(0)' : 'translateX(10px)',
-    delay: delay,
-  });
-};
-
 const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
   const [expanded, setExpanded] = useState(false);
   const [visible, setVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [showText, setShowText] = useState(false);
 
-  const handleScroll = () => {
+  const handleScroll = throttle(() => {
     const currentScrollPosition = window.pageYOffset;
 
     if (currentScrollPosition <= 0) {
@@ -33,16 +24,12 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     }
 
     setScrollPosition(currentScrollPosition);
-  };
+  }, 100);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollPosition]);
-
-  useEffect(() => {
-    setShowText(true);
-  }, []);
 
   const toggleNavbar = () => {
     setExpanded(!expanded);
