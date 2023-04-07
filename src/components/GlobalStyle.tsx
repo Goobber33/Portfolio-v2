@@ -209,7 +209,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #284B63;
   }
   
-  
   ::-webkit-scrollbar-thumb {
     background-color: #555;
     border-radius: 20px;
@@ -243,6 +242,30 @@ const GlobalStyle = createGlobalStyle`
   background-color: #3C6E71;
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  }
+  
+  .custom-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    max-width: 33.33%;
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 1200px) {
+    .custom-col {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-col {
+      max-width: 100%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
   }
 
   .contact-section {

@@ -4,12 +4,12 @@ import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/NavbarComponent';
 import LogoComponent from './components/LogoComponents';
-import Portfolio from './components/Portfolio';
 import About from './components/About';
 import SocialBar from './components/SocialMediaBar';
 import GlobalStyle from './components/GlobalStyle';
 import IntroText from './components/IntroText';
 import ContactForm from './components/ContactForm';
+import ProjectCard from './components/ProjectCard';
 
 // Define the main App component
 
@@ -56,9 +56,10 @@ const App: React.FC = () => {
 
       <About />
 
-      {/* Render the Portfolio component */}
 
-      <Portfolio />
+      {/* Render the ProjectCard component */}
+
+      <ProjectCard />
 
       {/* Render the SocialBar component */}
 
