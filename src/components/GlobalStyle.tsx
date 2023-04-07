@@ -210,9 +210,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #555;
+    background-color: #284B63;
     border-radius: 20px;
-    
   }
   
   ::-webkit-scrollbar-thumb:hover {
