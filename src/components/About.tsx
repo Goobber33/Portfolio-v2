@@ -54,8 +54,7 @@ const About: React.FC = () => {
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         const rect = aboutSection.getBoundingClientRect();
-        const threshold = 0.5;
-        const isInViewport = rect.top <= window.innerHeight * threshold && rect.bottom >= 0;
+        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
         if (isInViewport) {
           setShowIcons(true);
           setShowText(true);
@@ -71,6 +70,7 @@ const About: React.FC = () => {
         }
       }
     };
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
