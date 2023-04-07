@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { useSpring, animated } from 'react-spring';
-import { Element, scroller } from 'react-scroll';
+import { Element } from 'react-scroll';
 import heroImage from '../images/hero.webp';
 
 const useIconAnimation = (showIcons: boolean, delay: number) => {
@@ -27,7 +27,7 @@ const About: React.FC = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const headerAnimation = useTextAnimation(showText, 300);
-  const hero = useTextAnimation(showText, 100);
+  const hero = useTextAnimation(showText, 400);
   const paragraph1Animation = useTextAnimation(showText, 400);
   const paragraph2Animation = useTextAnimation(showText, 500);
   const paragraph3Animation = useTextAnimation(showText, 600);
@@ -38,7 +38,7 @@ const About: React.FC = () => {
   const paragraph8Animation = useTextAnimation(showText, 1100);
   const paragraph9Animation = useTextAnimation(showText, 1200);
   const paragraph10Animation = useTextAnimation(showText, 1300);
-  const paragraph11Animation = useTextAnimation(showText, 1500)
+  const paragraph11Animation = useTextAnimation(showText, 1500);
 
   const reactIconAnimation = useIconAnimation(showIcons, 1700);
   const htmlIconAnimation = useIconAnimation(showIcons, 1900);
@@ -60,6 +60,13 @@ const About: React.FC = () => {
           setShowIcons(true);
           setShowText(true);
           setAnimationTriggered(true);
+
+          // Automatically scroll and center on the page
+          window.scrollTo({
+            top: aboutSection.offsetTop - (window.innerHeight - aboutSection.offsetHeight) / 2,
+            behavior: 'smooth',
+          });
+
           window.removeEventListener('scroll', handleScroll);
         }
       }
@@ -68,7 +75,6 @@ const About: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [animationTriggered]);
-
 
   return (
     <Element name="about">
