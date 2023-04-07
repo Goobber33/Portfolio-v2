@@ -27,7 +27,7 @@ const About: React.FC = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const headerAnimation = useTextAnimation(showText, 300);
-  const hero = useTextAnimation(showText, 0);
+  const hero = useTextAnimation(showText, 500);
   const paragraph1Animation = useTextAnimation(showText, 400);
   const paragraph2Animation = useTextAnimation(showText, 500);
   const paragraph3Animation = useTextAnimation(showText, 600);
@@ -82,60 +82,62 @@ const About: React.FC = () => {
 
                 <div className="col-md-8">
                   <animated.div style={headerAnimation} className="text-start">
-                    <h2 className="text-white mb-4 fs-1">About Me</h2>
+                    <h2 className="text-white mb-4 about-me-heading">About Me</h2>
                   </animated.div>
                   <div className="d-grid gap-0">
                     <div style={{ maxWidth: '500px' }}>
+
                       <animated.div style={paragraph1Animation}>
-                        <p id="aboutParagraph1" className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           I am a Full Stack Developer and IT
                         </p>
                       </animated.div>
                       <animated.div style={paragraph2Animation}>
-                        <p id="aboutParagraph2" className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           Professional with a passion for Software
                         </p>
                       </animated.div>
                       <animated.div style={paragraph3Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           Development. Having worked in IT for 3 years,
                         </p>
                       </animated.div>
                       <animated.div style={paragraph4Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           I spend my downtime working on personal
                         </p>
                       </animated.div>
                       <animated.div style={paragraph5Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           projects and learning new technologies.
                         </p>
                       </animated.div>
                       <animated.div style={paragraph6Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           Currently, I am working my way through a
                         </p>
                       </animated.div>
                       <animated.div style={paragraph7Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           coding bootcamp, and plan to focus on cloud
                         </p>
                       </animated.div>
                       <animated.div style={paragraph8Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           technologies afterwards. My goal is to pursue
                         </p>
                       </animated.div>
                       <animated.div style={paragraph9Animation}>
-                        <p className="mb-1 text-white fs-4">
+                        <p className="mb-1 text-white fs-4 about-me-text">
                           certifications in AWS, Azure, and Google
                         </p>
                       </animated.div>
                       <animated.div style={paragraph10Animation}>
-                        <p className="mb-5 text-white fs-4">
+                        <p className="mb-5 text-white fs-4 about-me-text">
                           Cloud, further enhancing my skillset.
                         </p>
                       </animated.div>
+
                     </div>
                   </div>
 

@@ -33,6 +33,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0 2rem;
   }
 
+  .logo {
+    height: 180px;
+    width: auto;
+  }
+
   .navbar-hidden {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
@@ -73,6 +78,11 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 9rem;
     text-align: left;
   }
+
+  .name-inner {
+    font-family: 'Adobe Caslon Pro, serif';
+    font-weight: bold;
+  }  
   
   .chat-box {
     width: fit-content;
@@ -89,20 +99,19 @@ const GlobalStyle = createGlobalStyle`
     animation: wave 1s linear infinite;
   }
   
-  .name-text {
+  .name-text-inner {
     display: inline-block;
     color: white;
-    font-size: 8rem !important;
+    font-size: 8rem;
     position: relative;
   }
-
   
   .name-inner::after {
     content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
-    width: 100%;
+    width: 80%;
     height: 2px;
     background-color: #B0FFF8;
     transform: scaleX(0);
@@ -134,6 +143,30 @@ const GlobalStyle = createGlobalStyle`
       transform: rotate(20deg);
     }
   }  
+
+  .about-me-heading {
+    font-family: 'Adobe Caslon Pro, serif';
+    font-weight: bold;
+    font-size: 3.5rem;
+    position: relative;
+  }
+
+  .about-me-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 46%;
+    height: 2px;
+    background-color: #B0FFF8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-me-heading:hover::after {
+    transform: scaleX(1);
+  }
 
   .custom-mt {
     margin-top: 30rem; 
@@ -291,8 +324,13 @@ const GlobalStyle = createGlobalStyle`
 
   @media screen and (max-width: 767px) {
 
-    .name-text {
-      font-size: 3rem !important;
+    .logo {
+      height: 90px; 
+      width: auto;
+    }
+
+    .name-text-inner {
+      font-size: 5.5rem;
     }
   
     .intro-text-wrapper {
@@ -305,17 +343,22 @@ const GlobalStyle = createGlobalStyle`
       padding-left: 2rem;
     }
 
+    .about-me-text {
+      font-size: 1rem !important; 
+    }
+
     .hero-wrapper {
+      top: -340px;
       right: 3%;
     }
     
     .hero-image {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
     }
 
     .hero-title {
-      right: 3%;
+      right: 50px;
     }
 
     .text-muted {
@@ -323,6 +366,10 @@ const GlobalStyle = createGlobalStyle`
       margin-left: 620px;
       position: absolute;
       bottom: 0;
+    }
+
+    .fa-icon {
+      font-size: 1.5rem;
     }
 
   }

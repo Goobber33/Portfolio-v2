@@ -54,8 +54,6 @@ const IntroText: React.FC = () => {
             <animated.h3
               style={{
                 ...nameTextAnimation,
-                fontFamily: 'Adobe Caslon Pro, serif',
-                fontWeight: 'bold',
               }}
               className="name-text fs-1 mb-4"
             >

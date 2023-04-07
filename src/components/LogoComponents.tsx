@@ -28,7 +28,7 @@ const LogoComponent = () => {
 
   return (
     <animated.div style={logoAnimation} className="mt-3 mt-md-0">
-      <Image src={logo} alt="Kyle Parks Portfolio" height={180} />
+      <Image src={logo} alt="Kyle Parks Portfolio" className="logo" />
     </animated.div>
   );
 };
