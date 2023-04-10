@@ -148,7 +148,7 @@ const About: React.FC = () => {
                   </div>
 
                   <animated.div style={paragraph11Animation}>
-                    <p className="text-white">Here are some languages and tools I have worked with: </p>
+                    <p className="text-white">Here are some languages I have worked with: </p>
                   </animated.div>
 
                   {/* These are the icons below the about me text */}

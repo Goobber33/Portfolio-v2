@@ -71,6 +71,7 @@ const ContactForm: React.FC = () => {
                     </div>
                     <button type="submit">Send</button>
                 </form>
+                <p>kcparks1234@gmail.com</p>
             </div>
             <Modal
                 isOpen={modalIsOpen}

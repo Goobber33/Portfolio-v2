@@ -51,7 +51,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
       variant="dark"
       expand="lg"
       fixed="top"
-      className={`mb-4 mt-3 mt-md-0 ${visible ? '' : 'navbar-hidden'}`} 
+      className={`mb-4 mt-3 mt-md-0 ${visible ? '' : 'navbar-hidden'}`}
       style={style}
     >
       <Navbar.Toggle
@@ -78,9 +78,9 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
             02. About
           </Nav.Link>
           <Nav.Link
-             onClick={() => handleNavLinkClick('projects')}
-             href="#project"
-             active={activeLink === 'projects'}
+            onClick={() => handleNavLinkClick('projects')}
+            href="#projectsAnchor"
+            active={activeLink === 'projects'}
           >
             03. Projects
           </Nav.Link>

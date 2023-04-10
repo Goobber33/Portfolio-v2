@@ -187,7 +187,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .card:hover {
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
   }
   
   .card .card-title {
@@ -242,14 +242,18 @@ const GlobalStyle = createGlobalStyle`
   padding: 0.5rem 1rem;
   border-radius: 10px;
   }
+
+  .project-card-margin {
+    margin-left: -4.3rem;
+  }  
   
   .custom-col {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
     box-sizing: border-box;
-    max-width: 33.33%;
-    padding: 0 1rem;
+    padding: 0.2rem;
+    padding-left: 3rem;
   }
   
   @media (max-width: 1200px) {

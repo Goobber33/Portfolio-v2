@@ -12,12 +12,12 @@ const projects = [
   {
     title: 'Jobstacle Course',
     description: 'Jobstacle course is a collaborative Full-Stack website that logs you in, tracks what jobs you have applied to, interviewed for, and been denied for and utilizes a user friendly UI to track these. It uses MySQL, Node.js, Handlebars, and many other tools.',
-    githubUrl: 'https://github.com/example/project2'
+    githubUrl: 'https://github.com/chewytaro/Jobstacle-course'
   },
   {
     title: 'Where Wolf',
     description: 'Where Wolf is a collaborative project built to list dog friendly businesses in a searched area. It uses Yelpp-Fusion API to find the businesses, and leaflet API to show these businesses on an interactive map.',
-    githubUrl: 'https://github.com/example/project3'
+    githubUrl: 'https://github.com/jacksonmaltby/where-wolf'
   },
   {
     title: 'E-commerce back-end',
@@ -26,19 +26,19 @@ const projects = [
   },
   {
     title: 'Track Your Employees',
-    description: 'This is a description of Project 5.',
-    githubUrl: 'https://github.com/example/project5'
+    description: 'Using Node.js, this is a CLI application that tracks employees names, job titles, salary, and will also show the department and manager for each employee.',
+    githubUrl: 'https://github.com/Goobber33/Track-your-Employees-'
   },
   {
     title: 'Crazy Weather We Are having',
-    description: 'This is a description of Project 6.',
-    githubUrl: 'https://github.com/example/project6'
+    description: 'This application is a Weather Dashboard. The user can search an area and it will show the current and 10 day weather for that area.',
+    githubUrl: 'https://github.com/Goobber33/Crazy-Weather-We-re-Having'
   },
 ];
 
 const cardStyle = {
   height: '300px',
-  width: '540px'
+  width: '450px'
 };
 
 const useTrailAnimation = (showItems: boolean) => {
@@ -85,14 +85,15 @@ const ProjectCard: React.FC = () => {
   }, [animationTriggered]);
 
 
-  return (
+ return (
     <section id="projects" className="project py-3 custom-pr">
-      <Container fluid style={{ paddingLeft: 16, paddingRight: 23 }}>
+      <Container fluid style={{ paddingLeft: 70 }}>
+        <a id="projectsAnchor" href="#projects" className="anchor"></a>
         <Row noGutters className="justify-content-center">
           {trail.map((style, index) => (
-            <Col key={index} className="mb-2 custom-col" xl={4} lg={4} md={6} sm={12}>
+            <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
               <animated.div style={style}>
-                <Card className="card" style={cardStyle}>
+                <Card className="card custom-card-spacing" style={cardStyle}>                  
                   <Card.Header className="d-flex justify-content-end">
                     <a href={projects[index].githubUrl} target="_blank" rel="noopener noreferrer">
                       <FaGithub size={24} color="#000" />
