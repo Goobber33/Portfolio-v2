@@ -5,32 +5,32 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'This is a description of Project 1.',
-    githubUrl: 'https://github.com/example/project1'
+    title: 'Portfolio v2',
+    description: 'This current site is the second version of my Personal Portfolio, built with React, Bootstrap and Typescript',
+    githubUrl: 'https://github.com/Goobber33/Portfolio-v2'
   },
   {
-    title: 'Project 2',
-    description: 'This is a description of Project 2.',
+    title: 'Jobstacle Course',
+    description: 'Jobstacle course is a collaborative Full-Stack website that logs you in, tracks what jobs you have applied to, interviewed for, and been denied for and utilizes a user friendly UI to track these. It uses MySQL, Node.js, Handlebars, and many other tools.',
     githubUrl: 'https://github.com/example/project2'
   },
   {
-    title: 'Project 3',
-    description: 'This is a description of Project 3.',
+    title: 'Where Wolf',
+    description: 'Where Wolf is a collaborative project built to list dog friendly businesses in a searched area. It uses Yelpp-Fusion API to find the businesses, and leaflet API to show these businesses on an interactive map.',
     githubUrl: 'https://github.com/example/project3'
   },
   {
-    title: 'Project 4',
-    description: 'This is a description of Project 4.',
-    githubUrl: 'https://github.com/example/project4'
+    title: 'E-commerce back-end',
+    description: 'I built the back-end of an eccomerce site. This project uses Node.js and has categories, tags, and product ids.',
+    githubUrl: 'https://github.com/Goobber33/Complete-E-comm-Back-End'
   },
   {
-    title: 'Project 5',
+    title: 'Track Your Employees',
     description: 'This is a description of Project 5.',
     githubUrl: 'https://github.com/example/project5'
   },
   {
-    title: 'Project 6',
+    title: 'Crazy Weather We Are having',
     description: 'This is a description of Project 6.',
     githubUrl: 'https://github.com/example/project6'
   },
