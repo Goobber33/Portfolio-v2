@@ -397,7 +397,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (max-width: 1900px) {
+  @media (min-width: 1900px) {
    
     .project-card-margin {
       margin-right: -5rem ;
