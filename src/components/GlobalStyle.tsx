@@ -397,6 +397,22 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @media (min-width: 1800px) {
+   
+    .project-card-margin {
+      margin-right: -3rem ;
+      left: 3.3rem;
+    }
+  }
+
+  @media (min-width: 1850px) {
+   
+    .project-card-margin {
+      margin-right: -4.5rem ;
+      left: 3.3rem;
+    }
+  }
+
   @media (min-width: 1900px) {
    
     .project-card-margin {
