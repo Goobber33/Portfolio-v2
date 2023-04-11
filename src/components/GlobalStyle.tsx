@@ -438,7 +438,7 @@ const GlobalStyle = createGlobalStyle`
 
     .project-card-margin {
       margin-right: -5rem;
-      left: 3rem;
+      left: 2.5rem;
     } 
 
     .card {
@@ -447,7 +447,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  @media screen and (min-width: 1919px) {
+  @media screen and (min-width: 1920x) {
     .intro-text-wrapper {
       padding-top: 20rem;
     }
