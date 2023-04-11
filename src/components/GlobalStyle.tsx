@@ -255,11 +255,53 @@ const GlobalStyle = createGlobalStyle`
     padding: 0.2rem;
     padding-left: 3rem;
   }
+
+  @media screen and (min-width: 1920px) and (min-height: 1080px) {
+    .intro-text-wrapper {
+      padding-top: 20rem;
+    }
+  
+    .hello-text {
+      font-size: 5em;
+    }
+  
+    .name-text-inner {
+      font-size: 14rem;
+    }
+  
+    .text-white {
+      font-size: 2.5em;
+    }
+
+     .project-card-margin {
+    margin-right: -5rem;
+    left: 3.3rem;
+  } 
+
+  }
+
+  
+  
   
   @media (max-width: 1200px) {
     .custom-col {
       margin-left: 1rem;
       margin-right: 1rem;
+    }
+    .intro-text-wrapper {
+      padding-top: 12rem;
+    }
+  
+    .hello-text {
+      font-size: 4.5em;
+    }
+  
+    .name-text-inner {
+      font-size: 12rem;
+    }
+  
+    .text-white {
+      font-size: 2em;
     }
   }
   
