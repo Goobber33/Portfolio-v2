@@ -168,6 +168,10 @@ const GlobalStyle = createGlobalStyle`
     transform: scaleX(1);
   }
 
+  .text-white-two {
+    color: white;
+  }
+
   .custom-mt {
     margin-top: 30rem; 
   }
@@ -184,6 +188,8 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 2px 4px #3C6E71;
     border-radius: 0.5rem;
     overflow: hidden;
+    max-width: 450px;
+    right: 2.5rem;
   }
   
   .card:hover {
@@ -245,6 +251,7 @@ const GlobalStyle = createGlobalStyle`
 
   .project-card-margin {
     margin-left: -4.3rem;
+    left: 2.8rem;
   }  
   
   .custom-col {
@@ -254,63 +261,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     padding: 0.2rem;
     padding-left: 3rem;
-  }
-
-  @media screen and (min-width: 1919px) and (min-height: 1080px) {
-    .intro-text-wrapper {
-      padding-top: 20rem;
-    }
-  
-    .hello-text {
-      font-size: 5em;
-    }
-  
-    .name-text-inner {
-      font-size: 14rem;
-    }
-  
-    .text-white {
-      font-size: 2.5em;
-    }
-
-     .project-card-margin {
-    margin-right: -5rem;
-    left: 3.3rem;
-  } 
-
-  }
-
-  
-  
-  
-  @media (max-width: 1200px) {
-    .custom-col {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-    .intro-text-wrapper {
-      padding-top: 12rem;
-    }
-  
-    .hello-text {
-      font-size: 4.5em;
-    }
-  
-    .name-text-inner {
-      font-size: 12rem;
-    }
-  
-    .text-white {
-      font-size: 2em;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .custom-col {
-      max-width: 100%;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
   }
 
   .contact-section {
@@ -363,11 +313,6 @@ const GlobalStyle = createGlobalStyle`
   .contact-section button[type='submit']:hover {
     background-color: #284b63;
   }
-
-  .hover-effect:hover {
-    background-color: white !important;
-    color: #284B63 !important;
-  }
   
   .social-icon {
   transition: transform 0.3s ease;
@@ -390,55 +335,93 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  @media screen and (max-width: 767px) {
+  // ----------- Media Queries for mobile devices -------------
 
-    .logo {
-      height: 90px; 
-      width: auto;
-    }
 
-    .name-text-inner {
-      font-size: 5.5rem;
-    }
+  @media (max-width: 1280px) {
   
     .intro-text-wrapper {
-      padding-top: 5rem;
-      padding-left: 2rem;
+      padding-top: 12rem;
+    }
+  
+    .name-text-inner {
+      font-size: 7rem;
+    }
+  
+    .text-white {
+      font-size: 1.8em;
     }
 
-    #about {
-      padding-top: 5rem;
-      padding-left: 2rem;
+    .name-inner::after {
+      width: 93%;
+    }
+
+    .about-me-heading {
+      font-size: 3.5rem;
     }
 
     .about-me-text {
-      font-size: 1rem !important; 
+      font-size: 1.2rem !important;
+    }
+
+    .text-white-two {
+      color: white;
     }
 
     .hero-wrapper {
-      top: -340px;
-      right: 3%;
-    }
-    
-    .hero-image {
-      width: 300px;
-      height: 300px;
+      left: 7rem;
     }
 
     .hero-title {
-      right: 50px;
-    }
-
-    .text-muted {
-      text-align: left;
-      margin-left: 620px;
       position: absolute;
-      bottom: 0;
+      right: calc(52% - 150px);
+      font-size: 2rem;
+      color: white;
+      background-color: #3C6E71;
+      padding: 0.5rem 1rem;
     }
 
-    .fa-icon {
-      font-size: 1.5rem;
+    .hero-image {
+      height:400px;
+      width: 400px;
     }
+
+    .project-card-margin {
+      margin-right: 1.7rem;
+      left: 3rem;
+    } 
+
+    .card {
+      height: 300px !important;
+      width: 350px !important;
+    }
+
+  }
+
+  @media screen and (min-width: 1919px) and (min-height: 1080px) {
+    .intro-text-wrapper {
+      padding-top: 20rem;
+    }
+  
+    .hello-text {
+      font-size: 5em;
+    }
+  
+    .name-text-inner {
+      font-size: 14rem;
+    }
+  
+    .text-white {
+      font-size: 2.5em;
+    }
+
+     .project-card-margin {
+      margin-right: -5rem;
+      left: 3.3rem;
+    } 
+  }
+
+
 
   }
 `;
