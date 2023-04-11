@@ -348,6 +348,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 7rem;
     }
   
+    .text-white {
+      font-size: 1.8em;
+    }
+
     .name-inner::after {
       width: 93%;
     }
@@ -360,6 +364,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.2rem !important;
     }
 
+    .text-white-two {
+      color: white;
+    }
+
     .hero-wrapper {
       left: 7rem;
     }
@@ -368,10 +376,13 @@ const GlobalStyle = createGlobalStyle`
       position: absolute;
       right: calc(52% - 150px);
       font-size: 2rem;
+      color: white;
+      background-color: #3C6E71;
+      padding: 0.5rem 1rem;
     }
 
     .hero-image {
-      height: 400px;
+      height:400px;
       width: 400px;
     }
 
@@ -386,68 +397,15 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (max-width: 1440px) {
-  
-    .intro-text-wrapper {
-      padding-top: 15rem;
-    }
-  
-    .name-text-inner {
-      font-size: 8rem;
-    }
-  
-    .name-inner::after {
-      width: 93%;
-    }
-
-    .about-me-heading {
-      font-size: 3rem;
-    }
-
-    .about-me-text {
-      font-size: 1.1rem !important;
-    }
-
-    .hero-wrapper {
-      left: 7rem;
-    }
-
-    .hero-title {
-      position: absolute;
-      right: calc(54% - 150px);
-      font-size: 1.8rem;
-    }
-
-    .hero-image {
-      height: 430px;
-      width: 430px;
-    }
-
-    .project-card-margin {
-      margin-right: 1rem;
-      left: 3.6rem;
-    } 
-
-    .card {
-      height: 350px !important;
-      width: 390px !important;
-    }
-  }
-
   @media (max-width: 1900px) {
-
+   
     .project-card-margin {
-      margin-right: -5rem;
-      left: 2.5rem;
-    } 
-
-    .card {
-      width: 450px !important;
+      margin-right: -5rem ;
+      left: 3.3rem;
     }
   }
 
-
-  @media screen and (min-width: 1920x) {
+  @media screen and (min-width: 1920px) and (min-height: 1080px) {
     .intro-text-wrapper {
       padding-top: 20rem;
     }
@@ -457,23 +415,19 @@ const GlobalStyle = createGlobalStyle`
     }
   
     .name-text-inner {
-      font-size: 14rem;
+      font-size: 9rem;
     }
   
     .text-white {
       font-size: 2.5em;
     }
 
-    .project-card-margin {
+     .project-card-margin {
       margin-right: -5rem;
-      left: 3.3rem;
+      left: 3.5rem;
     } 
   }
-
-
-
-
-  }
+}
 `;
 
 export default GlobalStyle;
