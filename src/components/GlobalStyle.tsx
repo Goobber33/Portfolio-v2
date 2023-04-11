@@ -256,7 +256,7 @@ const GlobalStyle = createGlobalStyle`
     padding-left: 3rem;
   }
 
-  @media screen and (min-width: 1920px) and (min-height: 1080px) {
+  @media screen and (min-width: 1919px) and (min-height: 1080px) {
     .intro-text-wrapper {
       padding-top: 20rem;
     }
