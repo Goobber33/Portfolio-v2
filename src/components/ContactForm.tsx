@@ -11,29 +11,31 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
+      
         try {
-            const response = await fetch('http://localhost:5000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message }),
-            });
-
-            if (response.ok) {
-                setModalMessage('Email sent successfully!');
-                setModalIsOpen(true);
-            } else {
-                setModalMessage('An error occurred while sending the email.');
-                setModalIsOpen(true);
-            }
-        } catch (error) {
-            console.error(error);
+          const response = await fetch('https://kp-portfolio-back-end.herokuapp.com/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+          });
+      
+          if (response.ok) {
+            setModalMessage('Email sent successfully!');
+            setModalIsOpen(true);
+          } else {
+            const errorData = await response.json(); // Add this line
+            console.error(errorData); // Add this line
             setModalMessage('An error occurred while sending the email.');
             setModalIsOpen(true);
+          }
+        } catch (error) {
+          console.error(error);
+          setModalMessage('An error occurred while sending the email.');
+          setModalIsOpen(true);
         }
-    };
+      };      
 
     return (
         <section className="contact-section" id="contact">

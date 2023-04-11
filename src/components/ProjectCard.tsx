@@ -89,7 +89,7 @@ const ProjectCard: React.FC = () => {
     <section id="projects" className="project py-3 custom-pr">
       <Container fluid style={{ paddingLeft: 70 }}>
         <a id="projectsAnchor" href="#projects" className="anchor"></a>
-        <Row noGutters className="justify-content-center">
+        <Row className="justify-content-center no-gutters">
           {trail.map((style, index) => (
             <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
               <animated.div style={style}>
