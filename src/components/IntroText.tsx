@@ -33,6 +33,7 @@ const IntroText: React.FC = () => {
 
     // Container for the text
 
+    <section className="vh-40 background-#284B63">
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
@@ -74,6 +75,7 @@ const IntroText: React.FC = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

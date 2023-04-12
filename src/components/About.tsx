@@ -27,46 +27,35 @@ const About: React.FC = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const headerAnimation = useTextAnimation(showText, 300);
-  const hero = useTextAnimation(showText, 400);
-  const paragraph1Animation = useTextAnimation(showText, 400);
-  const paragraph2Animation = useTextAnimation(showText, 500);
-  const paragraph3Animation = useTextAnimation(showText, 600);
-  const paragraph4Animation = useTextAnimation(showText, 700);
-  const paragraph5Animation = useTextAnimation(showText, 800);
-  const paragraph6Animation = useTextAnimation(showText, 900);
-  const paragraph7Animation = useTextAnimation(showText, 1000);
-  const paragraph8Animation = useTextAnimation(showText, 1100);
-  const paragraph9Animation = useTextAnimation(showText, 1200);
-  const paragraph10Animation = useTextAnimation(showText, 1300);
-  const paragraph11Animation = useTextAnimation(showText, 1500);
+  const hero = useTextAnimation(showText, 1600);
+  const paragraphAnimation = useTextAnimation(showText, 700);
+  const paragraph11Animation = useTextAnimation(showText, 900);
 
-  const reactIconAnimation = useIconAnimation(showIcons, 1700);
-  const htmlIconAnimation = useIconAnimation(showIcons, 1900);
-  const cssIconAnimation = useIconAnimation(showIcons, 2100);
-  const jsIconAnimation = useIconAnimation(showIcons, 2300);
-  const nodeIconAnimation = useIconAnimation(showIcons, 2500);
-  const npmIconAnimation = useIconAnimation(showIcons, 2700);
+  const reactIconAnimation = useIconAnimation(showIcons, 1100);
+  const htmlIconAnimation = useIconAnimation(showIcons, 1200);
+  const cssIconAnimation = useIconAnimation(showIcons, 1300);
+  const jsIconAnimation = useIconAnimation(showIcons, 1400);
+  const nodeIconAnimation = useIconAnimation(showIcons, 1500);
+  const npmIconAnimation = useIconAnimation(showIcons, 1600);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (animationTriggered) return;
-
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         const rect = aboutSection.getBoundingClientRect();
-        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-        if (isInViewport) {
+        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 2;
+        if (isInViewport && !animationTriggered) {
+          setAnimationTriggered(true);
           setShowIcons(true);
           setShowText(true);
-          setAnimationTriggered(true);
 
           // Automatically scroll and center on the page
           window.scrollTo({
-            top: aboutSection.offsetTop - (window.innerHeight - aboutSection.offsetHeight) / 2,
+            top: window.innerHeight,
             behavior: 'smooth',
           });
-
-          window.removeEventListener('scroll', handleScroll);
+        } else if (!isInViewport) {
+          setAnimationTriggered(false);
         }
       }
     };
@@ -77,7 +66,7 @@ const About: React.FC = () => {
 
   return (
     <Element name="about">
-      <section id="about" className="about py-5 custom-mt">
+      <section id="about" className="about py-5 custom-mt about-fullscreen">
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
@@ -87,58 +76,58 @@ const About: React.FC = () => {
 
                 <div className="col-md-8">
                   <animated.div style={headerAnimation} className="text-start">
-                    <h2 className="text-white mb-4 about-me-heading">About Me</h2>
+                    <h2 className="mb-4 about-me-heading">About Me</h2>
                   </animated.div>
                   <div className="d-grid gap-0">
                     <div style={{ maxWidth: '500px' }}>
 
-                      <animated.div style={paragraph1Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           I am a Full Stack Developer and IT
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph2Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           Professional with a passion for Software
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph3Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           Development. Having worked in IT for 3 years,
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph4Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           I spend my downtime working on personal
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph5Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           projects and learning new technologies.
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph6Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           Currently, I am working my way through a
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph7Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           coding bootcamp, and plan to focus on cloud
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph8Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           technologies afterwards. My goal is to pursue
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph9Animation}>
-                        <p className="mb-1 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-1 fs-4 about-me-text">
                           certifications in AWS, Azure, and Google
                         </p>
                       </animated.div>
-                      <animated.div style={paragraph10Animation}>
-                        <p className="mb-5 text-white fs-4 about-me-text">
+                      <animated.div style={paragraphAnimation}>
+                        <p className="mb-5 fs-4 about-me-text">
                           Cloud, further enhancing my skillset.
                         </p>
                       </animated.div>

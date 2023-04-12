@@ -144,11 +144,20 @@ const GlobalStyle = createGlobalStyle`
     }
   }  
 
+  .about-fullscreen {
+    min-height: 100vh;
+  }  
+
+  .about {
+    background-color: white;
+  }
+
   .about-me-heading {
     font-family: 'Adobe Caslon Pro, serif';
     font-weight: bold;
     font-size: 3.5rem;
     position: relative;
+    color: #284B63;
   }
 
   .about-me-heading::after {
@@ -168,12 +177,16 @@ const GlobalStyle = createGlobalStyle`
     transform: scaleX(1);
   }
 
+  .about-me-text {
+    color: #284B63;
+  }
+
   .text-white-two {
-    color: white;
+    color: #284B63;
   }
 
   .custom-mt {
-    margin-top: 30rem; 
+    margin-top:16.5rem; 
   }
 
   .custom-pr {
@@ -208,21 +221,9 @@ const GlobalStyle = createGlobalStyle`
   }
   
   ::-webkit-scrollbar {
-    width: 12px;
+    display: none;
   }
   
-  ::-webkit-scrollbar-track {
-    background-color: #284B63;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #284B63;
-    border-radius: 20px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
 
   .hero-wrapper {
     position: absolute;
@@ -333,8 +334,7 @@ const GlobalStyle = createGlobalStyle`
   .social-icon .fa-instagram {
   color: #E1306C;
   }
-
-
+  
   // ----------- Media Queries for mobile devices -------------
 
 

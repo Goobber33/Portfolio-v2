@@ -18,7 +18,7 @@ const SocialBar: React.FC = () => {
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </a>
       </div>
-      <div className="text-muted">© 2023 Kyle Parks</div>
+      <div className="text-muted m-1">© 2023 Kyle Parks</div>
     </Navbar>
   );
 };
