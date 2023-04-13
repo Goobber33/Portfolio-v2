@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 #root {
     background-color: #284B63;
     min-height: 350vh;
+    width: 100%;
   }
   
   body {
@@ -190,7 +191,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .custom-pr {
-    margin-top: 30rem;
+    margin-top: 10rem;
+    min-height: 50vh;
   }
 
   .contact-section {

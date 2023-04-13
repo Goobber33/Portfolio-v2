@@ -7,7 +7,7 @@ import LogoComponent from './components/LogoComponents';
 import About from './components/About';
 import SocialBar from './components/SocialMediaBar';
 import GlobalStyle from './components/GlobalStyle';
-import IntroText from './components/IntroText';
+import Intro from './components/IntroText';
 import ContactForm from './components/ContactForm';
 import ProjectCard from './components/ProjectCard';
 
@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
       {/* Render the IntroText component */}
 
-      <IntroText />
+      <Intro />
 
       {/* Render the About component */}
 

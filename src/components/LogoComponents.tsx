@@ -27,7 +27,7 @@ const LogoComponent = () => {
   const logoAnimation = useLogoAnimation(showLogo, 200);
 
   return (
-    <animated.div style={logoAnimation} className="mt-3 mt-md-0">
+    <animated.div style={logoAnimation} className="mt-3 mt-md-0 logo">
       <Image src={logo} alt="Kyle Parks Portfolio" className="logo" />
     </animated.div>
   );

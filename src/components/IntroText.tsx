@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { Element } from 'react-scroll';
 
 // Custom hook to animate text
 
@@ -15,12 +16,7 @@ const useTextAnimation = (showText: boolean, delay: number) => {
 
 const IntroText: React.FC = () => {
   const [showText, setShowText] = useState(false);
-
-  // Sets the "showText" state to true when the component mounts
-
-  useEffect(() => {
-    setShowText(true);
-  }, []);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
 
   // Animations for the different parts of the text
 
@@ -29,11 +25,41 @@ const IntroText: React.FC = () => {
   const descriptionTextAnimation = useTextAnimation(showText, 900);
   const descriptionTextAnimationtwo = useTextAnimation(showText, 1100);
 
-  return (
+  // Sets the "showText" state to true when the component mounts
+  useEffect(() => {
+    setShowText(true);
+  }, []);
+
+  // Scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const introTextSection = document.getElementById('introText');
+      if (introTextSection) {
+        const rect = introTextSection.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (isInViewport && !animationTriggered) {
+          setAnimationTriggered(true);
+          setShowText(true);
+
+          // Automatically scroll and center on the page
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        } else if (!isInViewport) {
+          setAnimationTriggered(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [animationTriggered]);
 
     // Container for the text
-
-    <section className="vh-40 background-#284B63">
+    return (
+    <Element name="introText">
+    <section id="introText" className="vh-40 background-#284B63">
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
@@ -76,6 +102,7 @@ const IntroText: React.FC = () => {
       </div>
     </div>
     </section>
+    </Element>
   );
 };
 
