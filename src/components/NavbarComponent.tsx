@@ -51,7 +51,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
       variant="dark"
       expand="lg"
       fixed="top"
-      className={`mb-4 mt-3 nav mt-md-0 ${visible ? '' : 'navbar-hidden'}`}
+      className={`mb-4 mt-3 mt-md-0 ${visible ? '' : 'navbar-hidden'}`}
       style={style}
     >
       <Navbar.Toggle
@@ -104,6 +104,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
             05. Resume
           </Nav.Link>
         </Nav>
+
 
       </Navbar.Collapse>
     </Navbar>

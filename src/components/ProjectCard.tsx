@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import { useTrail, animated } from 'react-spring';
 import { FaGithub } from 'react-icons/fa';
+import { Element } from 'react-scroll';
 
 const projects = [
   {
@@ -86,6 +87,7 @@ const ProjectCard: React.FC = () => {
 
 
  return (
+  <Element name="ProjectCard">
     <section id="projects" className="project py-3 custom-pr">
       <Container fluid style={{ paddingLeft: 70 }}>
         <a id="projectsAnchor" href="#projects" className="anchor"></a>
@@ -110,6 +112,7 @@ const ProjectCard: React.FC = () => {
         </Row>
       </Container>
     </section>
+    </Element>
   );
 };
 

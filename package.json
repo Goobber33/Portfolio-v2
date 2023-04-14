@@ -20,9 +20,9 @@
     "react-modal": "^3.16.1",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
-    "react-scroll-into-view-if-needed": "^3.0.1",
     "react-spring": "^9.7.1",
     "react-typewriter-hook": "^1.0.1",
+    "scroll": "^3.0.1",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
