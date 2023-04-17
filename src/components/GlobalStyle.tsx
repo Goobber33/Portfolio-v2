@@ -14,6 +14,25 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     overflow: hidden;
   }
+
+  .progress-container {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 50%;
+    background-color: gray;
+    z-index: 1000;
+    border-radius: 9px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    background-color: #B0FFF8;
+    transition: height 0.5s ease-out;
+    border-radius: 6px;
+  }
   
   header {
     padding: 2rem 0;
@@ -77,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .intro-text-wrapper {
-    padding-top: 9rem;
+    padding-top: 6.5rem;
     text-align: left;
   }
 

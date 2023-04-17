@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
-import { useTrail, animated } from 'react-spring';
 import { FaGithub } from 'react-icons/fa';
+import { scroller } from 'react-scroll';
 import { Element } from 'react-scroll';
+import { throttle } from 'lodash';
+
 
 const projects = [
   {
@@ -42,78 +44,98 @@ const cardStyle = {
   width: '450px'
 };
 
-const useTrailAnimation = (showItems: boolean) => {
-  return useTrail(projects.length, {
-    opacity: showItems ? 1 : 0,
-    transform: showItems ? 'translateY(0)' : 'translateY(100px)',
-    delay: 500,
-    from: { opacity: 0, transform: 'translateY(100px)' },
-  });
-};
+const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
-const ProjectCard: React.FC = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [visible, setVisible] = useState(true);
 
-  const [showItems, setShowItems] = useState(false);
-  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const handleScroll = throttle(() => {
+    const currentScrollPosition = window.pageYOffset;
 
-  const trail = useTrailAnimation(showItems);
+    if (currentScrollPosition <= 0) {
+      setVisible(true);
+    } else if (currentScrollPosition > scrollPosition) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setScrollPosition(currentScrollPosition);
+  }, 100);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (animationTriggered) return;
-
-      const aboutSection = document.getElementById('projects');
-      if (aboutSection) {
-        const rect = aboutSection.getBoundingClientRect();
-        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-        if (isInViewport) {
-          setShowItems(true);
-          setAnimationTriggered(true);
-
-          // Automatically scroll and center on the page
-          window.scrollTo({
-            top: aboutSection.offsetTop - (window.innerHeight - aboutSection.offsetHeight) / 2,
-            behavior: 'smooth',
-          });
-
-          window.removeEventListener('scroll', handleScroll);
-        }
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [animationTriggered]);
+  }, [scrollPosition]);
 
+  const [activeLink, setActiveLink] = useState<string>('ContactForm');
 
- return (
-  <Element name="ProjectCard">
-    <section id="projects" className="project py-3 custom-pr">
-      <Container fluid style={{ paddingLeft: 70 }}>
-        <a id="projectsAnchor" href="#projects" className="anchor"></a>
-        <Row noGutters className="justify-content-center">
-          {trail.map((style, index) => (
-            <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
-              <animated.div style={style}>
-                <Card className="card custom-card-spacing" style={cardStyle}>                  
-                  <Card.Header className="d-flex justify-content-end">
-                    <a href={projects[index].githubUrl} target="_blank" rel="noopener noreferrer">
-                      <FaGithub size={24} color="#000" />
-                    </a>
-                  </Card.Header>
-                  <Card.Body>
-                    <Card.Title>{projects[index].title}</Card.Title>
-                    <Card.Text>{projects[index].description}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </animated.div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
-    </Element>
+  const handleNavLinkClick = (linkName: string) => {
+    setActiveLink(linkName);
+    scroller.scrollTo(linkName, {
+      duration: 0,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: 2,
+    });
+  };
+
+  const handleScrollUp = () => {
+    scroller.scrollTo('about', {
+      duration: 0,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: 0, // increase this value to scroll farther up
+    });
+  };
+
+  return (
+    <div ref={ref}>
+      <Element name="projectCard">
+        <section id="ProjectCard" className="project py-3 custom-pr">
+
+          <div
+            onClick={handleScrollUp}
+            className="d-flex justify-content-center arrow-container"
+          >
+            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-up fs-1 text-white"></i>
+            </span>
+          </div>
+
+          <Container fluid style={{ paddingLeft: 70 }}>
+            <a id="projectsAnchor" href="#projects" className="anchor"></a>
+            <Row noGutters className="justify-content-center">
+              {projects.map((project, index) => (
+                <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
+                  <Card className="card custom-card-spacing" style={cardStyle}>
+                    <Card.Header className="d-flex justify-content-end">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <FaGithub size={24} color="#000" />
+                      </a>
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>{project.title}</Card.Title>
+                      <Card.Text>{project.description}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+
+          <div
+            onClick={() => handleNavLinkClick('contact')}
+            className="d-flex justify-content-center arrow-container">
+            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-down fs-1 text-white"></i>
+            </span>
+          </div>
+
+        </section>
+      </Element>
+    </div>
   );
-};
+});
 
 export default ProjectCard;

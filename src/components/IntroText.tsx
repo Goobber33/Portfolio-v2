@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Element } from 'react-scroll';
 import { throttle } from 'lodash';
@@ -13,7 +13,8 @@ const useTextAnimation = (showText: boolean, delay: number) => {
   });
 };
 
-const IntroText: React.FC = () => {
+
+const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
   const [showText, setShowText] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -54,12 +55,13 @@ const IntroText: React.FC = () => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 2, // Adjust the scroll position by a fixed offset in pixels
+      offset: 2,
     });
   };
 
 
   return (
+    <div ref={ref}>
     <Element name="introText">
       <section id="introText" className="vh-40 background-#284B63">
         <div className="container-fluid custom">
@@ -106,17 +108,16 @@ const IntroText: React.FC = () => {
 
         <div
           onClick={() => handleNavLinkClick('about')}
-          className="d-flex justify-content-center">
+          className="d-flex justify-content-center arrow-container">
           <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-            <span role="img" aria-label="downward arrow" className="fs-1 text-white">
-              ⬇️
-            </span>
+            <i className="fa fa-angle-down fs-1 text-white"></i>
           </span>
         </div>
 
       </section>
     </Element>
-  );
-};
+    </div>
+   )
+  });
 
 export default IntroText;

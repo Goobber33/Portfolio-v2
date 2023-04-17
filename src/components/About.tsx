@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJs, faNode, faNpm } from '@fortawesome/free-brands-svg-icons';
 import { Element } from 'react-scroll';
@@ -7,9 +7,7 @@ import { scroller } from 'react-scroll';
 import { throttle } from 'lodash';
 
 
-
-
-const About: React.FC = () => {
+const About = forwardRef<HTMLDivElement>((_, ref) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -41,109 +39,128 @@ const About: React.FC = () => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 2, // Adjust the scroll position by a fixed offset in pixels
+      offset: 0,
+    });
+  };
+
+  const handleScrollUp = () => {
+    scroller.scrollTo('introText', {
+      duration: 0,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -180, // increase this value to scroll farther up
     });
   };
 
   return (
-    <Element name="about">
-      <section id="about" className="about py-5 custom-mt about-fullscreen">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
-              <div className="row">
+    <div ref={ref}>
+      <Element name="about">
+        <section id="about" className="about py-5 custom-mt about-fullscreen">
 
-                {/* About me text section */}
+          <div
+            onClick={handleScrollUp}
+            className="d-flex justify-content-center arrow-container"
+          >
+            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-up fs-1 text-black"></i>
+            </span>
+          </div>
 
-                <div className="col-md-8">
-                  <div className="text-start">
-                    <h2 className="mb-4 about-me-heading">About Me</h2>
+
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
+                <div className="row">
+
+                  {/* About me text section */}
+
+                  <div className="col-md-8">
+                    <div className="text-start">
+                      <h2 className="mb-4 about-me-heading">About Me</h2>
+                    </div>
+                    <div className="d-grid gap-0">
+                      <div style={{ maxWidth: '500px' }}>
+
+                        <p className="mb-1 fs-4 about-me-text">
+                          I am a Full Stack Developer and IT
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          Professional with a passion for Software
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          Development. Having worked in IT for 3 years,
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          I spend my downtime working on personal
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          projects and learning new technologies.
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          Currently, I am working my way through a
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          coding bootcamp, and plan to focus on cloud
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          technologies afterwards. My goal is to pursue
+                        </p>
+                        <p className="mb-1 fs-4 about-me-text">
+                          certifications in AWS, Azure, and Google
+                        </p>
+                        <p className="mb-5 fs-4 about-me-text">
+                          Cloud, further enhancing my skillset.
+                        </p>
+
+                      </div>
+                    </div>
+
+                    <p className="text-white-two">Here are some languages I have worked with: </p>
+
+                    {/* These are the icons below the about me text */}
+
+                    <div className="d-flex justify-content-start mb-5">
+                      <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
+                      <FontAwesomeIcon icon={faHtml5} size="3x" className="mx-3 my-3 fa-icon" color="#f06529" />
+                      <FontAwesomeIcon icon={faCss3} size="3x" className="mx-3 my-3 fa-icon" color="#2965f1" />
+                      <FontAwesomeIcon icon={faJs} size="3x" className="mx-3 my-3 fa-icon" color="#f7df1e" />
+                      <FontAwesomeIcon icon={faNode} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+                      <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
+                    </div>
                   </div>
-                  <div className="d-grid gap-0">
-                    <div style={{ maxWidth: '500px' }}>
+                  {/* Hero Image */}
 
-                      <p className="mb-1 fs-4 about-me-text">
-                        I am a Full Stack Developer and IT
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        Professional with a passion for Software
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        Development. Having worked in IT for 3 years,
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        I spend my downtime working on personal
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        projects and learning new technologies.
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        Currently, I am working my way through a
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        coding bootcamp, and plan to focus on cloud
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        technologies afterwards. My goal is to pursue
-                      </p>
-                      <p className="mb-1 fs-4 about-me-text">
-                        certifications in AWS, Azure, and Google
-                      </p>
-                      <p className="mb-5 fs-4 about-me-text">
-                        Cloud, further enhancing my skillset.
-                      </p>
-
+                  <div className="col-md-4 col-sm-12">
+                    <div className="hero-wrapper">
+                      <div className="hero-image-wrapper">
+                        <img
+                          src={heroImage}
+                          alt="Kyle Parks"
+                          className="hero-image"
+                          loading="lazy"
+                        />
+                        <h1 className="hero-title">Kyle Parks</h1>
+                      </div>
                     </div>
                   </div>
 
-                  <p className="text-white-two">Here are some languages I have worked with: </p>
-
-                  {/* These are the icons below the about me text */}
-
-                  <div className="d-flex justify-content-start mb-5">
-                    <FontAwesomeIcon icon={faReact} size="3x" className="mx-3 my-3 fa-icon" color="#61dafb" />
-                    <FontAwesomeIcon icon={faHtml5} size="3x" className="mx-3 my-3 fa-icon" color="#f06529" />
-                    <FontAwesomeIcon icon={faCss3} size="3x" className="mx-3 my-3 fa-icon" color="#2965f1" />
-                    <FontAwesomeIcon icon={faJs} size="3x" className="mx-3 my-3 fa-icon" color="#f7df1e" />
-                    <FontAwesomeIcon icon={faNode} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
-                    <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
-                  </div>
                 </div>
-                {/* Hero Image */}
-
-                <div className="col-md-4 col-sm-12">
-                  <div className="hero-wrapper">
-                    <div className="hero-image-wrapper">
-                      <img
-                        src={heroImage}
-                        alt="Kyle Parks"
-                        className="hero-image"
-                        loading="lazy"
-                      />
-                      <h1 className="hero-title">Kyle Parks</h1>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
-        </div>
 
-        <div
-          onClick={() => handleNavLinkClick('ProjectCard')}
-          className="d-flex justify-content-center">
-          <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-            <span role="img" aria-label="downward arrow" className="fs-1 text-white">
-              ⬇️
+          <div
+            onClick={() => handleNavLinkClick('ProjectCard')}
+            className="d-flex justify-content-center arrow-container">
+            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-down fs-1 text-black"></i>
             </span>
-          </span>
-        </div>
+          </div>
 
-      </section>
-    </Element>
-
-);
-};
+        </section>
+      </Element>
+    </div>
+  )
+});
 
 export default About;
