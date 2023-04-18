@@ -151,10 +151,17 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
 
           <div
             onClick={() => handleNavLinkClick('ProjectCard')}
-            className="d-flex justify-content-center arrow-container">
-            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-down fs-1 text-black"></i>
+
+            className="d-flex justify-content-center arrowthree-container">
+
+            <span className="arrow-down-two mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-down text-black"></i>
             </span>
+
+            <span className="pcard mt-1">
+                Projects
+              </span>
+
           </div>
 
         </section>

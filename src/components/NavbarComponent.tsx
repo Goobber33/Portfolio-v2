@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { throttle } from 'lodash';
 
 interface NavbarProps {
   style?: React.CSSProperties;

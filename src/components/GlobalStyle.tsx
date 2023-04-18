@@ -57,13 +57,33 @@
 
     .arrowone-container {
       margin-top: 10rem;
-    }    
+    }
+
+    .arrowthree-container {
+      margin-top -1rem;
+    }
   
     .arrow-down-one {
       font-size: 5rem;
       animation: arrow-bounce 1.2s;
       animation-iteration-count: 3;
       margin-top: 1rem;
+    }
+
+    .arrow-down-two {
+      font-size: 5rem;
+      animation: arrow-bounce 1.2s;
+      animation-iteration-count: 3;
+      margin-top: 1rem;
+    }
+
+    .arrowone-container:hover .about-me {
+      opacity: 1;
+      animation: gradient-animation 4s forwards;
+    }
+  
+    .arrowone-container:hover .about-me.visible {
+      animation: gradient-animation 4s forwards;
     }
   
     .about-me {
@@ -100,15 +120,6 @@
       60% {
         transform: translateY(-5px);
       }
-    }
-  
-    .arrowone-container:hover .about-me {
-      opacity: 1;
-      animation: gradient-animation 4s forwards;
-    }
-  
-    .arrowone-container:hover .about-me.visible {
-      animation: gradient-animation 4s forwards;
     }
   
     .logo {
