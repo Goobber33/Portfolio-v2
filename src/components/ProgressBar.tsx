@@ -49,6 +49,9 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ sections = [] }) => {
   return (
     <div className="progress-container">
       <div className="progress-bar" style={{ height: `${calculateProgress()}%` }}></div>
+      <div className="progress-percent" style={{ top: `calc(${calculateProgress()}% - 60px)`, transform: `translateX(${calculateProgress()}%)`, color: '#B0FFF8' }}>
+        {calculateProgress() ? `${Math.round(calculateProgress())}%` : '0%'}
+      </div>
     </div>
   );
 };
