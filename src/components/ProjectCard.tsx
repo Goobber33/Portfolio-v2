@@ -44,6 +44,17 @@ const cardStyle = {
   width: '450px'
 };
 
+const titleStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  marginBottom: 0,
+};
+
+const logoStyle = {
+  display: 'flex',
+  alignItems: 'center',
+};
+
 const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -85,7 +96,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 0, // increase this value to scroll farther up
+      offset: 0,
     });
   };
 
@@ -107,18 +118,24 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
             <a id="projectsAnchor" href="#projects" className="anchor"></a>
             <Row noGutters className="justify-content-center">
               {projects.map((project, index) => (
+
                 <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
+
                   <Card className="card custom-card-spacing" style={cardStyle}>
-                    <Card.Header className="d-flex justify-content-end">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+
+                    <Card.Header className="d-flex justify-content-between align-items-center">
+                      <Card.Title style={titleStyle}>{project.title}</Card.Title>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style={logoStyle}>
                         <FaGithub size={24} color="#000" />
                       </a>
                     </Card.Header>
+
                     <Card.Body>
-                      <Card.Title>{project.title}</Card.Title>
                       <Card.Text>{project.description}</Card.Text>
                     </Card.Body>
+
                   </Card>
+
                 </Col>
               ))}
             </Row>

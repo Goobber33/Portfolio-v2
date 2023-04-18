@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   .progress-container {
     position: fixed;
     top: 50%;
-    right: 50px;
+    right: 3.8rem;
     transform: translateY(-50%);
     width: 9px;
     height: 50%;
@@ -223,7 +223,8 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 0.5rem;
     overflow: hidden;
     max-width: 450px;
-    right: 2.5rem;
+    right: 2.7rem;
+    top: 4rem;
   }
   
   .card:hover {

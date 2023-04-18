@@ -48,7 +48,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: -180, // increase this value to scroll farther up
+      offset: -180,
     });
   };
 
