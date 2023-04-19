@@ -5,7 +5,11 @@ import { scroller } from 'react-scroll';
 import { Element } from 'react-scroll';
 import { throttle } from 'lodash';
 import image1 from '../images/first.jpg';
-import image2 from '../images/second.jpg'
+import image2 from '../images/second.jpg';
+import image3 from '../images/third.jpg';
+import image4 from '../images/fourth.jpg';
+import image5 from '../images/fifth.jpg';
+import image6 from '../images/sixth.jpg';
 
 
 const projects = [
@@ -24,22 +28,26 @@ const projects = [
   {
     title: 'Where Wolf',
     description: 'Where Wolf is a collaborative project built to list dog friendly businesses in a searched area. It uses Yelpp-Fusion API to find the businesses, and leaflet API to show these businesses on an interactive map.',
-    githubUrl: 'https://github.com/jacksonmaltby/where-wolf'
+    githubUrl: 'https://github.com/jacksonmaltby/where-wolf',
+    image: image3
   },
   {
     title: 'E-commerce back-end',
     description: 'I built the back-end of an eccomerce site. This project uses Node.js and has categories, tags, and product ids.',
-    githubUrl: 'https://github.com/Goobber33/Complete-E-comm-Back-End'
+    githubUrl: 'https://github.com/Goobber33/Complete-E-comm-Back-End',
+    image: image4
   },
   {
     title: 'Track Your Employees',
     description: 'Using Node.js, this is a CLI application that tracks employees names, job titles, salary, and will also show the department and manager for each employee.',
-    githubUrl: 'https://github.com/Goobber33/Track-your-Employees-'
+    githubUrl: 'https://github.com/Goobber33/Track-your-Employees-',
+    image: image5
   },
   {
     title: 'Crazy Weather We Are having',
     description: 'This application is a Weather Dashboard. The user can search an area and it will show the current and 10 day weather for that area.',
-    githubUrl: 'https://github.com/Goobber33/Crazy-Weather-We-re-Having'
+    githubUrl: 'https://github.com/Goobber33/Crazy-Weather-We-re-Having',
+    image: image6
   },
 ];
 
