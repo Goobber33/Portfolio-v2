@@ -69,7 +69,11 @@
     }
 
     .arrowfour-container {
-      margin-top: -1.5rem;
+      margin-top: -1.4rem;
+    }
+
+    .arrowfive-container {
+      margin-top: 2rem;
     }
 
     .arrow-up-one {
@@ -78,7 +82,6 @@
 
     .arrow-up-two {
       font-size: 5rem;
-      margin-bottom: -1rem;
     }
 
     .arronec, .arrthreec {
@@ -93,6 +96,11 @@
     }
 
     .arrow-down-two {
+      font-size: 5rem;
+      margin-top: 1rem;
+    }
+
+    .arrow-down-three {
       font-size: 5rem;
       margin-top: 1rem;
     }
@@ -148,6 +156,46 @@
       opacity: 0;
       transition: opacity 0.3s ease, color 0.3s ease;
     }
+
+    .abouttext {
+      position: absolute;
+      margin-top: 5.4rem;
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, white 0%, #B0FFF8 30%);
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .contacttext {
+      position: absolute;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, white 0%, #B0FFF8 30%);
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .arrowfour-container:hover .abouttext {
+      opacity: 1;
+      animation: gradient-animation 4s forwards;
+    }
+  
+    .arrowfour-container:hover .about-text.visible {
+      animation: gradient-animation 4s forwards;
+    }
+
+    .arrowfive-container:hover .contacttext {
+      opacity: 1;
+      animation: gradient-animation 4s forwards;
+    }
+  
+    .arrowfive-container:hover .contacttext.visible {
+      animation: gradient-animation 4s forwards;
+    }
   
     @keyframes gradient-animation {
       0% {
@@ -195,8 +243,8 @@
     }  
 
     .hide-on-desktop {
-    display: none;
-  }
+      display: none;
+    }
 
     .logo-box {
       display: inline-block;
@@ -343,23 +391,44 @@
       overflow: hidden;
       max-width: 450px;
       right: 2.7rem;
-      top: 4rem;
-    }
-    
-    .card:hover {
-    transform: translateY(-5px);
+      top: 2rem;
     }
     
     .card .card-title {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      color: #284B63;
     }
     
     .card .card-text {
       font-size: 1rem;
-      color: #666;
+      color: #284B63;
       line-height: 1.5;
+      opacity: 0;
     }
+
+    .cardTextWrapper {
+      position: absolute;
+      bottom: -50%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      height: 0%;
+      opacity: 0;
+    }    
+    
+    .card:hover .cardTextWrapper {
+      height: 70%;
+      bottom: 25%;
+      opacity: 1;
+    }    
+
+    .card:hover .card-text {
+      opacity: 1;
+    }    
     
     ::-webkit-scrollbar {
       display: none;

@@ -4,18 +4,22 @@ import { FaGithub } from 'react-icons/fa';
 import { scroller } from 'react-scroll';
 import { Element } from 'react-scroll';
 import { throttle } from 'lodash';
+import image1 from '../images/first.jpg';
+import image2 from '../images/second.jpg'
 
 
 const projects = [
   {
     title: 'Portfolio v2',
     description: 'This current site is the second version of my Personal Portfolio, built with React, Bootstrap and Typescript',
-    githubUrl: 'https://github.com/Goobber33/Portfolio-v2'
+    githubUrl: 'https://github.com/Goobber33/Portfolio-v2',
+    image: image1
   },
   {
     title: 'Jobstacle Course',
     description: 'Jobstacle course is a collaborative Full-Stack website that logs you in, tracks what jobs you have applied to, interviewed for, and been denied for and utilizes a user friendly UI to track these. It uses MySQL, Node.js, Handlebars, and many other tools.',
-    githubUrl: 'https://github.com/chewytaro/Jobstacle-course'
+    githubUrl: 'https://github.com/chewytaro/Jobstacle-course',
+    image: image2
   },
   {
     title: 'Where Wolf',
@@ -54,6 +58,25 @@ const logoStyle = {
   display: 'flex',
   alignItems: 'center',
 };
+
+const imgWrapper: React.CSSProperties = {
+  width: '100%',
+  height: '100%',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  position: 'relative',
+};
+
+const cardTextWrapper: React.CSSProperties = {
+  position: 'absolute',
+  bottom: 0,
+  width: '100%',
+  padding: '10px',
+  textAlign: 'center',
+  transition: 'all 0.3s ease',
+  overflow: 'hidden',
+};
+
 
 const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
@@ -110,7 +133,11 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
             <span className="arrow-up-two mt-1" style={{ cursor: 'pointer' }}>
               <i className="fa fa-angle-up text-white"></i>
             </span>
-            
+
+            <span className="abouttext">
+              About
+            </span>
+
           </div>
 
           <Container fluid style={{ paddingLeft: 70 }}>
@@ -121,7 +148,6 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
                 <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
 
                   <Card className="card custom-card-spacing" style={cardStyle}>
-
                     <Card.Header className="d-flex justify-content-between align-items-center">
                       <Card.Title style={titleStyle}>{project.title}</Card.Title>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style={logoStyle}>
@@ -129,10 +155,14 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
                       </a>
                     </Card.Header>
 
-                    <Card.Body>
-                      <Card.Text>{project.description}</Card.Text>
+                    <Card.Body style={{ position: 'relative', padding: 0 }}>
+                      <div style={{ ...imgWrapper, backgroundImage: `url(${project.image})` }} className="imgWrapper">
+                        <div className="cardTextWrapper" style={cardTextWrapper}>
+                          <Card.Text>{project.description}</Card.Text>
+                        </div>
+                      </div>
                     </Card.Body>
-
+                    
                   </Card>
 
                 </Col>
@@ -140,12 +170,16 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
             </Row>
           </Container>
 
-          <div
-            onClick={() => handleNavLinkClick('contact')}
-            className="d-flex justify-content-center arrow-container">
-            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-down fs-1 text-white"></i>
+          <div onClick={() => handleNavLinkClick('contact')} className="d-flex justify-content-center arrowfive-container">
+
+            <span className="arrow-down-three mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-down text-white"></i>
             </span>
+
+            <span className="contacttext">
+              Contact
+            </span>
+
           </div>
 
         </section>
