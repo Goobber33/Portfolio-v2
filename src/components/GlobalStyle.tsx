@@ -69,10 +69,12 @@
 
     .arrow-up-one {
       font-size: 5rem;
-      animation: arrow-bounce 1.2s;
-      animation-iteration-count: 6;
       margin-top: rem;
       opacity: 0;
+    }
+
+    .arronec, .arrthreec {
+      color: #284B63;
     }
 
     .arrowtwo-container:hover .arrow-up-one {

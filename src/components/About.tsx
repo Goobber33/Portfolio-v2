@@ -62,11 +62,11 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
             className="d-flex justify-content-center arrowtwo-container"
           >
             <span className="arrow-up-one mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-up text-black"></i>
+              <i className="fa fa-angle-up arronec"></i>
             </span>
             
             <span className="hometext">
-              Intro
+              Home
             </span>
 
           </div>
@@ -159,7 +159,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
             className="d-flex justify-content-center arrowthree-container">
 
             <span className="arrow-down-two mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-down text-black"></i>
+              <i className="fa fa-angle-down arrthreec"></i>
             </span>
 
             <span className="pcard mt-1">

@@ -110,7 +110,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
             className="d-flex justify-content-center arrow-container"
           >
             <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-up fs-1 text-white"></i>
+              <i className="fa fa-angle-up text-white"></i>
             </span>
           </div>
 
