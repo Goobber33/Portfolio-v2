@@ -118,7 +118,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 2,
+      offset: 70,
     });
   };
 

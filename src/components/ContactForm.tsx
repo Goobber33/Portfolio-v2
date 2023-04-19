@@ -44,7 +44,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
             duration: 0,
             delay: 0,
             smooth: 'easeInOutQuart',
-            offset: -10, // increase this value to scroll farther up
+            offset: -10,
         });
     };
 
@@ -52,13 +52,16 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
         <div ref={ref}>
             <section className="contact-section" id="contact">
 
-                <div
-                    onClick={handleScrollUp}
-                    className="d-flex justify-content-center arrow-container"
-                >
-                    <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-                        <i className="fa fa-angle-up fs-1 text-white"></i>
+                <div onClick={handleScrollUp} className="d-flex justify-content-center arrowsix-container">
+
+                    <span className="arrow-up-three mt-3" style={{ cursor: 'pointer' }}>
+                        <i className="fa fa-angle-up arrsixc"></i>
                     </span>
+
+                    <span className="contacttexttwo">
+                        Projects
+                    </span>
+
                 </div>
 
                 <div className="container">

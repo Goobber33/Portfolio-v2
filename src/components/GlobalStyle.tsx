@@ -76,6 +76,10 @@
       margin-top: 2rem;
     }
 
+    .arrowsix-container {
+      margin-top: -3rem;
+    }
+
     .arrow-up-one {
       font-size: 5rem;
     }
@@ -84,7 +88,15 @@
       font-size: 5rem;
     }
 
-    .arronec, .arrthreec {
+    .arrow-up-three {
+      font-size: 5rem;
+    }
+
+    .arronec .arrthreec {
+      color: #284B63;
+    }
+
+    .arrsixc {
       color: #284B63;
     }
   
@@ -120,6 +132,11 @@
     }
 
     .arrowthree-container:hover .pcard {
+      opacity: 1;
+      color: gray;
+    }
+
+    .arrowsix-container:hover .contacttexttwo {
       opacity: 1;
       color: gray;
     }
@@ -177,6 +194,15 @@
       color: transparent;
       opacity: 0;
       transition: opacity 0.3s ease;
+    }
+
+    .contacttexttwo {
+      position: absolute;
+      margin-top: 6rem;
+      font-size: 1.3rem;
+      color: gray;
+      opacity: 0;
+      transition: opacity 0.3s ease, color 0.3s ease;
     }
 
     .arrowfour-container:hover .abouttext {
@@ -468,9 +494,15 @@
       left: 4.8rem;
     }  
 
+    .container {
+      margin-top: 5rem;
+      color: #284B63;
+    }
+
     .contact-section {
-      color: #fff;
-      padding: 4rem 0;
+      background-color: white;
+      padding: 6rem 0;
+      min-height: 100vh;
     }
     
     .contact-section h2 {
