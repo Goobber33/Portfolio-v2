@@ -96,7 +96,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 0,
+      offset: 50,
     });
   };
 
@@ -107,9 +107,9 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
           <div
             onClick={handleScrollUp}
-            className="d-flex justify-content-center arrow-container"
+            className="d-flex justify-content-center arrowfour-container"
           >
-            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
+            <span className="arrow-up-two mt-1" style={{ cursor: 'pointer' }}>
               <i className="fa fa-angle-up text-white"></i>
             </span>
           </div>

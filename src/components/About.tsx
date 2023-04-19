@@ -64,13 +64,12 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
             <span className="arrow-up-one mt-3" style={{ cursor: 'pointer' }}>
               <i className="fa fa-angle-up arronec"></i>
             </span>
-            
+
             <span className="hometext">
               Home
             </span>
 
           </div>
-
 
           <div className="container-fluid">
             <div className="row">
@@ -163,8 +162,8 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
             </span>
 
             <span className="pcard mt-1">
-                Projects
-              </span>
+              Projects
+            </span>
 
           </div>
 

@@ -60,25 +60,30 @@
     }
 
     .arrowtwo-container {
-      margin-top: -5rem;
-    }
+      position: relative;
+      top: -1rem;  
+    }    
 
     .arrowthree-container {
-      margin-top -1rem;
+      margin-top: -4rem;
+    }
+
+    .arrowfour-container {
+      margin-top: -3rem;
     }
 
     .arrow-up-one {
       font-size: 5rem;
-      margin-top: rem;
-      opacity: 0;
+    }
+
+    .arrow-up-two {
+      font-size: 5rem;
+      margin-bottom: -1rem;
+      color: #B0FFF8;
     }
 
     .arronec, .arrthreec {
       color: #284B63;
-    }
-
-    .arrowtwo-container:hover .arrow-up-one {
-      opacity: 1;
     }
   
     .arrow-down-one {
@@ -91,11 +96,6 @@
     .arrow-down-two {
       font-size: 5rem;
       margin-top: 1rem;
-      opacity: 0;
-    }
-
-    .arrowthree-container:hover .arrow-down-two {
-      opacity: 1;
     }
 
     .arrowtwo-container:hover .hometext {
@@ -366,7 +366,6 @@
       display: none;
     }
     
-
     .hero-wrapper {
       position: absolute;
       top: 39%;
@@ -375,36 +374,31 @@
     }
 
     .hero-image {
-    width: 450px;
-    height: 450px;
-    border-radius: 3%;
-    object-fit: cover;
+      width: 450px;
+      height: 450px;
+      border-radius: 3%;
+      object-fit: cover;
     }
 
     .hero-title {
-    position: absolute;
-    bottom: -32px;
-    right: calc(61.5% - 150px);
-    font-size: 2rem;
-    color: white;
-    background-color: #3C6E71;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+      position: absolute;
+      bottom: -32px;
+      right: calc(61.5% - 150px);
+      font-size: 2rem;
+      color: white;
+      background-color: #3C6E71;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .project-card {
+      background-color:
     }
 
     .project-card-margin {
-      margin-left: -4.3rem;
-      left: 2.8rem;
+      margin-left: -5rem;
+      left: 4.8rem;
     }  
-    
-    .custom-col {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 2rem;
-      box-sizing: border-box;
-      padding: 0.2rem;
-      padding-left: 3rem;
-    }
 
     .contact-section {
       color: #fff;
