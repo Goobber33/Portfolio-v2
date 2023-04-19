@@ -69,7 +69,7 @@
     }
 
     .arrowfour-container {
-      margin-top: -3rem;
+      margin-top: -1.5rem;
     }
 
     .arrow-up-one {
@@ -79,7 +79,6 @@
     .arrow-up-two {
       font-size: 5rem;
       margin-bottom: -1rem;
-      color: #B0FFF8;
     }
 
     .arronec, .arrthreec {
@@ -119,8 +118,8 @@
   
     .about-me {
       position: absolute;
-      margin-top: -0.5rem;
-      font-size: 2rem;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
       background: linear-gradient(90deg, white 0%, #B0FFF8 30%);
       -webkit-background-clip: text;
       color: transparent;
@@ -134,8 +133,8 @@
 
     .pcard {
       position: absolute;
-      margin-top: -0.5rem;
-      font-size: 2rem;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
       color: gray;
       opacity: 0;
       transition: opacity 0.3s ease, color 0.3s ease;
@@ -144,7 +143,7 @@
     .hometext {
       position: absolute;
       margin-top: 6rem;
-      font-size: 2rem;
+      font-size: 1.3rem;
       color: gray;
       opacity: 0;
       transition: opacity 0.3s ease, color 0.3s ease;

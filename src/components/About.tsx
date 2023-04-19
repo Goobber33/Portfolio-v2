@@ -161,7 +161,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
               <i className="fa fa-angle-down arrthreec"></i>
             </span>
 
-            <span className="pcard mt-1">
+            <span className="pcard">
               Projects
             </span>
 

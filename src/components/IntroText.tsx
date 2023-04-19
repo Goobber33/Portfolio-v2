@@ -84,7 +84,7 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
               <i className="fa fa-angle-down text-white"></i>
             </span>
 
-            <span className="about-me mt-1">
+            <span className="about-me">
               About Me
             </span>
 

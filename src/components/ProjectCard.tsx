@@ -105,13 +105,12 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
       <Element name="projectCard">
         <section id="ProjectCard" className="project py-3 custom-pr">
 
-          <div
-            onClick={handleScrollUp}
-            className="d-flex justify-content-center arrowfour-container"
-          >
+          <div onClick={handleScrollUp} className="d-flex justify-content-center arrowfour-container">
+
             <span className="arrow-up-two mt-1" style={{ cursor: 'pointer' }}>
               <i className="fa fa-angle-up text-white"></i>
             </span>
+            
           </div>
 
           <Container fluid style={{ paddingLeft: 70 }}>
