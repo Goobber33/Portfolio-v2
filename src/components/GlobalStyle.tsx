@@ -59,22 +59,46 @@
       margin-top: 10rem;
     }
 
+    .arrowtwo-container {
+      margin-top: -5rem;
+    }
+
     .arrowthree-container {
       margin-top -1rem;
+    }
+
+    .arrow-up-one {
+      font-size: 5rem;
+      animation: arrow-bounce 1.2s;
+      animation-iteration-count: 6;
+      margin-top: rem;
+      opacity: 0;
+    }
+
+    .arrowtwo-container:hover .arrow-up-one {
+      opacity: 1;
     }
   
     .arrow-down-one {
       font-size: 5rem;
       animation: arrow-bounce 1.2s;
-      animation-iteration-count: 3;
+      animation-iteration-count: 6;
       margin-top: 1rem;
     }
 
     .arrow-down-two {
       font-size: 5rem;
-      animation: arrow-bounce 1.2s;
-      animation-iteration-count: 3;
       margin-top: 1rem;
+      opacity: 0;
+    }
+
+    .arrowthree-container:hover .arrow-down-two {
+      opacity: 1;
+    }
+
+    .arrowtwo-container:hover .hometext {
+      opacity: 1;
+      color: gray;
     }
 
     .arrowone-container:hover .about-me {
@@ -84,6 +108,11 @@
   
     .arrowone-container:hover .about-me.visible {
       animation: gradient-animation 4s forwards;
+    }
+
+    .arrowthree-container:hover .pcard {
+      opacity: 1;
+      color: gray;
     }
   
     .about-me {
@@ -99,6 +128,24 @@
   
     .about-me.visible {
       animation: gradient-animation 1s forwards;
+    }
+
+    .pcard {
+      position: absolute;
+      margin-top: -0.5rem;
+      font-size: 2rem;
+      color: gray;
+      opacity: 0;
+      transition: opacity 0.3s ease, color 0.3s ease;
+    }
+
+    .hometext {
+      position: absolute;
+      margin-top: 6rem;
+      font-size: 2rem;
+      color: gray;
+      opacity: 0;
+      transition: opacity 0.3s ease, color 0.3s ease;
     }
   
     @keyframes gradient-animation {
@@ -320,7 +367,7 @@
 
     .hero-wrapper {
       position: absolute;
-      top: 35%;
+      top: 39%;
       right: -99%;
       transform: translateY(-40%);
     }

@@ -59,11 +59,16 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
 
           <div
             onClick={handleScrollUp}
-            className="d-flex justify-content-center arrow-container"
+            className="d-flex justify-content-center arrowtwo-container"
           >
-            <span className="arrow-down mt-3" style={{ cursor: 'pointer' }}>
-              <i className="fa fa-angle-up fs-1 text-black"></i>
+            <span className="arrow-up-one mt-3" style={{ cursor: 'pointer' }}>
+              <i className="fa fa-angle-up text-black"></i>
             </span>
+            
+            <span className="hometext">
+              Intro
+            </span>
+
           </div>
 
 
@@ -80,7 +85,6 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                     </div>
                     <div className="d-grid gap-0">
                       <div style={{ maxWidth: '500px' }}>
-
                         <p className="mb-1 fs-4 about-me-text">
                           I am a Full Stack Developer and IT
                         </p>
