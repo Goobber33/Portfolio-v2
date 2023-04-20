@@ -63,6 +63,10 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
       offset = -600; // Set the desired offset value for this breakpoint
     }
 
+    if (window.matchMedia('(min-width: 2560px)').matches) {
+      offset = -800;
+    }
+
     scroller.scrollTo('introText', {
       duration: 0,
       delay: 0,
@@ -151,6 +155,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                       <FontAwesomeIcon icon={faNpm} size="3x" className="mx-3 my-3 fa-icon" color="#68a063" />
                     </div>
                   </div>
+                  
                   {/* Hero Image */}
 
                   <div className="col-md-4 col-sm-12">

@@ -32,6 +32,10 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
       // For screens with a width of at least 3840px
       offset = 55; // Set the desired offset value for this breakpoint
     }
+
+    if (window.matchMedia('(min-width: 2560px)').matches) {
+      offset = 100;
+    }
   
     // Pass the updated offset value to the scroller
     scroller.scrollTo(linkName, {

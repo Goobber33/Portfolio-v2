@@ -577,6 +577,200 @@
     // ------------ Media Queries for mobile devices ------------- //
 
 
+    @media (min-width: 2560px) {
+
+      .navbar {
+        font-size: 1.8rem;
+      }
+
+      .main {
+        min-height: 65vh;
+        margin-top: 8rem;
+      }
+
+      .logo {
+        height: 310px;
+        width: auto;
+      }
+
+      .intro-text-wrapper {
+        font-size: 1.4rem;
+      }
+
+      .waving-hand {
+        font-size: 4rem;
+      }
+
+      .name-text-inner {
+        font-size: 12rem;
+      }
+
+      h2 {
+        font-size: 2.9rem;
+      }
+
+      .arrowone-container {
+        margin-top: 8rem;
+      }
+
+      .arrow-down-one {
+        font-size: 10rem;
+      }
+
+      .progress-container {
+        width: 35px;
+        border-radius: 25px;
+        right: 6rem;
+        border-radius: 23px;
+      }
+
+      .arrowtwo-container {
+        margin-top: -1rem;
+      }
+
+      .arrow-up-one {
+        font-size: 10rem;
+      }
+
+      .about-me-heading {
+        font-weight: bold;
+        font-size: 6.5rem;
+      }
+
+      .about-me-text {
+        font-size: 2.5rem !important;
+        word-wrap: break-word;
+        width: 300%;
+      }
+
+      .col-md-8 {
+        margin-top: -1rem;
+      }
+
+      .text-white-two {
+        font-size: 2.2rem;
+        margin-top: 2rem;
+      }
+
+      .about {
+        font-size: 1.5rem;
+      }
+
+      .hero-image {
+        width: 750px;
+        height: 750px;
+        border-radius: 3%;
+        object-fit: cover;
+        margin-top: 1rem;
+        margin-left: -7rem;
+      }
+  
+      .hero-title {
+        position: absolute;
+        bottom: -32px;
+        right: calc(61.5% - 150px);
+        font-size: 3rem;
+        color: white;
+        background-color: #3C6E71;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
+
+      .arrowthree-container {
+        margin-top: -7rem;
+      }
+
+      .arrow-down-two {
+        font-size: 10rem;
+      }
+
+      .project {
+        min-height: 100vh;
+      }
+
+      .arrowfour-container {
+        margin-top: -3rem
+      }
+
+      .arrow-up-two {
+        font-size: 10rem;
+      }
+
+      .card {
+        height: 28rem !important;
+        width: 44rem !important;
+        border-radius: 1rem;
+        margin-top: 1rem;
+      }
+
+      .card .card-text {
+        font-size: 2.5rem;
+      }
+
+      .project-card-margin {
+        margin-left: -7rem;
+        left: 6rem;
+      }
+      
+      .arrow-down-three {
+        font-size: 10rem;
+      }
+
+      .arrowsix-container {
+        margin-top: -9rem;
+      }
+
+      .arrow-up-three {
+        font-size: 15rem;
+      }
+
+      .arrowsix-container {
+        margin-top: -6rem;
+      }
+
+      .arrow-up-three {
+        font-size: 10rem;
+      }
+
+      .container {
+        margin-top: 8rem;
+      }
+
+      .container h2 {
+        font-size: 3rem;
+      }
+
+      .contact-section label {
+        display: block;
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+        margin-left: -18rem;
+      }
+      
+      .contact-section input,
+      .contact-section textarea {
+        width: 200%;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        margin-left: -18rem;
+      }
+      
+      .contact-section textarea {
+        height: 15rem; /* Updated height */
+      }
+
+      .contact-container form button {
+        font-size: 3rem !important;
+        border-radius: 20px !important;
+        width: 300px;
+        margin-left: -18rem;
+      }
+
+
+
+    }
+
+
     @media (min-width: 3840px) {
 
       .navbar {
@@ -603,6 +797,10 @@
 
       .name-text-inner {
         font-size: 16.5rem;
+      }
+
+      .name-inner::after {
+        width: 70%;
       }
 
       h2 {
