@@ -64,7 +64,7 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
 
                 </div>
 
-                <div className="container">
+                <div className="container contact-container">
                     <h2>Contact Me</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">

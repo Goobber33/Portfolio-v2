@@ -97,7 +97,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                 <div className="row">
 
                   {/* About me text section */}
-
+                
                   <div className="col-md-8">
                     <div className="text-start">
                       <h2 className="mb-4 about-me-heading">About Me</h2>
@@ -109,7 +109,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
                         </p>
                         <p className="mb-1 fs-4 about-me-text">
                           Professional with a passion for Software
-                        </p>
+                        </p>  
                         <p className="mb-1 fs-4 about-me-text">
                           Development. Having worked in IT for 3 years,
                         </p>

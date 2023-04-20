@@ -394,8 +394,8 @@
 
     .about-me-text {
       color: #284B63;
-       word-wrap: break-word;
-       width: 150%;
+      word-wrap: break-word;
+      width: 150%;
     }
 
     .text-white-two {
@@ -418,9 +418,9 @@
       box-shadow: 0 2px 4px #3C6E71;
       border-radius: 0.5rem;
       overflow: hidden;
-      max-width: 450px;
       right: 2.7rem;
       top: 2rem;
+      width: 100%;
     }
     
     .card .card-title {
@@ -574,7 +574,7 @@
     color: #E1306C;
     }
     
-    // ----------- Media Queries for mobile devices -------------
+    // ------------ Media Queries for mobile devices ------------- //
 
 
     @media (min-width: 3840px) {
@@ -610,7 +610,7 @@
       }
 
       .arrowone-container {
-        margin-top: 25rem;
+        margin-top: 21rem;
       }
 
       .arrow-down-one {
@@ -622,19 +622,32 @@
         border-radius: 25px;
       }
 
+      .arrowtwo-container {
+        margin-top: -3rem;
+      }
+
+      .arrow-up-one {
+        font-size: 15rem;
+      }
+
       .about-me-heading {
         font-weight: bold;
         font-size: 7.5rem;
       }
 
       .about-me-text {
-        font-size: 3.2rem !important;
+        font-size: 3rem !important;
          word-wrap: break-word;
          width: 300%;
       }
 
+      .col-md-8 {
+        margin-top: 1rem;
+      }
+
       .text-white-two {
         font-size: 2.2rem;
+        margin-top:2rem;
       }
 
       .about {
@@ -642,10 +655,12 @@
       }
 
       .hero-image {
-        width: 950px;
-        height: 950px;
+        width: 1100px;
+        height: 1100px;
         border-radius: 3%;
         object-fit: cover;
+        margin-top: 1rem;
+        margin-left: -8rem;
       }
   
       .hero-title {
@@ -658,7 +673,89 @@
         padding: 0.5rem 1rem;
         border-radius: 10px;
       }
-  
+
+      .arrowthree-container {
+        margin-top: 4rem;
+      }
+
+      .arrow-down-two {
+        font-size: 15rem;
+      }
+
+      .project {
+        min-height: 100vh;
+      }
+
+      .arrowfour-container {
+        margin-top: rem
+      }
+
+      .arrow-up-two {
+        font-size: 15rem;
+      }
+
+      .card {
+        height: 40rem !important;
+        width: 70rem !important;
+        border-radius: 1rem;
+        margin-top: 2rem;
+      }
+
+      .card .card-text {
+        font-size: 2.5rem;
+      }
+
+      .project-card-margin {
+        margin-left: -7rem;
+        left: 6rem;
+      }
+      
+      .arrow-down-three {
+        font-size: 15rem;
+      }
+
+      .arrowsix-container {
+        margin-top: -9rem;
+      }
+
+      .arrow-up-three {
+        font-size: 15rem;
+      }
+
+      .container {
+        margin-top: 14rem;
+      }
+
+      .container h2 {
+        font-size: 5rem;
+      }
+
+      .contact-section label {
+        display: block;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        margin-left: -18rem;
+      }
+      
+      .contact-section input,
+      .contact-section textarea {
+        width: 200%;
+        padding: 3rem;
+        margin-bottom: 6rem;
+        margin-left: -18rem;
+      }
+      
+      .contact-section textarea {
+        height: 20rem; /* Updated height */
+      }
+
+      .contact-container form button {
+        font-size: 4rem !important;
+        border-radius: 20px !important;
+        width: 300px;
+        margin-left: -18rem;
+      }
+
   }
   `;
 

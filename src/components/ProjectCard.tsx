@@ -155,7 +155,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
                 <Col key={index} className={`mb-2 custom-col project-card-margin`} xl={4} lg={4} md={6} sm={12}>
 
-                  <Card className="card custom-card-spacing" style={cardStyle}>
+                  <Card className={`card custom-card-spacing`} style={cardStyle}>
                     <Card.Header className="d-flex justify-content-between align-items-center">
                       <Card.Title style={titleStyle}>{project.title}</Card.Title>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style={logoStyle}>
@@ -170,7 +170,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
                         </div>
                       </div>
                     </Card.Body>
-                    
+
                   </Card>
 
                 </Col>

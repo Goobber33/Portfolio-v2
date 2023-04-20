@@ -30,7 +30,7 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
     // Update the offset value based on the screen size using window.matchMedia
     if (window.matchMedia('(min-width: 3840px)').matches) {
       // For screens with a width of at least 3840px
-      offset = 20; // Set the desired offset value for this breakpoint
+      offset = 55; // Set the desired offset value for this breakpoint
     }
   
     // Pass the updated offset value to the scroller
