@@ -24,18 +24,29 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
   }, []);
 
   const handleNavLinkClick = (linkName: string) => {
+    // Set a default offset value
+    let offset = 55;
+  
+    // Update the offset value based on the screen size using window.matchMedia
+    if (window.matchMedia('(min-width: 3840px)').matches) {
+      // For screens with a width of at least 3840px
+      offset = 20; // Set the desired offset value for this breakpoint
+    }
+  
+    // Pass the updated offset value to the scroller
     scroller.scrollTo(linkName, {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 55,
+      offset: offset,
     });
   };
+  
 
   return (
     <div ref={ref}>
       <Element name="introText">
-        <section id="introText">
+        <section id="introText" className="main">
           <div className="container-fluid custom">
             <div className="row">
               <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
@@ -49,7 +60,7 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
                     className="hello-text mb-3 text-white"
                   >
                     Hi{' '}
-                    <span role="img" aria-label="waving hand" className="waving-hand fs-2">
+                    <span role="img" aria-label="waving hand" className="waving-hand">
                       👋 {' '}
                     </span> my name is
                   </animated.h2>

@@ -35,22 +35,42 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
 
   const handleNavLinkClick = (linkName: string) => {
     setActiveLink(linkName);
+
+    // Set a default offset value
+    let offset = 0;
+
+    // Update the offset value based on the screen size using window.matchMedia
+    if (window.matchMedia('(min-width: 3840px)').matches) {
+      // For screens with a width of at least 3840px
+      offset = 0; // Set the desired offset value for this breakpoint
+    }
+
     scroller.scrollTo(linkName, {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 0,
+      offset: offset,
     });
   };
 
   const handleScrollUp = () => {
+    // Set a default offset value
+    let offset = -180;
+
+    // Update the offset value based on the screen size using window.matchMedia
+    if (window.matchMedia('(min-width: 3840px)').matches) {
+      // For screens with a width of at least 3840px
+      offset = -600; // Set the desired offset value for this breakpoint
+    }
+
     scroller.scrollTo('introText', {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: -180,
+      offset: offset,
     });
   };
+
 
   return (
     <div ref={ref}>

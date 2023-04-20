@@ -98,9 +98,6 @@ const ContactForm = forwardRef<HTMLDivElement>((_, ref) => {
                         </div>
                         <button type="submit">Send</button>
                     </form>
-                    <div className="text-center">
-                        <p>kcparks1234@gmail.com</p>
-                    </div>
                 </div>
                 <Modal
                     isOpen={modalIsOpen}

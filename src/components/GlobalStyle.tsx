@@ -309,6 +309,7 @@
     }
 
     .waving-hand {
+      font-size: 2rem;
       display: inline-block;
       animation: wave 1s linear infinite;
     }
@@ -393,6 +394,8 @@
 
     .about-me-text {
       color: #284B63;
+       word-wrap: break-word;
+       width: 150%;
     }
 
     .text-white-two {
@@ -574,12 +577,88 @@
     // ----------- Media Queries for mobile devices -------------
 
 
-  @media (max-width: 768px) {
-    .hide-on-desktop {
-      display: initial;
-    }
-  }
-    
+    @media (min-width: 3840px) {
+
+      .navbar {
+        font-size: 2.5rem;
+      }
+      
+      .main {
+        min-height: 100vh;
+        margin-top: 10rem;
+      }
+
+      .logo {
+        height: 450px;
+        width: auto;
+      }
+      
+      .intro-text-wrapper {
+        font-size: 1.8rem;
+      }
+
+      .waving-hand {
+        font-size: 6.5rem;
+      }
+
+      .name-text-inner {
+        font-size: 16.5rem;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      .arrowone-container {
+        margin-top: 25rem;
+      }
+
+      .arrow-down-one {
+        font-size: 15rem;
+      }
+
+      .progress-container {
+        width: 45px;
+        border-radius: 25px;
+      }
+
+      .about-me-heading {
+        font-weight: bold;
+        font-size: 7.5rem;
+      }
+
+      .about-me-text {
+        font-size: 3.2rem !important;
+         word-wrap: break-word;
+         width: 300%;
+      }
+
+      .text-white-two {
+        font-size: 2.2rem;
+      }
+
+      .about {
+        font-size: 2.5rem;
+      }
+
+      .hero-image {
+        width: 950px;
+        height: 950px;
+        border-radius: 3%;
+        object-fit: cover;
+      }
+  
+      .hero-title {
+        position: absolute;
+        bottom: -32px;
+        right: calc(61.5% - 150px);
+        font-size: 2rem;
+        color: white;
+        background-color: #3C6E71;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
+  
   }
   `;
 
