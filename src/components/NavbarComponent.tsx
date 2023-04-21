@@ -8,22 +8,12 @@ interface NavbarProps {
 
 const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
   const [expanded, setExpanded] = useState(false);
-  const [visible, setVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     const currentScrollPosition = window.pageYOffset;
-  
-    if (currentScrollPosition <= 0) {
-      setVisible(true);
-    } else if (currentScrollPosition > scrollPosition) {
-      setVisible(false);
-    } else {
-      setVisible(true);
-    }
-  
     setScrollPosition(currentScrollPosition);
-  };  
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -36,7 +26,7 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     const projectsSection = document.getElementById('ProjectCard');
     const contactSection = document.getElementById('contact');
     const resumeSection = document.getElementById('resume');
-  
+
     const sections = [
       { name: 'home', element: introTextSection },
       { name: 'about', element: aboutSection },
@@ -44,20 +34,16 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
       { name: 'contact', element: contactSection },
       { name: 'resume', element: resumeSection },
     ];
-  
+
     const sectionInView = sections.find((section) => {
       if (section.element && section.name !== '') {
         const rect = section.element.getBoundingClientRect();
         return rect.top <= 80 && rect.bottom >= 80;
       }
     });
-  
-    setActiveLink(sectionInView?.name ?? 'home');
-  }, [scrollPosition]);  
 
-  const toggleNavbar = () => {
-    setExpanded(!expanded);
-  };
+    setActiveLink(sectionInView?.name ?? 'home');
+  }, [scrollPosition]);
 
   const [activeLink, setActiveLink] = useState('');
 
@@ -66,52 +52,48 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
   return (
     <Navbar
       variant="dark"
-      expand="lg"
+      
       fixed="top"
-      className={`mb-4 mt-3 mt-md-0 ${visible ? '' : 'navbar-hidden'}`}
+      className={`mb-4 mt-3 mt-md-0`}
     >
-      <Navbar.Collapse
-        id="basic-navbar-nav"
-        className={`${expanded ? 'show transparent-menu' : ''} text-right`}
-      >
-        <Nav className="ml-auto">
-          <Nav.Link
-            className={activeLink === 'home' ? 'active' : ''}
-            href="#introText"
-            style={navbarLinkStyle}
-          >
-            01. Home
-          </Nav.Link>
-          <Nav.Link
-            className={activeLink === 'about' ? 'active' : ''}
-            href="#about"
-            style={navbarLinkStyle}
-          >
-            02. About
-          </Nav.Link>
-          <Nav.Link
-            className={activeLink === 'projects' ? 'active' : ''}
-            href="#ProjectCard"
-            style={navbarLinkStyle}
-          >
-            03. Projects
-          </Nav.Link>
-          <Nav.Link
-            className={activeLink === 'contact' ? 'active' : ''}
-            href="#contact"
-            style={navbarLinkStyle}
-          >
-            04. Contact
-          </Nav.Link>
-          <Nav.Link
-            className={activeLink === 'resume' ? 'active' : ''}
-            href="#resume"
-            style={navbarLinkStyle}
-          >
-            05. Resume
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+
+      <Nav className="ml-auto">
+        <Nav.Link
+          className={activeLink === 'home' ? 'active' : ''}
+          href="#introText"
+          style={navbarLinkStyle}
+        >
+          01. Home
+        </Nav.Link>
+        <Nav.Link
+          className={activeLink === 'about' ? 'active' : ''}
+          href="#about"
+          style={navbarLinkStyle}
+        >
+          02. About
+        </Nav.Link>
+        <Nav.Link
+          className={activeLink === 'projects' ? 'active' : ''}
+          href="#ProjectCard"
+          style={navbarLinkStyle}
+        >
+          03. Projects
+        </Nav.Link>
+        <Nav.Link
+          className={activeLink === 'contact' ? 'active' : ''}
+          href="#contact"
+          style={navbarLinkStyle}
+        >
+          04. Contact
+        </Nav.Link>
+        <Nav.Link
+          className={activeLink === 'resume' ? 'active' : ''}
+          href="#resume"
+          style={navbarLinkStyle}
+        >
+          05. Resume
+        </Nav.Link>
+      </Nav>
     </Navbar>
   );
 };

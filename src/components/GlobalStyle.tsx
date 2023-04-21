@@ -1,6 +1,6 @@
-  import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-  const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   #root {
       background-color: #284B63;
       min-height: 350vh;
@@ -573,81 +573,161 @@
     color: #E1306C;
     }
     
-    // ------------ Media Queries for mobile devices ------------- //
+  // ------------ Media Queries for mobile devices ------------- //
 
-    // ---------- Media Query for 1024px ---------- //
+  // ---------- Media Query for 1024px ---------- //
 
-    @media (min-width: 1024px) {
+  @media (min-width: 768px) {
 
-      .navbar {
-        font-size: 0.7rem;
-      }
-      
-      .main {
-        margin-top: -3rem;
-      }
-
-      .logo {
-        height: 150px;
-        width: auto;
-      }
-      
-      .intro-text-wrapper {
-        font-size: 0.8rem;
-      }
-
-      .waving-hand {
-        font-size: 1.5rem;
-      }
-
-      .name-text-inner {
-        font-size: 5rem;
-      }
-
-      .name-inner::after {
-        width: 70%;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-
-      .arrowone-container {
-        margin-top: 1rem;
-      }
-
-      .arrow-down-one {
-        font-size: 4rem;
-      }
-
-      .about-me {
-        font-size: 0.7rem;
-        bottom: 6rem;
-      }
-
-      .progress-container {
-        width: 15px;
-        border-radius: 25px;
-        right: 2.4rem;
-      }
-
-      .card {
-        height: 10rem !important;
-        width: 20rem !important;
-        border-radius: -1rem;
-        margin-top: rem;
-        top: 1.6rem;
-      }
-
-      .card .card-text {
-        font-size: 1.3rem;
-      }
-
-      .project-card-margin {
-        margin-left: -3.3rem;
-        left: 3rem;
-      }
+    .navbar {
+      font-size: 0.7rem;
     }
+    
+    .main {
+      min-height: 10vh;
+      margin-top: 3rem;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+
+    .progress-container {
+      right: 2.5rem;
+      height: 20rem;
+    }
+    
+    .intro-text-wrapper {
+      font-size: 0.7rem;
+    }
+
+    .waving-hand {
+      font-size: 1.5rem;
+    }
+
+    .name-text-inner {
+      font-size: 5rem;
+    }
+
+    .name-inner::after {
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    .arrowone-container {
+      margin-top: 19rem;
+    }
+
+    .arrow-down-one {
+      font-size: 6rem;
+    }
+
+    .about-me {
+      font-size: 1.5rem;
+      bottom: 8.5rem;
+    }
+
+    .arrowtwo-container {
+      margin-top: 0.4rem;
+    }
+
+    .arrow-up-one {
+      font-size: 6rem;
+    }
+
+    .hometext {
+      font-size: 1.5rem;
+      top: 2rem;
+    }
+
+    .about-me-heading {
+      font-weight: bold;
+      font-size: 2.4rem;
+    }
+
+    .about-me-text {
+      font-size: 1rem !important;
+      word-wrap: break-word;
+    }
+
+    .hero-image {
+      width: 280px;
+      height: 280px;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      left: -3rem;
+      bottom: -1rem;
+    }
+
+    .hero-title {
+      position: absolute;
+      bottom: -19px;
+      right: calc(82% - 150px);
+      font-size: 1rem;
+      color: white;
+      background-color: #3C6E71;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .col-md-8 {
+      margin-top: 3rem;
+    }
+
+    .text-white-two {
+      font-size: 0.8rem;
+      margin-top: -1rem;
+    }
+
+    .mb-5 {
+      font-size: 8px;
+    }
+
+    .arrowthree-container {
+      margin-top: 4rem;
+    }
+
+    .arrow-down-two {
+      font-size: 6rem;
+    }
+
+    .pcard {
+      font-size: 1.5rem;
+    }
+
+    .card {
+      height: 15rem !important;
+      width: 18rem !important;
+      border-radius: -0.1rem;
+      margin-top: rem;
+    }
+
+    .card .card-text {
+      font-size: 0.8rem;
+    }
+
+    .project-card-margin {
+      margin-left: -3.7rem;
+      left: 4rem;
+    }
+
+    .arrowfive-container {
+      margin-top: 2rem;
+    }
+
+    .arrowsix-container {
+      margin-top: -6rem;
+    }
+
+  }
+
+  // ---------- Media Query for 1440px devices (Mac) ---------- //
 
     @media (min-width: 1440px) {
 
@@ -1305,4 +1385,4 @@
   }
   `;
 
-  export default GlobalStyle;
+export default GlobalStyle;

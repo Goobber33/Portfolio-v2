@@ -71,7 +71,7 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
       offset = -940;
     }
 
-    if (window.matchMedia('(min-width: 1440px)').matches) {
+    if (window.matchMedia('(min-width: 768px)').matches) {
       offset = -1000
     }
 
