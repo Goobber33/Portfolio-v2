@@ -71,6 +71,10 @@ const About = forwardRef<HTMLDivElement>((_, ref) => {
       offset = -940;
     }
 
+    if (window.matchMedia('(min-width: 1440px)').matches) {
+      offset = -1000
+    }
+
     scroller.scrollTo('introText', {
       duration: 0,
       delay: 0,

@@ -575,6 +575,80 @@
     
     // ------------ Media Queries for mobile devices ------------- //
 
+    // ---------- Media Query for 1024px ---------- //
+
+    @media (min-width: 1024px) {
+
+      .navbar {
+        font-size: 0.7rem;
+      }
+      
+      .main {
+        margin-top: -3rem;
+      }
+
+      .logo {
+        height: 150px;
+        width: auto;
+      }
+      
+      .intro-text-wrapper {
+        font-size: 0.8rem;
+      }
+
+      .waving-hand {
+        font-size: 1.5rem;
+      }
+
+      .name-text-inner {
+        font-size: 5rem;
+      }
+
+      .name-inner::after {
+        width: 70%;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      .arrowone-container {
+        margin-top: 1rem;
+      }
+
+      .arrow-down-one {
+        font-size: 4rem;
+      }
+
+      .about-me {
+        font-size: 0.7rem;
+        bottom: 6rem;
+      }
+
+      .progress-container {
+        width: 15px;
+        border-radius: 25px;
+        right: 2.4rem;
+      }
+
+      .card {
+        height: 10rem !important;
+        width: 20rem !important;
+        border-radius: -1rem;
+        margin-top: rem;
+        top: 1.6rem;
+      }
+
+      .card .card-text {
+        font-size: 1.3rem;
+      }
+
+      .project-card-margin {
+        margin-left: -3.3rem;
+        left: 3rem;
+      }
+    }
+
     @media (min-width: 1440px) {
 
       .navbar {
@@ -583,7 +657,7 @@
       
       .main {
         min-height: 60vh;
-        margin-top: 2rem;
+        margin-top: 3rem;
       }
 
       .logo {
@@ -608,7 +682,7 @@
       }
 
       .name-inner::after {
-        width: 80%;
+        width: 70%;
       }
 
       h2 {
@@ -616,24 +690,34 @@
       }
 
       .arrowone-container {
-        margin-top: 3rem;
+        margin-top: 8rem;
       }
 
       .arrow-down-one {
         font-size: 6rem;
       }
 
+      .about-me {
+        font-size: 1.5rem;
+        bottom: 7.8rem;
+      }
+
       .progress-container {
         width: 20px;
         border-radius: 18px;
+        right: 2rem;
       }
 
       .arrowtwo-container {
-        margin-top: 1rem;
+        margin-top: 0.4rem;
       }
 
       .arrow-up-one {
         font-size: 6rem;
+      }
+
+      .hometext {
+        top: 1rem;
       }
 
       .about-me-heading {
@@ -668,7 +752,7 @@
       }
 
       .col-md-8 {
-        margin-top: -0.8rem;
+        margin-top: -0.2rem;
       }
 
       .text-white-two {
@@ -681,7 +765,7 @@
       }
 
       .arrowthree-container {
-        margin-top: -6rem;
+        margin-top: -1rem;
       }
 
       .arrow-down-two {
@@ -689,8 +773,8 @@
       }
 
       .card {
-        height: 15rem !important;
-        width: 25rem !important;
+        height: 18rem !important;
+        width: 31.8rem !important;
         border-radius: -0.1rem;
         margin-top: 0rem;
       }
@@ -700,12 +784,16 @@
       }
 
       .project-card-margin {
-        margin-left: -3.2rem;
-        left: 2.7rem;
+        margin-left: -1.5rem;
+        left: 1.3rem;
+      }
+
+      .arrowsix-container {
+        margin-top: -7rem;
       }
 
       .container {
-        margin-top: 2rem;
+        margin-top: 6rem;
       }
 
       .container h2 {
@@ -742,7 +830,7 @@
     @media (min-width: 1920px) {
 
       .main {
-        margin-top: 8rem;
+        margin-top: 2rem;
       }
 
       .progress-container {
@@ -753,7 +841,11 @@
       }
 
       .arrowone-container {
-        margin-top: 13rem;
+        margin-top: 11rem;
+      }
+
+      .hometext {
+        margin-top: 7rem;
       }
 
       .name-inner::after {
@@ -772,7 +864,7 @@
       }
 
       .col-md-8 {
-        margin-top: 0.8rem;
+        margin-top: -1rem;
       }
 
       .about {
@@ -800,7 +892,7 @@
       }
 
       .arrowthree-container {
-        margin-top: -1rem;
+        margin-top: -5rem;
       }
 
       .card {
@@ -808,7 +900,7 @@
         width: 35rem !important;
         border-radius: -1rem;
         margin-top: rem;
-        top: 5.5rem;
+        top: 1.6rem;
       }
 
       .card .card-text {
@@ -821,15 +913,15 @@
       }
 
       .arrowfive-container {
-        margin-top: 8rem;
+        margin-top: 1rem;
       }
 
       .arrowsix-container {
-        margin-top: -6rem;
+        margin-top: -2rem;
       }
 
       .container {
-        margin-top: 14rem;
+        margin-top: 11rem;
       }
     }
 
