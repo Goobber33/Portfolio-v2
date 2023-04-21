@@ -575,6 +575,168 @@
     
     // ------------ Media Queries for mobile devices ------------- //
 
+    @media (min-width: 1440px) {
+
+      .navbar {
+        font-size: 0.9rem;
+      }
+      
+      .main {
+        min-height: 60vh;
+        margin-top: 2rem;
+      }
+
+      .logo {
+        height: 150px;
+        width: auto;
+      }
+
+      .progress-container {
+        right: 3rem;
+      }
+      
+      .intro-text-wrapper {
+        font-size: 1rem;
+      }
+
+      .waving-hand {
+        font-size: 2.5rem;
+      }
+
+      .name-text-inner {
+        font-size: 7rem;
+      }
+
+      .name-inner::after {
+        width: 80%;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .arrowone-container {
+        margin-top: 3rem;
+      }
+
+      .arrow-down-one {
+        font-size: 6rem;
+      }
+
+      .progress-container {
+        width: 20px;
+        border-radius: 18px;
+      }
+
+      .arrowtwo-container {
+        margin-top: 1rem;
+      }
+
+      .arrow-up-one {
+        font-size: 6rem;
+      }
+
+      .about-me-heading {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      .about-me-text {
+        font-size: 1.4rem !important;
+        word-wrap: break-word;
+      }
+
+      .hero-image {
+        width: 450px;
+        height: 450px;
+      }
+
+      .hero-image-wrapper {
+        position: relative;
+        left: 6rem;
+      }
+  
+      .hero-title {
+        position: absolute;
+        bottom: -32px;
+        right: calc(61.5% - 150px);
+        font-size: 2rem;
+        color: white;
+        background-color: #3C6E71;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
+
+      .col-md-8 {
+        margin-top: -0.8rem;
+      }
+
+      .text-white-two {
+        font-size: 1rem;
+        margin-top: -1rem;
+      }
+
+      .about {
+        font-size: 0.7rem;
+      }
+
+      .arrowthree-container {
+        margin-top: -6rem;
+      }
+
+      .arrow-down-two {
+        font-size: 6rem;
+      }
+
+      .card {
+        height: 15rem !important;
+        width: 25rem !important;
+        border-radius: -0.1rem;
+        margin-top: 0rem;
+      }
+
+      .card .card-text {
+        font-size: 1.3rem;
+      }
+
+      .project-card-margin {
+        margin-left: -3.2rem;
+        left: 2.7rem;
+      }
+
+      .container {
+        margin-top: 2rem;
+      }
+
+      .container h2 {
+        font-size: 2rem;
+      }
+
+      .contact-section label {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      
+      .contact-section input,
+      .contact-section textarea {
+        width: 100%;
+        padding: 3rem;
+        margin-bottom: 0rem;
+        height: 10px !important;
+      }
+      
+      .contact-section textarea {
+        height: -2rem;
+      }
+
+      .contact-container form button {
+        font-size: 1rem !important;
+        border-radius: 10px !important;
+        width: 100px;
+      }
+    }
+
     @media (min-width: 1920px) {
 
       .main {
@@ -650,9 +812,9 @@
         margin-left: -3.3rem;
         left: 3rem;
       }
-
     }
 
+    // ---------- 2560px Media Query ----------//
 
     @media (min-width: 2560px) {
 
@@ -843,6 +1005,8 @@
         margin-left: -18rem;
       }
     }
+
+    // ---------- 3840px Media Query ----------//
 
     @media (min-width: 3840px) {
 

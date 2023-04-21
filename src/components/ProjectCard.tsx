@@ -128,11 +128,18 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   const handleScrollUp = () => {
+
+    let offset = 50;
+
+    if (window.matchMedia('(min-width: 1440px)').matches) {
+      offset = 90;
+    }
+
     scroller.scrollTo('about', {
       duration: 0,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: 50,
+      offset: offset,
     });
   };
 
