@@ -737,10 +737,12 @@
       }
     }
 
+    // ---------- Media Query for 1920px ---------- //
+
     @media (min-width: 1920px) {
 
       .main {
-        margin-top: rem;
+        margin-top: 8rem;
       }
 
       .progress-container {
@@ -751,11 +753,11 @@
       }
 
       .arrowone-container {
-        margin-top: 11rem;
+        margin-top: 13rem;
       }
 
       .name-inner::after {
-        width: 70%;
+        width: 60%;
       }
 
       .about-me-heading {
@@ -770,7 +772,7 @@
       }
 
       .col-md-8 {
-        margin-top: -0.9rem;
+        margin-top: 0.8rem;
       }
 
       .about {
@@ -797,11 +799,16 @@
         border-radius: 10px;
       }
 
+      .arrowthree-container {
+        margin-top: -1rem;
+      }
+
       .card {
         height: 20rem !important;
         width: 35rem !important;
         border-radius: -1rem;
-        margin-top: 0rem;
+        margin-top: rem;
+        top: 5.5rem;
       }
 
       .card .card-text {
@@ -811,6 +818,18 @@
       .project-card-margin {
         margin-left: -3.3rem;
         left: 3rem;
+      }
+
+      .arrowfive-container {
+        margin-top: 8rem;
+      }
+
+      .arrowsix-container {
+        margin-top: -6rem;
+      }
+
+      .container {
+        margin-top: 14rem;
       }
     }
 
