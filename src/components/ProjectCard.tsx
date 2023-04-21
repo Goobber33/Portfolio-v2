@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { scroller } from 'react-scroll';
 import { Element } from 'react-scroll';
 import { throttle } from 'lodash';
+import { AiOutlineLink } from 'react-icons/ai';
 import image1 from '../images/first.jpg';
 import image2 from '../images/second.jpg';
 import image3 from '../images/third.jpg';
@@ -17,18 +18,21 @@ const projects = [
     title: 'Portfolio v2',
     description: 'This current site is the second version of my Personal Portfolio, built with React, Bootstrap and Typescript',
     githubUrl: 'https://github.com/Goobber33/Portfolio-v2',
+    liveUrl: 'https://goobber33.github.io/Portfolio-v2/',
     image: image1
   },
   {
     title: 'Jobstacle Course',
     description: 'Jobstacle course is a collaborative Full-Stack website that logs you in, tracks what jobs you have applied to, interviewed for, and been denied for and utilizes a user friendly UI to track these. It uses MySQL, Node.js, Handlebars, and many other tools.',
     githubUrl: 'https://github.com/chewytaro/Jobstacle-course',
+    liveUrl: 'https://jobstacle-course.herokuapp.com/',
     image: image2
   },
   {
     title: 'Where Wolf',
     description: 'Where Wolf is a collaborative project built to list dog friendly businesses in a searched area. It uses Yelpp-Fusion API to find the businesses, and leaflet API to show these businesses on an interactive map.',
     githubUrl: 'https://github.com/jacksonmaltby/where-wolf',
+    liveUrl:'https://jacksonmaltby.github.io/where-wolf/',
     image: image3
   },
   {
@@ -47,6 +51,7 @@ const projects = [
     title: 'Crazy Weather We Are having',
     description: 'This application is a Weather Dashboard. The user can search an area and it will show the current and 10 day weather for that area.',
     githubUrl: 'https://github.com/Goobber33/Crazy-Weather-We-re-Having',
+    liveUrl: 'https://goobber33.github.io/Crazy-Weather-We-re-Having/',
     image: image6
   },
 ];
@@ -158,9 +163,14 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
                   <Card className={`card custom-card-spacing`} style={cardStyle}>
                     <Card.Header className="d-flex justify-content-between align-items-center">
                       <Card.Title style={titleStyle}>{project.title}</Card.Title>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style={logoStyle}>
-                        <FaGithub size={24} color="#000" />
-                      </a>
+                      <div style={logoStyle}>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <AiOutlineLink size={24} color="#000" className="mr-2" /> {/* use the AiOutlineLink icon */}
+                        </a>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <FaGithub size={24} color="#000" />
+                        </a>
+                      </div>
                     </Card.Header>
 
                     <Card.Body style={{ position: 'relative', padding: 0 }}>

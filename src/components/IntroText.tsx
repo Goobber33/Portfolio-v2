@@ -36,6 +36,8 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
     if (window.matchMedia('(min-width: 2560px)').matches) {
       offset = 100;
     }
+
+    if (window.matchMedia('(min-width: 1920px)').matches) 
   
     // Pass the updated offset value to the scroller
     scroller.scrollTo(linkName, {

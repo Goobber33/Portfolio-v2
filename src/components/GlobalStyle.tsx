@@ -34,7 +34,6 @@
       border-radius: 17px;
     }
     
-    
     header {
       padding: 2rem 0;
       color: white;
@@ -576,6 +575,84 @@
     
     // ------------ Media Queries for mobile devices ------------- //
 
+    @media (min-width: 1920px) {
+
+      .main {
+        margin-top: rem;
+      }
+
+      .progress-container {
+        width: 20px;
+        border-radius: 25px;
+        right: 3rem;
+        border-radius: 23px;
+      }
+
+      .arrowone-container {
+        margin-top: 11rem;
+      }
+
+      .name-inner::after {
+        width: 70%;
+      }
+
+      .about-me-heading {
+        font-weight: bold;
+        font-size: 3.9rem;
+      }
+
+      .about-me-text {
+        font-size: 1.7rem !important;
+        word-wrap: break-word;
+        width: 300%;
+      }
+
+      .col-md-8 {
+        margin-top: -0.9rem;
+      }
+
+      .about {
+        font-size: 1.2rem;
+      }
+
+      .hero-image {
+        width: 500px;
+        height: 500px;
+        border-radius: 3%;
+        object-fit: cover;
+        margin-top: 1rem;
+        margin-left: -2.4rem;
+      }
+  
+      .hero-title {
+        position: absolute;
+        bottom: -32px;
+        right: calc(61.5% - 150px);
+        font-size: 2.4rem;
+        color: white;
+        background-color: #3C6E71;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+      }
+
+      .card {
+        height: 20rem !important;
+        width: 35rem !important;
+        border-radius: -1rem;
+        margin-top: 0rem;
+      }
+
+      .card .card-text {
+        font-size: 1.3rem;
+      }
+
+      .project-card-margin {
+        margin-left: -3.3rem;
+        left: 3rem;
+      }
+
+    }
+
 
     @media (min-width: 2560px) {
 
@@ -765,11 +842,7 @@
         width: 300px;
         margin-left: -18rem;
       }
-
-
-
     }
-
 
     @media (min-width: 3840px) {
 

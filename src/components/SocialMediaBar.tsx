@@ -14,9 +14,6 @@ const SocialBar: React.FC = () => {
         <a href="https://www.linkedin.com/in/kyle-parks-b0a74017b/" target="_blank" rel="noopener noreferrer" className="mx-3 social-icon">
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
-        <a href="https://www.instagram.com/kcparks33" target="_blank" rel="noopener noreferrer" className="mx-3 social-icon">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
-        </a>
       </div>
       <div className="text-muted m-1">© 2023 Kyle Parks</div>
     </Navbar>
