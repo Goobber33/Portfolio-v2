@@ -58,7 +58,7 @@ const projects = [
 
 const cardStyle = {
   height: '300px',
-  width: '450px'
+  width: '450px',
 };
 
 const titleStyle = {

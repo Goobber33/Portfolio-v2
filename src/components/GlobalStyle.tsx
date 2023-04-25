@@ -802,6 +802,205 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  @media (max-width: 430px) {
+
+    html, body {
+      overflow: hidden !important;
+    }
+
+    .navbar {
+      font-size: 6px;
+    }
+
+    .logo {
+      height: 70px;
+      width: auto;
+    }
+
+    .main {
+      font-size: 0.5rem;
+      margin-top: -3rem;
+    }
+
+    .progress-container {
+      right: 1.4rem;
+      height: 20rem;
+      width: 11px;
+      top: 22rem !important;
+    }
+
+    .waving-hand {
+      font-size: 1.5rem;
+    }
+
+    .name-text-inner {
+      font-size: 3rem;
+    }
+
+    .name-inner::after {
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+    }
+
+    .arrow-down-one {
+      font-size: 3rem;
+    }
+
+    .arrowtwo-container {
+      margin-top: 3rem;
+    }
+
+    .arrow-up-one {
+      font-size: 3rem;
+    }
+
+    .about-me-heading {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .about-me-text {
+      font-size: 0.5rem !important;
+      word-wrap: break-word;
+    }
+
+    .d-grid {
+      width: 40% !important;
+    }
+
+    .col-md-8 {
+      margin-top: 2.5rem;
+    }
+    
+    .hero-image {
+      height: 170px;
+      width: 170px;
+    }
+
+    .hero-image-wrapper {
+      width: 100%;
+      position: absolute;
+      left: -41rem;
+      bottom: 10rem;
+    }
+
+    .hero-title {
+     
+      bottom: -19px;
+      right: calc(112% - 128px);
+      font-size: 0.6rem;
+      color: white;
+      background-color: #3C6E71;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .text-white-two {
+      font-size: 0.5rem;
+      margin-top: -1rem;
+    }
+
+    .mb-5 {
+      font-size: 4px;
+    }
+
+    .arrowthree-container {
+      margin-top: 3rem;
+    }
+
+    .arrow-down-two {
+      font-size: 3rem;
+    }
+
+    .arrowfour-container {
+      margin-top: 1rem;
+    }
+
+    .arrow-up-two {
+      font-size: 3rem;
+    }
+
+    .card {
+      height: 5.2rem !important;
+      width: 11rem !important;
+      border-radius: -0.1rem;
+      margin-bottom: -0.1rem;
+    }
+
+
+  .card .card-text {
+    font-size: 0.8rem;
+  }
+
+  .project-card-margin {
+    margin-left: 1.8rem;
+    left: 5.1rem;
+    bottom: 1rem;
+  }
+
+  .project-card-title {
+    font-size: 10px !important;
+  }
+
+  .arrowfive-container {
+    margin-top: 0rem;
+  }
+
+  .arrow-down-three {
+    font-size: 3rem;
+  }
+
+  .arrowsix-container {
+    margin-top: -0.2rem;
+  }
+
+  .arrow-up-three {
+    font-size: 3rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 3rem;
+  }
+
+  .contact-section label {
+    font-size: 0.6rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+   
+    font-size: 0.5rem;
+  }
+  
+  .contact-section form {
+    max-width: 300px;
+  }
+
+  #message {
+    max-height: 80px;
+  }
+
+  .contact-section textarea {
+    height: -2rem;
+  }
+
+  .contact-container form button {
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    width: 100px;
+  }
+
+  }
+
   /* ---------- Media Query for 1024px ---------- */
 
   @media (min-width: 768px) {
