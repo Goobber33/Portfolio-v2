@@ -598,7 +598,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .progress-container {
-    right: 1.3rem;
+    right: 0.8rem !important;
     height: 16rem;
     width: 10px;
     top: 20rem;
@@ -670,7 +670,7 @@ const GlobalStyle = createGlobalStyle`
 
   .hero-image-wrapper {
     position: relative;
-    left: -27rem;
+    left: -37rem !important;
     bottom: 16rem;
   }
 
@@ -698,7 +698,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .arrowthree-container {
-    margin-top: 1rem;
+    margin-top: -1rem !important;
   }
 
   .arrow-down-two {
@@ -710,7 +710,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .arrowfour-container {
-    margin-top: 0.2rem;
+    margin-top: 0.5rem !important;
   }
 
   .arrow-up-two {
@@ -734,8 +734,8 @@ const GlobalStyle = createGlobalStyle`
 
   .project-card-margin {
     margin-left: 1.8rem;
-    left: 4rem;
-    bottom: 2.4rem;
+    left: 4rem !important;
+    bottom: 2.9rem !important;
   }
 
   .project-card-title {
@@ -743,7 +743,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .arrowfive-container {
-    margin-top: -2.3rem;
+    margin-top: -3rem !important;
   }
 
   .arrow-down-three {
