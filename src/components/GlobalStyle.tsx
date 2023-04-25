@@ -570,11 +570,12 @@ const GlobalStyle = createGlobalStyle`
     color: #E1306C;
     }
     
-  // ------------ Media Queries for mobile devices ------------- //
+  /* ------------ Media Queries for mobile devices ------------- */
 
-  // ---------- Media Query for 430px ---------- //
 
-  @media (max-width: 430px) {
+  /* ---------- Media Query for 390px ---------- */
+
+  @media (max-width: 390px)  {
 
    html, body {
       overflow: hidden !important;
@@ -597,7 +598,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .progress-container {
-    right: 2rem;
+    right: 1.3rem;
     height: 16rem;
     width: 10px;
     top: 20rem;
@@ -628,62 +629,103 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .arrowone-container {
-    margin-top: 12rem;
+    margin-top: 10rem;
   }
 
   .arrow-down-one {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  .arrowtwo-container {
+    margin-top: 2rem;
+  }
+
+  .arrow-up-one {
+    font-size: 3rem;
   }
 
   .about-me {
     font-size: 1rem;
   }
 
+  .hometext {
+    font-size: 0.8rem;
+    top: -0.5rem;
+  }
+
   .about-me-heading {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .about-me-text {
-    font-size: 0.3rem !important;
+    font-size: 0.5rem !important;
     word-wrap: break-word;
   }
 
   .hero-image {
-    width: 20px;
-    height: 20px;
+    width: 150px;
+    height: 150px;
   }
 
   .hero-image-wrapper {
     position: relative;
-    left: -39rem;
-    bottom: -1rem;
+    left: -27rem;
+    bottom: 16rem;
   }
 
   .hero-title {
     position: absolute;
-    bottom: -19px;
-    right: calc(82% - 150px);
-    font-size: 1rem;
+    bottom: -15px;
+    right: calc(125.2% - 150px);
+    font-size: 0.5rem;
     color: white;
     background-color: #3C6E71;
     padding: 0.5rem 1rem;
     border-radius: 10px;
   }
 
+  .text-white-two {
+    font-size: 0.55rem;
+  }
+
   .mb-5 {
     font-size: 4px;
   }
 
+  .col-md-8 {
+    margin-top: 1.3rem;
+  }
+
+  .arrowthree-container {
+    margin-top: 1rem;
+  }
+
+  .arrow-down-two {
+    font-size: 3rem;
+  }
+
+  .pcard {
+    font-size: 0.7rem;
+  }
+
+  .arrowfour-container {
+    margin-top: 0.2rem;
+  }
+
+  .arrow-up-two {
+    font-size: 3rem;
+  }
+
   .project {
-    max-height: 10vh !important;
+    max-height: 40vh !important;
   }
 
   .card {
-    height: 1rem !important;
-    width: 1rem !important;
+    height: 5rem !important;
+    width: 11rem !important;
     border-radius: -0.1rem;
-    margin-top: rem;
+    margin-bottom: -0.1rem;
   }
 
   .card .card-text {
@@ -691,13 +733,76 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .project-card-margin {
-    
-    
+    margin-left: 1.8rem;
+    left: 4rem;
+    bottom: 2.4rem;
+  }
+
+  .project-card-title {
+    font-size: 10px !important;
+  }
+
+  .arrowfive-container {
+    margin-top: -2.3rem;
+  }
+
+  .arrow-down-three {
+    font-size: 3rem;
+  }
+
+  .card .card-text {
+    font-size: 0.3rem;
+  }
+
+  .arrowsix-container {
+    margin-top: -0.2rem;
+  }
+
+  .arrow-up-three {
+    font-size: 3rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 3rem;
+  }
+
+  .contact-section label {
+    font-size: 0.6rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+   
+    font-size: 0.5rem;
+  }
+  
+  .contact-section form {
+    max-width: 300px;
+  }
+
+  #message {
+    max-height: 80px;
+  }
+
+  .contact-section textarea {
+    height: -2rem;
+  }
+
+  .contact-container form button {
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    width: 100px;
   }
 
   }
 
-  // ---------- Media Query for 1024px ---------- //
+  /* ---------- Media Query for 1024px ---------- */
 
   @media (min-width: 768px) {
 

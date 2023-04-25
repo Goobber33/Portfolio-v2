@@ -25,14 +25,12 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('ProjectCard');
     const contactSection = document.getElementById('contact');
-    const resumeSection = document.getElementById('resume');
 
     const sections = [
       { name: 'home', element: introTextSection },
       { name: 'about', element: aboutSection },
       { name: 'projects', element: projectsSection },
       { name: 'contact', element: contactSection },
-      { name: 'resume', element: resumeSection },
     ];
 
     const sectionInView = sections.find((section) => {
@@ -86,12 +84,14 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
           04. Contact
         </Nav.Link>
         <Nav.Link
-          className={activeLink === 'resume' ? 'active' : ''}
-          href="#resume"
-          style={navbarLinkStyle}
-        >
-          05. Resume
-        </Nav.Link>
+        className={activeLink === 'resume' ? 'active' : ''}
+        href={`${process.env.PUBLIC_URL}/Kyle Parks Resume.pdf`}
+        target="_blank" 
+        rel="noopener noreferrer"
+        style={navbarLinkStyle}
+      >
+        05. Resume
+      </Nav.Link>
       </Nav>
     </Navbar>
   );

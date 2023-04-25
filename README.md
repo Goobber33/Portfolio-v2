@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Kyle Parks Portfolio v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Welcome to Kyle Parks Portfolio v2! This project showcases my journey as a developer, highlighting the skills I've acquired during my time at the University of Washington's Coding Bootcamp and through self-teaching. This portfolio is built using React, TypeScript, Yarn, Sequelize, MySQL, and Express. The backend is hosted on Heroku, ensuring seamless and efficient deployment.
 
-## Available Scripts
+Dive into the world of my work, including projects that demonstrate my proficiency in these technologies. This portfolio is not only a testament to my passion for coding but also a reflection of my commitment to growth and excellence.
 
-In the project directory, you can run:
+## Technologies 
 
-### `npm start`
+![HTML5](https://img.shields.io/static/v1?style=for-the-badge&message=HTML5&color=E34F26&logo=HTML5&logoColor=FFFFFF&label=)
+![CSS3](https://img.shields.io/static/v1?style=for-the-badge&message=CSS3&color=1572B6&logo=CSS3&logoColor=FFFFFF&label=)
+![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+![React](https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=)
+![Yarn](https://img.shields.io/static/v1?style=for-the-badge&message=Yarn&color=2C8EBB&logo=Yarn&logoColor=FFFFFF&label=)
+![MySQL](https://img.shields.io/static/v1?style=for-the-badge&message=MySQL&color=4479A1&logo=MySQL&logoColor=FFFFFF&label=)
+![npm](https://img.shields.io/static/v1?style=for-the-badge&message=npm&color=CB3837&logo=npm&logoColor=FFFFFF&label=)
+![Node.js](https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label=)
+![Express](https://img.shields.io/static/v1?style=for-the-badge&message=Express&color=000000&logo=Express&logoColor=FFFFFF&label=)
+![Heroku](https://img.shields.io/static/v1?style=for-the-badge&message=Heroku&color=430098&logo=Heroku&logoColor=FFFFFF&label=)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
+* [Usage](#usage)
+* [Installation](#installation)
+* [Credits](#credits)
+* [Contributing](#congributing)
+* [Contact](#contact)
 
-### `npm test`
+## Insatallation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To explore the code behind my portfolio, follow these steps:
 
-### `npm run build`
+Clone the repository to your local machine by running git clone [repository URL].
+Install the necessary dependencies by running npm install in the terminal.
+Once the dependencies are installed, use npm start to launch the development server.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+Visit https://kylecparks.com to explore my portfolio, projects, and skills. Feel free to reach out if you'd like to collaborate or have any questions!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+If you have suggestions or would like to contribute to this project, please feel free to open an issue or submit a pull request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
+This application was built from scratch by Kyle Parks, with inspiration and support from the University of Washington's Coding Bootcamp, instructors, mentors, and peers.
 
-### `npm run eject`
+## Contact
+If you have any questions, comments, or would like to connect, please reach out to me via:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+LinkedIn: [https://www.linkedin.com/in/kyle-parks-b0a74017b/]
+GitHub: [https://github.com/Goobber33]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for exploring my portfolio, and I look forward to collaborating with you in the future!

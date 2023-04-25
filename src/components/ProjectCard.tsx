@@ -169,7 +169,7 @@ const ProjectCard = forwardRef<HTMLDivElement>((_, ref) => {
 
                   <Card className={`card custom-card-spacing`} style={cardStyle}>
                     <Card.Header className="d-flex justify-content-between align-items-center">
-                      <Card.Title style={titleStyle}>{project.title}</Card.Title>
+                    <Card.Title className="project-card-title" style={titleStyle}>{project.title}</Card.Title>
                       <div style={logoStyle}>
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <AiOutlineLink size={24} color="#000" className="mr-2" /> {/* use the AiOutlineLink icon */}
