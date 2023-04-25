@@ -52,7 +52,6 @@ const NavbarComponent: React.FC<NavbarProps> = ({ style, contactFormRef }) => {
   return (
     <Navbar
       variant="dark"
-      
       fixed="top"
       className={`mb-4 mt-3 mt-md-0`}
     >

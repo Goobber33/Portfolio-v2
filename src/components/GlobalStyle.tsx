@@ -1,11 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  #root {
-      background-color: #284B63;
-      min-height: 350vh;
-      width: 100%;
-    }
+  
     
     body {
       margin: 0;
@@ -13,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
       font-family: Arial, sans-serif;
       scroll-behavior: smooth;
       overflow: hidden;
+      background-color: #284B63;
     }
 
     .progress-container {
@@ -575,6 +572,131 @@ const GlobalStyle = createGlobalStyle`
     
   // ------------ Media Queries for mobile devices ------------- //
 
+  // ---------- Media Query for 430px ---------- //
+
+  @media (max-width: 430px) {
+
+   html, body {
+      overflow: hidden !important;
+    }
+
+  .main {
+    left: 3rem;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    font-size: 6px;
+  }
+  
+  .logo {
+    height: 75px;
+    width: auto;
+    left: 4rem;
+  }
+
+  .progress-container {
+    right: 2rem;
+    height: 16rem;
+    width: 10px;
+    top: 20rem;
+  }
+
+  .col-12.col-sm-12 {
+    left: 4rem;
+  }
+  
+  .intro-text-wrapper {
+    font-size: 10px;
+  }
+
+  .waving-hand {
+    font-size: 1.5rem;
+  }
+
+  .name-text-inner {
+    font-size: 40px;
+  }
+
+  .name-inner::after {
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+
+  .arrowone-container {
+    margin-top: 12rem;
+  }
+
+  .arrow-down-one {
+    font-size: 4rem;
+  }
+
+  .about-me {
+    font-size: 1rem;
+  }
+
+  .about-me-heading {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .about-me-text {
+    font-size: 0.3rem !important;
+    word-wrap: break-word;
+  }
+
+  .hero-image {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    left: -39rem;
+    bottom: -1rem;
+  }
+
+  .hero-title {
+    position: absolute;
+    bottom: -19px;
+    right: calc(82% - 150px);
+    font-size: 1rem;
+    color: white;
+    background-color: #3C6E71;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+
+  .mb-5 {
+    font-size: 4px;
+  }
+
+  .project {
+    max-height: 10vh !important;
+  }
+
+  .card {
+    height: 1rem !important;
+    width: 1rem !important;
+    border-radius: -0.1rem;
+    margin-top: rem;
+  }
+
+  .card .card-text {
+    font-size: 0.8rem;
+  }
+
+  .project-card-margin {
+    
+    
+  }
+
+  }
+
   // ---------- Media Query for 1024px ---------- //
 
   @media (min-width: 768px) {
@@ -1015,7 +1137,7 @@ const GlobalStyle = createGlobalStyle`
 
       .main {
         min-height: 65vh;
-        margin-top: 8rem;
+        margin-top: 1rem;
       }
 
       .logo {
@@ -1040,26 +1162,35 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .arrowone-container {
-        margin-top: 8rem;
+        margin-top: 10rem;
       }
 
       .arrow-down-one {
-        font-size: 10rem;
+        font-size: 8rem;
+      }
+
+      .about-me {
+        bottom: 12rem;
       }
 
       .progress-container {
-        width: 35px;
+        width: 27px;
+        height: 55%;
         border-radius: 25px;
         right: 6rem;
         border-radius: 23px;
       }
 
       .arrowtwo-container {
-        margin-top: -1rem;
+        margin-top: 0.7rem;
       }
 
       .arrow-up-one {
-        font-size: 10rem;
+        font-size: 8rem;
+      }
+
+      .hometext {
+        top: 2rem;
       }
 
       .about-me-heading {
@@ -1073,8 +1204,12 @@ const GlobalStyle = createGlobalStyle`
         width: 300%;
       }
 
+      .mb-5 {
+        font-size: 20px;
+      }
+
       .col-md-8 {
-        margin-top: -1rem;
+        margin-top: -2rem;
       }
 
       .text-white-two {
@@ -1107,11 +1242,15 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .arrowthree-container {
-        margin-top: -7rem;
+        margin-top: -5rem;
       }
 
       .arrow-down-two {
-        font-size: 10rem;
+        font-size: 8rem;
+      }
+
+      .custom-pr {
+        margin-top: 6rem;
       }
 
       .project {
@@ -1119,13 +1258,13 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .arrowfour-container {
-        margin-top: -3rem
+        margin-top: -4rem
       }
 
       .arrow-up-two {
-        font-size: 10rem;
+        font-size: 8rem;
       }
-
+    
       .card {
         height: 28rem !important;
         width: 44rem !important;
@@ -1134,7 +1273,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .card .card-text {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
       }
 
       .project-card-margin {
@@ -1143,7 +1282,7 @@ const GlobalStyle = createGlobalStyle`
       }
       
       .arrow-down-three {
-        font-size: 10rem;
+        font-size: 8rem;
       }
 
       .arrowsix-container {
@@ -1151,17 +1290,17 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .arrow-up-three {
-        font-size: 15rem;
+        font-size: 8rem;
       }
 
       .arrowsix-container {
-        margin-top: -6rem;
+        margin-top: -8rem;
       }
 
       .arrow-up-three {
-        font-size: 10rem;
+        font-size: 8rem;
       }
-
+      
       .container {
         margin-top: 8rem;
       }
@@ -1190,197 +1329,12 @@ const GlobalStyle = createGlobalStyle`
       }
 
       .contact-container form button {
-        font-size: 3rem !important;
+        font-size: 2rem !important;
         border-radius: 20px !important;
-        width: 300px;
+        width: 170px;
         margin-left: -18rem;
       }
     }
-
-    // ---------- 3840px Media Query ----------//
-
-    @media (min-width: 3840px) {
-
-      .navbar {
-        font-size: 2.5rem;
-      }
-      
-      .main {
-        min-height: 100vh;
-        margin-top: 10rem;
-      }
-
-      .logo {
-        height: 450px;
-        width: auto;
-      }
-      
-      .intro-text-wrapper {
-        font-size: 1.8rem;
-      }
-
-      .waving-hand {
-        font-size: 6.5rem;
-      }
-
-      .name-text-inner {
-        font-size: 16.5rem;
-      }
-
-      .name-inner::after {
-        width: 70%;
-      }
-
-      h2 {
-        font-size: 4rem;
-      }
-
-      .arrowone-container {
-        margin-top: 21rem;
-      }
-
-      .arrow-down-one {
-        font-size: 15rem;
-      }
-
-      .progress-container {
-        width: 45px;
-        border-radius: 25px;
-      }
-
-      .arrowtwo-container {
-        margin-top: -3rem;
-      }
-
-      .arrow-up-one {
-        font-size: 15rem;
-      }
-
-      .about-me-heading {
-        font-weight: bold;
-        font-size: 7.5rem;
-      }
-
-      .about-me-text {
-        font-size: 3rem !important;
-         word-wrap: break-word;
-         width: 300%;
-      }
-
-      .col-md-8 {
-        margin-top: 1rem;
-      }
-
-      .text-white-two {
-        font-size: 2.2rem;
-        margin-top:2rem;
-      }
-
-      .about {
-        font-size: 2.5rem;
-      }
-
-      .hero-image {
-        width: 1100px;
-        height: 1100px;
-        border-radius: 3%;
-        object-fit: cover;
-        margin-top: 1rem;
-        margin-left: -8rem;
-      }
-  
-      .hero-title {
-        position: absolute;
-        bottom: -32px;
-        right: calc(61.5% - 150px);
-        font-size: 2rem;
-        color: white;
-        background-color: #3C6E71;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-      }
-
-      .arrowthree-container {
-        margin-top: 4rem;
-      }
-
-      .arrow-down-two {
-        font-size: 15rem;
-      }
-
-      .project {
-        min-height: 100vh;
-      }
-
-      .arrowfour-container {
-        margin-top: rem
-      }
-
-      .arrow-up-two {
-        font-size: 15rem;
-      }
-
-      .card {
-        height: 40rem !important;
-        width: 70rem !important;
-        border-radius: 1rem;
-        margin-top: 2rem;
-      }
-
-      .card .card-text {
-        font-size: 2.5rem;
-      }
-
-      .project-card-margin {
-        margin-left: -7rem;
-        left: 6rem;
-      }
-      
-      .arrow-down-three {
-        font-size: 15rem;
-      }
-
-      .arrowsix-container {
-        margin-top: -9rem;
-      }
-
-      .arrow-up-three {
-        font-size: 15rem;
-      }
-
-      .container {
-        margin-top: 14rem;
-      }
-
-      .container h2 {
-        font-size: 5rem;
-      }
-
-      .contact-section label {
-        display: block;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        margin-left: -18rem;
-      }
-      
-      .contact-section input,
-      .contact-section textarea {
-        width: 200%;
-        padding: 3rem;
-        margin-bottom: 6rem;
-        margin-left: -18rem;
-      }
-      
-      .contact-section textarea {
-        height: 20rem; /* Updated height */
-      }
-
-      .contact-container form button {
-        font-size: 4rem !important;
-        border-radius: 20px !important;
-        width: 300px;
-        margin-left: -18rem;
-      }
 
   }
   `;

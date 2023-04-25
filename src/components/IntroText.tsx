@@ -57,7 +57,7 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
         <section id="introText" className="main">
           <div className="container-fluid custom">
             <div className="row">
-              <div className="col-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
+              <div className="col-12 col-sm-12 col-md-8 col-lg-6 offset-md-1 offset-lg-2">
                 <div className="intro-text-wrapper">
 
                   <animated.h2

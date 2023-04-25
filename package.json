@@ -24,6 +24,7 @@
     "react-scroll": "^1.8.9",
     "react-spring": "^9.7.1",
     "react-typewriter-hook": "^1.0.1",
+    "sass": "^1.62.0",
     "scroll": "^3.0.1",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
