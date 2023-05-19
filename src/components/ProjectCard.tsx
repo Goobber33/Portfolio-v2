@@ -36,9 +36,10 @@ const projects = [
     image: image3
   },
   {
-    title: 'E-commerce back-end',
-    description: 'I built the back-end of an eccomerce site. This project uses Node.js and has categories, tags, and product ids.',
-    githubUrl: 'https://github.com/Goobber33/Complete-E-comm-Back-End',
+    title: 'Chatbot',
+    description: 'What a fun project! I built a chatbot using OpenAIs API, OpenWeather API, Python and React. Interact with the chatbot by asking it any question you would like!',
+    githubUrl: 'https://github.com/Goobber33/Chabot',
+    liveUrl:'https://goobber33.github.io/Chabot/',
     image: image4
   },
   {
