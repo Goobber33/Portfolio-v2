@@ -43,9 +43,10 @@ const projects = [
     image: image4
   },
   {
-    title: 'Track Your Employees',
-    description: 'Using Node.js, this is a CLI application that tracks employees names, job titles, salary, and will also show the department and manager for each employee.',
-    githubUrl: 'https://github.com/Goobber33/Track-your-Employees-',
+    title: 'Web Scraper',
+    description: 'This project is a web scraper that fetches data from various websites and saves the extracted data to a MongoDB Atlas database. It also provides a user-friendly frontend built with React and TypeScript.',
+    githubUrl: 'https://github.com/Goobber33/Web-Scraper',
+    liveUrl:'https://goobber33.github.io/Web-Scraper/',
     image: image5
   },
   {
