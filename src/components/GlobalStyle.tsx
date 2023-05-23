@@ -50,6 +50,15 @@ const GlobalStyle = createGlobalStyle`
       max-width: 960px;
       padding: 0 2rem;
     }
+    
+    .lottie-player-wrapper {
+      width: 400px; /* increase width */
+      height: 400px; /* increase height */
+      position: relative;
+      left: -100px; /* adjust left position */
+      top: 50px; /* adjust top position */
+    }
+    
 
     .arrowone-container {
       margin-top: 10rem;
