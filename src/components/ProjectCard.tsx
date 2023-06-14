@@ -50,10 +50,10 @@ const projects = [
     image: image5
   },
   {
-    title: 'Crazy Weather We Are having',
-    description: 'This application is a Weather Dashboard. The user can search an area and it will show the current and 10 day weather for that area.',
-    githubUrl: 'https://github.com/Goobber33/Crazy-Weather-We-re-Having',
-    liveUrl: 'https://goobber33.github.io/Crazy-Weather-We-re-Having/',
+    title: 'Arcanum',
+    description: 'This is a card game, like hearthstone, built for game lovers. Are you ready to harness the power of magic, assemble your ultimate deck and rise above all others in the realm of Arcanum?',
+    githubUrl: 'https://github.com/Goobber33/Arcanum',
+    liveUrl: 'https://arcanum.herokuapp.com/',
     image: image6
   },
 ];

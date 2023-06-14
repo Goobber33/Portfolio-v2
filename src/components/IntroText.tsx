@@ -88,16 +88,16 @@ const IntroText = forwardRef<HTMLDivElement>((_, ref) => {
                 </div>
               </div>
               <div className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
-                <div className="lottie-player-wrapper">
+                {/* <div className="lottie-player-wrapper">
                   {React.createElement('lottie-player', {
-                    src: "https://lottie.host/b8ec5979-f33c-429c-8bd1-058dc7b3df30/RASgR2Wqwb.json",
+                    // src: "https://lottie.host/b8ec5979-f33c-429c-8bd1-058dc7b3df30/RASgR2Wqwb.json",
                     background: "transparent",
                     speed: "1",
                     style: { width: '100%', height: '100%' },
                     loop: true,
                     autoplay: true
                   })}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
